@@ -74,7 +74,7 @@ h1 .section-icon {
 }
 
 .section-nav-bar li {
-  margin: 0;
+  display: contents;
 }
 
 .section-nav-link {
