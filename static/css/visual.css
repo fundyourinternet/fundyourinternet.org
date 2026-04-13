@@ -244,13 +244,22 @@ h1 .section-icon {
 /* --- Homepage hero backdrop --- */
 
 .homepage-hero {
-  padding: calc(var(--space-lg) + 1.5rem) 0 0;
+  padding: calc(var(--space-2xl) + 1.5rem) var(--space-md) var(--space-xl);
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.homepage-hero .container {
-  padding-bottom: var(--space-lg);
+.homepage-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+.homepage-hero .section-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--colour-muted);
+  max-width: 36rem;
+  margin: 0 auto;
 }
 
 /* --- Hero image layers (shared) --- */
@@ -441,15 +450,8 @@ html[data-theme="dark"] .homepage-hero::before {
     font-size: 3rem;
   }
 
-  .homepage-hero::before {
-    right: calc(50% + 5rem);
-    background-position: center center;
-  }
-
-  .homepage-hero::after {
-    background:
-      linear-gradient(to right, transparent 10%, var(--colour-bg) calc(50% - 10rem)),
-      linear-gradient(to bottom, transparent 50%, var(--colour-bg) 100%);
+  .homepage-hero h1 {
+    font-size: 3rem;
   }
 }
 

@@ -1,14 +1,9 @@
 /* === Fund Your Internet — Component Styles === */
 
-/* --- Homepage hero --- */
+/* --- Homepage body content --- */
 
 .hero {
-  padding: var(--space-xl) 0 var(--space-lg);
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-md);
+  padding: var(--space-lg) 0;
 }
 
 .hero p {
@@ -350,10 +345,6 @@
 /* --- Responsive components --- */
 
 @media (min-width: 48em) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
   .page-toc {
     grid-template-columns: 1fr 1fr;
   }
