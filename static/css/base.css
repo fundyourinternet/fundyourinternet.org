@@ -229,8 +229,8 @@ main {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: var(--space-xs) 0;
-  background: color-mix(in srgb, var(--colour-bg) 85%, transparent);
+  padding: 0;
+  background: color-mix(in srgb, var(--colour-bg) 40%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--colour-border) 40%, transparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -240,6 +240,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .site-title {
