@@ -198,9 +198,22 @@ a:focus-visible {
   gap: var(--space-xs);
 }
 
+/* --- Icons --- */
+
+.icon {
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
+
+.icon-fyi-mark {
+  display: block;
+  flex-shrink: 0;
+}
+
 .site-title {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5rem;
   text-decoration: none;
   color: var(--colour-text);
@@ -208,18 +221,6 @@ a:focus-visible {
 
 .site-title:visited {
   color: var(--colour-text);
-}
-
-.site-mark {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  background: var(--colour-text);
-  color: var(--colour-bg);
-  padding: 0.15em 0.35em;
-  border-radius: 3px;
-  line-height: 1;
 }
 
 .site-name {
@@ -238,6 +239,9 @@ a:focus-visible {
 }
 
 .site-header nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
   font-size: 0.9rem;
   color: var(--colour-muted);
   text-decoration: none;
@@ -251,6 +255,12 @@ a:focus-visible {
   color: var(--colour-text);
   text-decoration: underline;
   text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.site-header nav .icon {
+  width: 16px;
+  height: 16px;
 }
 
 /* --- Homepage --- */
@@ -520,6 +530,88 @@ a:focus-visible {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   display: block;
+}
+
+/* --- Inline citations --- */
+
+.cite {
+  font-style: normal;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.cite a {
+  color: var(--colour-evidence);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--colour-evidence-border);
+}
+
+.cite a:hover {
+  border-bottom-style: solid;
+}
+
+.cite--missing {
+  color: #c0392b;
+}
+
+/* --- Library (evidence base) --- */
+
+.library-topic {
+  margin-bottom: var(--space-xl);
+}
+
+.library-topic h2 {
+  font-size: 1.2rem;
+  color: var(--colour-evidence);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--colour-evidence-border);
+}
+
+.library-list {
+  list-style: none;
+  padding: 0;
+}
+
+.library-entry {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--colour-subtle);
+}
+
+.library-entry--recommended {
+  padding-left: var(--space-sm);
+  border-left: 3px solid var(--colour-evidence);
+}
+
+.library-entry-header {
+  margin-bottom: var(--space-xs);
+}
+
+.library-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--colour-evidence);
+  margin-right: var(--space-xs);
+}
+
+.library-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--colour-text);
+}
+
+.library-meta {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--colour-muted);
+  margin-top: 0.15rem;
+}
+
+.library-annotation {
+  font-size: 0.9rem;
+  color: var(--colour-muted);
+  margin: 0;
 }
 
 /* --- Site footer --- */

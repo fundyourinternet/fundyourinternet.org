@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container">
     <a href="/" class="site-title" aria-label="Fund Your Internet — home">
-      <span class="site-mark" aria-hidden="true">FYI</span>
+      {{ partial "icons/fyi-mark.html" }}
       <span class="site-name">Fund Your Internet</span>
     </a>
     <nav aria-label="Main navigation">
@@ -9,7 +9,16 @@
         {{- $rel := .RelPermalink -}}
         {{- range .Site.Menus.main }}
         {{- $active := hasPrefix $rel .URL -}}
-        <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{- $icon := "" -}}
+        {{- if in .URL "feeds" }}{{ $icon = "feeds" }}
+        {{- else if in .URL "movement" }}{{ $icon = "movement" }}
+        {{- else if in .URL "evidence" }}{{ $icon = "evidence" }}{{ end -}}
+        <li>
+          <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>
+            {{- if $icon }}{{ partial (printf "icons/%s.html" $icon) }}{{ end -}}
+            {{ .Name }}
+          </a>
+        </li>
         {{- end }}
       </ul>
     </nav>

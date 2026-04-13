@@ -1,0 +1,69 @@
+{{ define "main" }}
+<article class="section-page section-page--evidence">
+  <div class="container">
+    <h1>{{ partial "icons/evidence.html" }} {{ .Title }}</h1>
+    {{ .Content }}
+
+    {{/* Collect all library sources and group by topic */}}
+    {{ $sources := slice }}
+    {{ range $id, $source := .Site.Data.library }}
+      {{ $sources = $sources | append $source }}
+    {{ end }}
+
+    {{/* Topic display names and ordering */}}
+    {{ $topics := dict
+      "algorithmic-feeds" "How do algorithmic feeds affect information quality?"
+      "journalism-economics" "What is the real economics of independent media?"
+      "ad-driven-wellbeing" "How does ad-driven optimisation affect wellbeing?"
+      "direct-funding-models" "What models for direct funding are working?"
+      "subscription-fatigue" "What does research say about subscription fatigue?"
+      "open-source-funding" "How does open source funding affect infrastructure?"
+      "platform-economics" "Platform economics and governance"
+      "attention-economics" "Attention as a resource"
+    }}
+
+    {{ $topicOrder := slice "algorithmic-feeds" "journalism-economics" "ad-driven-wellbeing" "direct-funding-models" "subscription-fatigue" "open-source-funding" "platform-economics" "attention-economics" }}
+
+    {{ range $topicKey := $topicOrder }}
+      {{ $topicName := index $topics $topicKey }}
+      {{/* Filter sources for this topic */}}
+      {{ $topicSources := slice }}
+      {{ range $sources }}
+        {{ if in .topics $topicKey }}
+          {{ $topicSources = $topicSources | append . }}
+        {{ end }}
+      {{ end }}
+
+      {{ if $topicSources }}
+      <section class="library-topic" id="topic-{{ $topicKey }}">
+        <h2>{{ $topicName }}</h2>
+        <ul class="library-list">
+          {{ range $topicSources }}
+          <li class="library-entry{{ if .recommended }} library-entry--recommended{{ end }}" id="{{ .id }}">
+            <div class="library-entry-header">
+              {{ if .recommended }}<span class="library-badge">Start here</span>{{ end }}
+              <a href="{{ .url }}" class="library-title">{{ .title }}</a>
+              <span class="library-meta">{{ .author }}, {{ .year }}{{ with .access }}{{ if ne . "open" }} · {{ . }}{{ end }}{{ end }}</span>
+            </div>
+            <p class="library-annotation">{{ .annotation }}</p>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+    {{ end }}
+
+    {{- if .Params.bridges }}
+    <div class="bridges">
+      <p class="bridges-heading">Continue the conversation</p>
+      {{ range .Params.bridges }}
+      <a href="{{ .url }}" class="bridge bridge--{{ .branch }}">
+        <span class="bridge-section">{{ .section }}</span>
+        <span class="bridge-prompt">{{ .prompt }}</span>
+      </a>
+      {{ end }}
+    </div>
+    {{- end }}
+  </div>
+</article>
+{{ end }}

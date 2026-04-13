@@ -14,7 +14,7 @@ bridges:
     prompt: "Read the research behind these claims."
 ---
 
-Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it shapes everything.
+Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it shapes everything. {{< cite "doctorow-enshittification-2023" >}}
 
 This section explains, in plain terms, how that model works and what it costs — not in money, but in the quality of what gets made. It also explains what you can do about it, which is more than you might think.
 
