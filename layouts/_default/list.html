@@ -1,5 +1,9 @@
 {{ define "main" }}
-<article class="section-page">
+{{ $section_class := "" }}
+{{ if in .RelPermalink "feeds" }}{{ $section_class = "section-page--feeds" }}
+{{ else if in .RelPermalink "movement" }}{{ $section_class = "section-page--movement" }}
+{{ else if in .RelPermalink "evidence" }}{{ $section_class = "section-page--evidence" }}{{ end }}
+<article class="section-page {{ $section_class }}">
   <div class="container">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
@@ -14,6 +18,18 @@
       </ul>
     </nav>
     {{ end }}
+
+    {{- if .Params.bridges }}
+    <div class="bridges">
+      <p class="bridges-heading">Continue the conversation</p>
+      {{ range .Params.bridges }}
+      <a href="{{ .url }}" class="bridge bridge--{{ .branch }}">
+        <span class="bridge-section">{{ .section }}</span>
+        <span class="bridge-prompt">{{ .prompt }}</span>
+      </a>
+      {{ end }}
+    </div>
+    {{- end }}
   </div>
 </article>
 {{ end }}

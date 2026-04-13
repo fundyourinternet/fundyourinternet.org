@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="16" fill="#2d5016"/>
-  <text x="50" y="68" font-family="Georgia, serif" font-size="48" fill="#fafaf8" text-anchor="middle">FYI</text>
+  <rect width="100" height="100" rx="14" fill="#1a1a1a"/>
+  <text x="50" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#a0a0a0" text-anchor="middle" letter-spacing="0.12em">FUND YOUR</text>
+  <text x="50" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#fafaf8" text-anchor="middle" font-weight="normal">FYI</text>
+  <text x="50" y="90" font-family="Georgia, 'Times New Roman', serif" font-size="12" fill="#a0a0a0" text-anchor="middle" letter-spacing="0.1em">INTERNET</text>
 </svg>

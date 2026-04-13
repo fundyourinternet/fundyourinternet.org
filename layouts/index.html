@@ -4,11 +4,46 @@
     <div class="hero">
       {{ .Content }}
     </div>
+  </div>
 
-    <nav class="branches" aria-label="Explore further">
+  <div class="container">
+    <p class="woven-heading">Three threads, one conversation</p>
+
+    {{ $feeds := site.GetPage "/how-feeds-work" }}
+    {{ $movement := site.GetPage "/the-movement" }}
+    {{ $evidence := site.GetPage "/the-evidence-base" }}
+
+    <div class="strand strand--feeds">
+      <p class="strand-label">How feeds work</p>
+      <h2>{{ with $feeds }}{{ .Params.strand_title | default "The system is working as designed" }}{{ end }}</h2>
+      <p>{{ with $feeds }}{{ .Params.strand_teaser | default "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written. Not because of bad intentions — because of basic arithmetic." }}{{ end }}</p>
+      <a href="/how-feeds-work/" class="read-more">Understand the mechanics</a>
+    </div>
+
+    <div class="strand strand--movement">
+      <p class="strand-label">The movement</p>
+      <h2>{{ with $movement }}{{ .Params.strand_title | default "It is already happening" }}{{ end }}</h2>
+      <p>{{ with $movement }}{{ .Params.strand_teaser | default "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern." }}{{ end }}</p>
+      <a href="/the-movement/" class="read-more">See who is building</a>
+    </div>
+
+    <div class="strand strand--evidence">
+      <p class="strand-label">The evidence base</p>
+      <h2>{{ with $evidence }}{{ .Params.strand_title | default "The research is clear" }}{{ end }}</h2>
+      <p>{{ with $evidence }}{{ .Params.strand_teaser | default "Algorithmic feeds measurably shift what gets made and how people feel. Direct funding models are growing. The data exists — curated, annotated, and organised by question." }}{{ end }}</p>
+      <a href="/the-evidence-base/" class="read-more">Read the sources</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="branches" aria-label="Explore all sections">
       {{ range .Site.Menus.main }}
         {{ $page := site.GetPage .URL }}
-        <a href="{{ .URL }}" class="branch-card">
+        {{ $branch_class := "" }}
+        {{ if in .URL "feeds" }}{{ $branch_class = "branch-card--feeds" }}
+        {{ else if in .URL "movement" }}{{ $branch_class = "branch-card--movement" }}
+        {{ else if in .URL "evidence" }}{{ $branch_class = "branch-card--evidence" }}{{ end }}
+        <a href="{{ .URL }}" class="branch-card {{ $branch_class }}">
           <h2>{{ .Name }}</h2>
           {{ with $page }}
             <p>{{ .Params.summary }}</p>

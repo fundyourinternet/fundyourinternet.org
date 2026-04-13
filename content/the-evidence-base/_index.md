@@ -1,6 +1,17 @@
 ---
 title: "The evidence base"
 summary: "Curated research and sources on how the internet gets funded, and what happens when it does not."
+strand_title: "The research is clear"
+strand_teaser: "Algorithmic feeds measurably shift what gets made and how people feel. Direct funding models are growing but face real obstacles. The data exists — curated, annotated, and organised by question."
+bridges:
+  - branch: feeds
+    section: How feeds work
+    url: /how-feeds-work/
+    prompt: "See these findings explained in plain terms."
+  - branch: movement
+    section: The movement
+    url: /the-movement/
+    prompt: "Meet the communities putting this research into practice."
 ---
 
 This is the library. If you want to go deep — to cite something, to follow an argument to its source, or to write your own piece — this is where you will find the research.
