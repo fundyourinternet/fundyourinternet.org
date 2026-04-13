@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+
+    {{ with .CurrentSection }}
+    <nav class="back-link">
+      <a href="{{ .RelPermalink }}">Back to {{ .Title }}</a>
+    </nav>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

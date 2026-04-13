@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="section-page">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+
+    {{ $pages := .Pages }}
+    {{ if $pages }}
+    <nav class="section-nav" aria-label="Pages in this section">
+      <ul>
+        {{ range $pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    {{ end }}
+  </div>
+</article>
+{{ end }}
