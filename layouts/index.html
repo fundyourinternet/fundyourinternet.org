@@ -14,7 +14,7 @@
     <p class="woven-heading">Three threads, one conversation</p>
 
     {{ $oldway := site.GetPage "/the-old-way" }}
-    {{ $newways := site.GetPage "/the-new-way" }}
+    {{ $newways := site.GetPage "/a-new-way" }}
     {{ $evidence := site.GetPage "/the-evidence" }}
 
     <div class="strand strand--old-way">
@@ -28,7 +28,7 @@
       <p class="strand-label">{{ partial "section-icon.html" "new-way" }} A New Way</p>
       <h2>{{ with $newways }}{{ .Params.strand_title | default "It is already happening" }}{{ end }}</h2>
       <p>{{ with $newways }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
-      <a href="/the-new-way/" class="read-more">See who is building</a>
+      <a href="/a-new-way/" class="read-more">See who is building</a>
     </div>
 
     <div class="strand strand--evidence">
@@ -39,23 +39,5 @@
     </div>
   </div>
 
-  <div class="container container--wide">
-    <nav class="branches" aria-label="Explore all sections">
-      {{ range .Site.Menus.main }}
-        {{ $page := site.GetPage .URL }}
-        {{ $branch_class := "" }}
-        {{ $branch_section := "" }}
-        {{ if in .URL "old-way" }}{{ $branch_class = "branch-card--old-way" }}{{ $branch_section = "old-way" }}
-        {{ else if in .URL "new-way" }}{{ $branch_class = "branch-card--new-way" }}{{ $branch_section = "new-way" }}
-        {{ else if in .URL "evidence" }}{{ $branch_class = "branch-card--evidence" }}{{ $branch_section = "evidence" }}{{ end }}
-        <a href="{{ .URL }}" class="branch-card {{ $branch_class }}">
-          <h2>{{ if $branch_section }}{{ partial "section-icon.html" $branch_section }} {{ end }}{{ .Name }}</h2>
-          {{ with $page }}
-            <p>{{ .Params.summary }}</p>
-          {{ end }}
-        </a>
-      {{ end }}
-    </nav>
-  </div>
 </article>
 {{ end }}
