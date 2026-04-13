@@ -73,6 +73,10 @@ h1 .section-icon {
   gap: var(--space-xs);
 }
 
+.section-nav-bar li {
+  margin: 0;
+}
+
 .section-nav-link {
   display: flex;
   align-items: center;
@@ -105,8 +109,8 @@ h1 .section-icon {
   opacity: 0.7;
 }
 
-.section-nav-link:not([class*="--"]):hover,
-.section-nav-link:not([class*="--"])[aria-current="page"] {
+.section-nav-link--one-thing:hover,
+.section-nav-link--one-thing[aria-current="page"] {
   color: var(--colour-text);
   border-bottom-color: var(--colour-text);
 }
