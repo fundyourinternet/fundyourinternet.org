@@ -272,9 +272,8 @@ main {
 
 .nav-menu {
   flex: 1;
-  display: flex;
-  justify-content: center;
   position: relative;
+  text-align: center;
 }
 
 .nav-toggle {
@@ -302,12 +301,18 @@ main {
 }
 
 @media (min-width: 48em) {
+  .nav-menu {
+    display: contents;
+  }
+
   .nav-toggle {
     display: none;
   }
 
-  .nav-menu > .nav-links {
+  .nav-links {
     display: flex;
+    flex: 1;
+    justify-content: center;
   }
 
   .nav-links ul {
