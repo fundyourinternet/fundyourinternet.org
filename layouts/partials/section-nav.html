@@ -1,16 +1,14 @@
 <nav class="section-nav-bar" aria-label="Main navigation">
   <ul>
     {{- $rel := .RelPermalink -}}
-    {{- range .Site.Menus.main }}
+    {{- range .Site.Menus.main -}}
     {{- $active := hasPrefix $rel .URL -}}
     {{- $section := "" -}}
-    {{- if in .URL "old-way" }}{{ $section = "old-way" }}{{ else if in .URL "new-way" }}{{ $section = "new-way" }}{{ else if in .URL "evidence" }}{{ $section = "evidence" }}{{ end -}}
-    <li>
-      <a href="{{ .URL }}" class="section-nav-link section-nav-link--{{ $section }}"{{ if $active }} aria-current="page"{{ end }}>
-        {{- if $section }}{{ partial "section-icon.html" $section }}{{ end -}}
-        <span>{{ .Name }}</span>
-      </a>
-    </li>
+    {{- if in .URL "old-way" -}}{{- $section = "old-way" -}}
+    {{- else if in .URL "new-way" -}}{{- $section = "new-way" -}}
+    {{- else if in .URL "evidence" -}}{{- $section = "evidence" -}}
+    {{- end -}}
+    <li><a href="{{ .URL }}" class="section-nav-link section-nav-link--{{ $section }}"{{ if $active }} aria-current="page"{{ end }}>{{- if $section -}}{{ partial "section-icon.html" $section }}{{- end -}}<span>{{ .Name }}</span></a></li>
     {{- end }}
   </ul>
 </nav>

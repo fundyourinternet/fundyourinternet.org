@@ -125,7 +125,7 @@ h1 .section-icon {
 /* --- Section hero (gradient placeholders) --- */
 
 .section-hero {
-  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  padding: calc(var(--space-2xl) + 3rem) var(--space-md) var(--space-xl);
   text-align: center;
 }
 
@@ -176,7 +176,7 @@ h1 .section-icon {
     var(--colour-bg) 80%,
     var(--colour-evidence-light) 100%
   );
-  padding: var(--space-lg) 0 0;
+  padding: calc(var(--space-lg) + 3rem) 0 0;
 }
 
 .homepage-hero .container {

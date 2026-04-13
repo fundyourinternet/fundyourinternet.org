@@ -307,22 +307,27 @@
   font-size: 1.2rem;
   color: var(--colour-evidence);
   padding-bottom: var(--space-xs);
-  border-bottom: 1px solid var(--colour-evidence-border);
+  margin-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--colour-evidence-border);
 }
 
 .library-list {
   list-style: none;
   padding: 0;
+  display: grid;
+  gap: var(--space-sm);
 }
 
 .library-entry {
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid var(--colour-subtle);
+  padding: var(--space-md);
+  background: var(--colour-subtle);
+  border-radius: 6px;
+  border-left: 3px solid var(--colour-evidence-border);
 }
 
 .library-entry--recommended {
-  padding-left: var(--space-sm);
-  border-left: 3px solid var(--colour-evidence);
+  background: var(--colour-evidence-light);
+  border-left-color: var(--colour-evidence);
 }
 
 .library-entry-header {
@@ -330,12 +335,17 @@
 }
 
 .library-badge {
-  font-size: 0.75rem;
+  display: inline-block;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--colour-evidence);
+  color: var(--colour-bg);
+  background: var(--colour-evidence);
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
   margin-right: var(--space-xs);
+  vertical-align: middle;
 }
 
 .library-title {
