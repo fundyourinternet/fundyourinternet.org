@@ -1,119 +1,102 @@
 /* === Fund Your Internet — Component Styles === */
 
-/* --- Homepage body content --- */
+/* --- Homepage domains (card containers) --- */
 
-.hero {
-  padding: var(--space-lg) 0;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: 36rem;
-}
-
-.hero .steps {
-  margin: var(--space-md) 0 var(--space-lg);
-}
-
-.hero .steps li {
-  margin-bottom: var(--space-xs);
-}
-
-.hero .reframe {
-  font-size: 1.05rem;
-  color: var(--colour-muted);
+.domain {
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
   border-left: 3px solid var(--colour-border);
-  padding-left: var(--space-md);
-  margin: var(--space-lg) 0;
-  max-width: 36rem;
+  border-radius: 0 6px 6px 0;
+  background: var(--colour-subtle);
 }
 
-/* --- Woven section: homepage teasers --- */
-
-.woven {
-  padding: var(--space-lg) 0 var(--space-xl);
-}
-
-.woven-heading {
-  font-size: 1.1rem;
+.domain-heading {
+  font-size: 0.85rem;
   font-family: var(--font-body);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--colour-muted);
-  margin-bottom: var(--space-lg);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
 }
 
-.strand {
-  margin-bottom: var(--space-lg);
-  padding: var(--space-md);
-  border-left: 3px solid var(--colour-branch-border);
-  border-radius: 0 6px 6px 0;
-  background: var(--colour-subtle);
+.domain-context {
+  font-size: 1rem;
+  color: var(--colour-muted);
+  max-width: 36rem;
+  margin-bottom: var(--space-sm);
 }
 
-.strand--old-way {
-  border-left-color: var(--colour-feeds);
-  background: var(--colour-feeds-light);
+.domain-context:last-child {
+  margin-bottom: 0;
 }
 
-.strand--new-way {
-  border-left-color: var(--colour-movement);
-  background: var(--colour-movement-light);
+/* --- Domain entries (icon + content rows) --- */
+
+.domain-entry {
+  display: flex;
+  gap: var(--space-sm);
 }
 
-.strand--evidence {
-  border-left-color: var(--colour-evidence);
-  background: var(--colour-evidence-light);
+.domain-entry + .domain-entry {
+  border-top: 1px solid var(--colour-border);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
 }
 
-.strand-label {
+.domain-entry-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--colour-muted);
+  padding-top: 0.15em;
+}
+
+.domain-entry-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.domain-entry-body p {
+  color: var(--colour-muted);
+  margin-bottom: 0.25rem;
+}
+
+.domain-entry-body p:last-child {
+  margin-bottom: 0;
+}
+
+.domain-entry-label {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: var(--space-xs);
-}
-
-.strand--old-way .strand-label {
-  color: var(--colour-feeds);
-}
-
-.strand--new-way .strand-label {
-  color: var(--colour-movement);
-}
-
-.strand--evidence .strand-label {
-  color: var(--colour-evidence);
-}
-
-.strand h2 {
-  font-size: 1.3rem;
-  margin-top: 0;
-  margin-bottom: var(--space-xs);
-}
-
-.strand p {
   color: var(--colour-muted);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.15rem;
 }
 
-.strand .read-more {
+.domain-entry-link {
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.strand--old-way .read-more {
-  color: var(--colour-feeds);
-}
+/* Branch colour accents for Explore entries */
 
-.strand--new-way .read-more {
-  color: var(--colour-movement);
-}
+.domain-entry--old-way .domain-entry-icon { color: var(--colour-feeds); }
+.domain-entry--new-way .domain-entry-icon { color: var(--colour-movement); }
+.domain-entry--evidence .domain-entry-icon { color: var(--colour-evidence); }
 
-.strand--evidence .read-more {
-  color: var(--colour-evidence);
-}
+.domain-entry--old-way .domain-entry-label { color: var(--colour-feeds); }
+.domain-entry--new-way .domain-entry-label { color: var(--colour-movement); }
+.domain-entry--evidence .domain-entry-label { color: var(--colour-evidence); }
+
+.domain-entry--old-way .domain-entry-link { color: var(--colour-feeds); }
+.domain-entry--new-way .domain-entry-link { color: var(--colour-movement); }
+.domain-entry--evidence .domain-entry-link { color: var(--colour-evidence); }
 
 /* --- Page table of contents --- */
 
