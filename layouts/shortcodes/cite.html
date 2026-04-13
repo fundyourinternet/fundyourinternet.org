@@ -1,0 +1,7 @@
+{{- $id := .Get 0 -}}
+{{- $source := index .Site.Data.library $id -}}
+{{- if $source -}}
+<cite class="cite"><a href="/the-evidence/#{{ $id }}" title="{{ $source.title }} ({{ $source.author }}, {{ $source.year }})">{{ $source.author }}, {{ $source.year }}</a></cite>
+{{- else -}}
+<cite class="cite cite--missing">[source not found: {{ $id }}]</cite>
+{{- end -}}

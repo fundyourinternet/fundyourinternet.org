@@ -1,10 +1,17 @@
 {{ define "main" }}
-<article>
+{{ $section_class := "" }}
+{{ $section := .CurrentSection }}
+{{ with $section }}
+  {{ if in .RelPermalink "old-way" }}{{ $section_class = "section-page--old-way" }}
+  {{ else if in .RelPermalink "new-way" }}{{ $section_class = "section-page--new-way" }}
+  {{ else if in .RelPermalink "evidence" }}{{ $section_class = "section-page--evidence" }}{{ end }}
+{{ end }}
+<article class="section-page {{ $section_class }}">
   <div class="container">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
 
-    {{ with .CurrentSection }}
+    {{ with $section }}
     <nav class="back-link">
       <a href="{{ .RelPermalink }}">Back to {{ .Title }}</a>
     </nav>

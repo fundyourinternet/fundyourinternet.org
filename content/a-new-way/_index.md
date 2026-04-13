@@ -1,6 +1,17 @@
 ---
-title: "The movement"
+title: "A New Way"
 summary: "The people and communities already building a different kind of internet, and how to find them."
+strand_title: "It is already happening"
+strand_teaser: "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern."
+bridges:
+  - branch: old-way
+    section: The Old Way
+    url: /the-old-way/
+    prompt: "Understand the mechanics these communities are responding to."
+  - branch: evidence
+    section: The Evidence
+    url: /the-evidence/
+    prompt: "See the research on which funding models are actually working."
 ---
 
 The response to the ad-driven web is already happening. It is not fringe, not crypto-utopian, not dependent on any single technology. In lots of different places, people are building the same kind of thing: direct relationships between people who make things and people who value them.

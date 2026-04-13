@@ -1,0 +1,15 @@
+id: "tidelift-maintainer-survey-2024"
+title: "2024 Open Source Maintainer Survey"
+author: "Tidelift"
+year: 2024
+url: "https://tidelift.com/open-source-maintainer-survey-2024"
+type: report
+topics:
+  - open-source-funding
+annotation: >
+  Annual survey of open source maintainers covering compensation, burnout,
+  and sustainability. The data on how many maintainers are unpaid — and how
+  that affects the software infrastructure everyone depends on — is sobering
+  and concrete.
+recommended: false
+access: open
