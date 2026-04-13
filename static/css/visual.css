@@ -219,7 +219,7 @@ h1 .section-icon {
 /* --- Section hero (photo + desaturated gradient fade) --- */
 
 .section-hero {
-  padding: calc(var(--space-2xl) + 3rem) var(--space-md) var(--space-xl);
+  padding: calc(var(--space-2xl) + 1.5rem) var(--space-md) var(--space-xl);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -244,7 +244,7 @@ h1 .section-icon {
 /* --- Homepage hero backdrop --- */
 
 .homepage-hero {
-  padding: calc(var(--space-lg) + 3rem) 0 0;
+  padding: calc(var(--space-lg) + 1.5rem) 0 0;
   position: relative;
   overflow: hidden;
 }

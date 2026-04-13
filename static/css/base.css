@@ -229,7 +229,11 @@ main {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: var(--space-sm) 0;
+  padding: var(--space-xs) 0;
+  background: color-mix(in srgb, var(--colour-bg) 85%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--colour-border) 40%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .site-header .container {
@@ -260,12 +264,6 @@ main {
   padding: 0.15em 0.35em;
   border-radius: 3px;
   line-height: 1;
-}
-
-.site-name {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: normal;
 }
 
 /* --- Navigation (checkbox-hack responsive burger) --- */
