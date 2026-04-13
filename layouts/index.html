@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="homepage">
+  <div class="container">
+    <div class="hero">
+      {{ .Content }}
+    </div>
+
+    <nav class="branches" aria-label="Explore further">
+      {{ range .Site.Menus.main }}
+        {{ $page := site.GetPage .URL }}
+        <a href="{{ .URL }}" class="branch-card">
+          <h2>{{ .Name }}</h2>
+          {{ with $page }}
+            <p>{{ .Params.summary }}</p>
+          {{ end }}
+        </a>
+      {{ end }}
+    </nav>
+  </div>
+</article>
+{{ end }}

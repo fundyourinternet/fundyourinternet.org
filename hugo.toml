@@ -1,0 +1,27 @@
+baseURL = "https://fundyourinternet.org/"
+languageCode = "en-GB"
+title = "Fund Your Internet"
+disableKinds = ["taxonomy"]
+
+[params]
+  description = "A practical guide to sustaining the things you rely on online."
+  repository = "https://github.com/fundyourinternet/fundyourinternet.org"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[menus]
+  [[menus.main]]
+    name = "How feeds work"
+    url = "/how-feeds-work/"
+    weight = 1
+  [[menus.main]]
+    name = "The movement"
+    url = "/the-movement/"
+    weight = 2
+  [[menus.main]]
+    name = "The evidence base"
+    url = "/the-evidence-base/"
+    weight = 3
