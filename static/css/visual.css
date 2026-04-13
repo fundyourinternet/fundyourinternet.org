@@ -149,10 +149,6 @@ h1 .section-icon {
 .section-hero h1 {
   font-size: 2.5rem;
   margin-bottom: var(--space-xs);
-  display: inline-block;
-  background: color-mix(in srgb, var(--colour-bg) 65%, transparent);
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
 }
 
 .section-hero .section-hero-subtitle {
@@ -160,10 +156,6 @@ h1 .section-icon {
   color: var(--colour-muted);
   max-width: 36rem;
   margin: 0 auto;
-  display: inline-block;
-  background: color-mix(in srgb, var(--colour-bg) 65%, transparent);
-  padding: 0.15em 0.4em;
-  border-radius: 3px;
 }
 
 .section-hero--old-way h1 { color: var(--colour-feeds); }
@@ -176,12 +168,6 @@ h1 .section-icon {
   padding: calc(var(--space-lg) + 3rem) 0 0;
   position: relative;
   overflow: hidden;
-}
-
-.homepage-hero .hero {
-  background: color-mix(in srgb, var(--colour-bg) 65%, transparent);
-  padding: var(--space-md);
-  border-radius: 6px;
 }
 
 .homepage-hero .container {
