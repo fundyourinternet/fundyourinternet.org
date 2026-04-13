@@ -1,16 +1,16 @@
 ---
-title: "The movement"
+title: "The New Ways"
 summary: "The people and communities already building a different kind of internet, and how to find them."
 strand_title: "It is already happening"
 strand_teaser: "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern."
 bridges:
-  - branch: feeds
-    section: How feeds work
-    url: /how-feeds-work/
+  - branch: old-way
+    section: The Old Way
+    url: /the-old-way/
     prompt: "Understand the mechanics these communities are responding to."
   - branch: evidence
-    section: The evidence base
-    url: /the-evidence-base/
+    section: The Evidence
+    url: /the-evidence/
     prompt: "See the research on which funding models are actually working."
 ---
 

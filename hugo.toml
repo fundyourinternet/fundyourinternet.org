@@ -14,14 +14,14 @@ disableKinds = ["taxonomy"]
 
 [menus]
   [[menus.main]]
-    name = "How feeds work"
-    pageRef = "/how-feeds-work"
+    name = "The Old Way"
+    pageRef = "/the-old-way"
     weight = 1
   [[menus.main]]
-    name = "The movement"
-    pageRef = "/the-movement"
+    name = "The New Ways"
+    pageRef = "/the-new-ways"
     weight = 2
   [[menus.main]]
-    name = "The evidence base"
-    pageRef = "/the-evidence-base"
+    name = "The Evidence"
+    pageRef = "/the-evidence"
     weight = 3

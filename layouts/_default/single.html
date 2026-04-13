@@ -2,8 +2,8 @@
 {{ $section_class := "" }}
 {{ $section := .CurrentSection }}
 {{ with $section }}
-  {{ if in .RelPermalink "feeds" }}{{ $section_class = "section-page--feeds" }}
-  {{ else if in .RelPermalink "movement" }}{{ $section_class = "section-page--movement" }}
+  {{ if in .RelPermalink "old-way" }}{{ $section_class = "section-page--old-way" }}
+  {{ else if in .RelPermalink "new-ways" }}{{ $section_class = "section-page--new-ways" }}
   {{ else if in .RelPermalink "evidence" }}{{ $section_class = "section-page--evidence" }}{{ end }}
 {{ end }}
 <article class="section-page {{ $section_class }}">

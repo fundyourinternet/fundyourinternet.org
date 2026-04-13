@@ -1,16 +1,16 @@
 ---
-title: "How feeds work"
+title: "The Old Way"
 summary: "What happens when algorithms decide what you see, and what it means for the things you rely on."
 strand_title: "The system is working as designed"
 strand_teaser: "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written — not because of bad intentions, but because of basic arithmetic."
 bridges:
-  - branch: movement
-    section: The movement
-    url: /the-movement/
+  - branch: new-ways
+    section: The New Ways
+    url: /the-new-ways/
     prompt: "See who is already building alternatives to the ad-driven model."
   - branch: evidence
-    section: The evidence base
-    url: /the-evidence-base/
+    section: The Evidence
+    url: /the-evidence/
     prompt: "Read the research behind these claims."
 ---
 
@@ -26,4 +26,4 @@ The sections below are being written. When complete, they will cover:
 - Who benefits from you not thinking about this
 - The alternative you already have access to
 
-Each section is short, jargon-free, and grounded in concrete examples rather than abstract arguments. The evidence behind these claims is collected in [the evidence base](/the-evidence-base/).
+Each section is short, jargon-free, and grounded in concrete examples rather than abstract arguments. The evidence behind these claims is collected in [the evidence](/the-evidence/).

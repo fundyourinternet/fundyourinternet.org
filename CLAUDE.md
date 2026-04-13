@@ -11,7 +11,7 @@ The relationship to at.fund: "built by the at.fund team" in the footer. at.fund 
 - **Warm. Direct. Confident without being preachy.** The voice of someone who has figured something out and is sharing it because it is useful, not because they are recruiting.
 - **British English.** Colour, not color. Organised, not organized.
 - **No emojis, no exclamation marks** in body copy.
-- **No jargon** in user-facing content. "Algorithm" is fine. "Enshittification" is Branch 3 only.
+- **No jargon** in user-facing content. "Algorithm" is fine. "Enshittification" is The Evidence only.
 - **Not a guilt trip.** Every piece of content should leave the reader feeling more capable, not more complicit.
 - **Closer to a well-designed zine than a manifesto.** Closer to a helpful friend than a brand.
 - **Informational without being didactic.** Use concrete examples, not abstractions. Show the mechanics, do not tell the reader how to feel.
@@ -24,14 +24,15 @@ The relationship to at.fund: "built by the at.fund team" in the footer. at.fund 
 - **System fonts** — no external font requests. `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` for body. `Georgia, "Times New Roman", serif` for headings.
 - **No cookies, no tracking** — no analytics beyond what may be added later (Plausible or Fathom, privacy-respecting only).
 - **GitHub Pages** deployment via GitHub Actions. Push to `main` triggers build.
+- **Icons** — to be sourced from an icon library (not custom SVGs). Not yet implemented.
 
 ## Content architecture
 
-The site has a **front door** (homepage) and **three branches**:
+The site has a **front door** (homepage) and **three sections**:
 
-1. **How feeds work** (`/how-feeds-work/`, colour: teal `--colour-feeds`) — Explanatory. How algorithmic feeds shape what gets made. Professional and clear, not zealous.
-2. **The movement** (`/the-movement/`, colour: amber `--colour-movement`) — Social and empowering. Communities building direct funding relationships. The most emotionally important branch.
-3. **The evidence base** (`/the-evidence-base/`, colour: slate blue `--colour-evidence`) — Research and data. A curated, annotated library organised by question.
+1. **The Old Way** (`/the-old-way/`, colour: teal `--colour-feeds`) — How the ad-driven internet works and what it costs. Professional and clear, not zealous.
+2. **The New Ways** (`/the-new-ways/`, colour: amber `--colour-movement`) — Communities building direct funding relationships. The most emotionally important section.
+3. **The Evidence** (`/the-evidence/`, colour: slate blue `--colour-evidence`) — A curated, annotated library organised by question.
 
 ### Interweaving pattern
 
@@ -39,23 +40,19 @@ The sections are not silos. They connect through:
 - **Contextual bridges** — tailored prompts at the bottom of each section page linking to the other two. Written per-section, not auto-generated.
 - **Sidenotes** — Tufte-style margin notes for cross-section references. Use `{{</* sidenote */>}}...{{</* /sidenote */>}}` shortcode.
 - **Inline citations** — Use `{{</* cite "source-id" */>}}` to reference library sources from any page.
-- **Woven homepage** — the front door intermixes teasers from all three branches.
+- **Woven homepage** — the front door intermixes teasers from all three sections.
 
 ## Library reference system
 
-Sources are defined as YAML files in `data/library/`. Each file follows a consistent schema (see `docs/library-schema.md`). Use the `cite` shortcode to reference them inline. The evidence base page auto-generates from these data files.
+Sources are defined as YAML files in `data/library/`. Each file follows a consistent schema (see `docs/library-schema.md`). Use the `cite` shortcode to reference them inline. The evidence page auto-generates from these data files.
 
 ## CSS conventions
 
 - All custom properties use `--colour-` prefix (British spelling)
-- Branch colours: `--colour-feeds`, `--colour-movement`, `--colour-evidence` with `-light` and `-border` variants
+- Branch colour tokens: `--colour-feeds` (teal), `--colour-movement` (amber), `--colour-evidence` (slate) with `-light` and `-border` variants
+- Section CSS classes use URL slugs: `.section-page--old-way`, `.section-page--new-ways`, `.section-page--evidence`
 - Spacing scale: `--space-xs` (0.5rem) through `--space-xl` (5rem)
 - Max content width: `--max-width` (42rem)
-- Section pages get a branch class: `.section-page--feeds`, `.section-page--movement`, `.section-page--evidence`
-
-## Icons
-
-Branch and concept icons are inline SVGs defined as Hugo partials in `layouts/partials/icons/`. They use `currentColor` to inherit the branch colour. Call via `{{ partial "icons/feeds.html" }}`.
 
 ## What this site is NOT
 
@@ -86,3 +83,7 @@ static/          Static assets (favicon, robots.txt)
 - Keep the CSS under 400 lines. If it grows beyond that, the design is too complex.
 - When adding a library source, follow the schema in `docs/library-schema.md`.
 - Test with `hugo server` before committing.
+
+## End of session
+
+Before finishing a session, review whether anything learned or decided during the session should be captured in this file. If project conventions, technical decisions, or content guidelines have changed, update CLAUDE.md so future sessions start with accurate context.

@@ -1,12 +1,11 @@
 {{ define "main" }}
 {{ $section_class := "" }}
-{{ $icon := "" }}
-{{ if in .RelPermalink "feeds" }}{{ $section_class = "section-page--feeds" }}{{ $icon = "feeds" }}
-{{ else if in .RelPermalink "movement" }}{{ $section_class = "section-page--movement" }}{{ $icon = "movement" }}
-{{ else if in .RelPermalink "evidence" }}{{ $section_class = "section-page--evidence" }}{{ $icon = "evidence" }}{{ end }}
+{{ if in .RelPermalink "old-way" }}{{ $section_class = "section-page--old-way" }}
+{{ else if in .RelPermalink "new-ways" }}{{ $section_class = "section-page--new-ways" }}
+{{ else if in .RelPermalink "evidence" }}{{ $section_class = "section-page--evidence" }}{{ end }}
 <article class="section-page {{ $section_class }}">
   <div class="container">
-    <h1>{{ if $icon }}{{ partial (printf "icons/%s.html" $icon) }}{{ end }} {{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
     {{ .Content }}
 
     {{ $pages := .Pages }}

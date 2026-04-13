@@ -39,13 +39,13 @@ This file defines specialised contributor roles for AI-assisted work on fundyour
 
 ## Design Contributor
 
-**Scope:** Templates in `layouts/`, styles in `static/css/style.css`, and icons in `layouts/partials/icons/`.
+**Scope:** Templates in `layouts/`, styles in `static/css/style.css`.
 
 **Guidelines:**
 - Read `CLAUDE.md` for CSS conventions and the design system.
 - No JavaScript. If it seems like you need JS, find a CSS-only solution or reconsider the feature.
-- No external dependencies — no icon fonts, no CDN-hosted libraries, no Google Fonts.
-- Icons are inline SVGs using `currentColor`. Keep them simple enough to be legible at 16px.
+- No external dependencies — no CDN-hosted libraries, no Google Fonts.
+- Icons should come from a chosen icon library (TBD), not custom SVGs.
 - Keep the total CSS under 400 lines. Every addition should justify its existence.
 - Test in both light and dark mode (`prefers-color-scheme`).
 - Verify WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text) for any new colours.

@@ -198,22 +198,9 @@ a:focus-visible {
   gap: var(--space-xs);
 }
 
-/* --- Icons --- */
-
-.icon {
-  display: inline-block;
-  vertical-align: -0.15em;
-  flex-shrink: 0;
-}
-
-.icon-fyi-mark {
-  display: block;
-  flex-shrink: 0;
-}
-
 .site-title {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.5rem;
   text-decoration: none;
   color: var(--colour-text);
@@ -221,6 +208,18 @@ a:focus-visible {
 
 .site-title:visited {
   color: var(--colour-text);
+}
+
+.site-mark {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  background: var(--colour-text);
+  color: var(--colour-bg);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  line-height: 1;
 }
 
 .site-name {
@@ -239,9 +238,6 @@ a:focus-visible {
 }
 
 .site-header nav a {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
   font-size: 0.9rem;
   color: var(--colour-muted);
   text-decoration: none;
@@ -256,11 +252,6 @@ a:focus-visible {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.2em;
-}
-
-.site-header nav .icon {
-  width: 16px;
-  height: 16px;
 }
 
 /* --- Homepage --- */
@@ -318,11 +309,11 @@ a:focus-visible {
   border-left: 3px solid var(--colour-branch-border);
 }
 
-.strand--feeds {
+.strand--old-way {
   border-left-color: var(--colour-feeds);
 }
 
-.strand--movement {
+.strand--new-ways {
   border-left-color: var(--colour-movement);
 }
 
@@ -338,11 +329,11 @@ a:focus-visible {
   margin-bottom: var(--space-xs);
 }
 
-.strand--feeds .strand-label {
+.strand--old-way .strand-label {
   color: var(--colour-feeds);
 }
 
-.strand--movement .strand-label {
+.strand--new-ways .strand-label {
   color: var(--colour-movement);
 }
 
@@ -366,11 +357,11 @@ a:focus-visible {
   font-weight: 500;
 }
 
-.strand--feeds .read-more {
+.strand--old-way .read-more {
   color: var(--colour-feeds);
 }
 
-.strand--movement .read-more {
+.strand--new-ways .read-more {
   color: var(--colour-movement);
 }
 
@@ -404,11 +395,11 @@ a:focus-visible {
   background-color: var(--colour-subtle);
 }
 
-.branch-card--feeds {
+.branch-card--old-way {
   border-left-color: var(--colour-feeds);
 }
 
-.branch-card--movement {
+.branch-card--new-ways {
   border-left-color: var(--colour-movement);
 }
 
@@ -421,8 +412,8 @@ a:focus-visible {
   margin: 0 0 var(--space-xs);
 }
 
-.branch-card--feeds h2 { color: var(--colour-feeds); }
-.branch-card--movement h2 { color: var(--colour-movement); }
+.branch-card--old-way h2 { color: var(--colour-feeds); }
+.branch-card--new-ways h2 { color: var(--colour-movement); }
 .branch-card--evidence h2 { color: var(--colour-evidence); }
 
 .branch-card p {
@@ -442,8 +433,8 @@ a:focus-visible {
   color: var(--colour-branch);
 }
 
-.section-page--feeds { --colour-branch: var(--colour-feeds); --colour-branch-light: var(--colour-feeds-light); --colour-branch-border: var(--colour-feeds-border); }
-.section-page--movement { --colour-branch: var(--colour-movement); --colour-branch-light: var(--colour-movement-light); --colour-branch-border: var(--colour-movement-border); }
+.section-page--old-way { --colour-branch: var(--colour-feeds); --colour-branch-light: var(--colour-feeds-light); --colour-branch-border: var(--colour-feeds-border); }
+.section-page--new-ways { --colour-branch: var(--colour-movement); --colour-branch-light: var(--colour-movement-light); --colour-branch-border: var(--colour-movement-border); }
 .section-page--evidence { --colour-branch: var(--colour-evidence); --colour-branch-light: var(--colour-evidence-light); --colour-branch-border: var(--colour-evidence-border); }
 
 .section-nav {
@@ -509,8 +500,8 @@ a:focus-visible {
   background-color: var(--colour-subtle);
 }
 
-.bridge--feeds { border-left-color: var(--colour-feeds); }
-.bridge--movement { border-left-color: var(--colour-movement); }
+.bridge--old-way { border-left-color: var(--colour-feeds); }
+.bridge--new-ways { border-left-color: var(--colour-movement); }
 .bridge--evidence { border-left-color: var(--colour-evidence); }
 
 .bridge-section {
@@ -522,8 +513,8 @@ a:focus-visible {
   margin-bottom: 0.25rem;
 }
 
-.bridge--feeds .bridge-section { color: var(--colour-feeds); }
-.bridge--movement .bridge-section { color: var(--colour-movement); }
+.bridge--old-way .bridge-section { color: var(--colour-feeds); }
+.bridge--new-ways .bridge-section { color: var(--colour-movement); }
 .bridge--evidence .bridge-section { color: var(--colour-evidence); }
 
 .bridge-prompt {
