@@ -19,8 +19,8 @@ The relationship to at.fund: "built by the at.fund team" in the footer. at.fund 
 ## Technical decisions
 
 - **Hugo** — static site generator. Zero Node.js dependency. Contributors edit markdown and push. Go templating is only touched by maintainers, never by content contributors.
-- **Plain CSS** — no preprocessor, no framework. CSS custom properties for the design system. Three stylesheets (`base.css`, `components.css`, `visual.css`), each under 400 lines.
-- **Progressive enhancement** — the site must work without JS entirely. Minimal JS (`static/js/theme.js`, ~30 lines) powers the dark/light mode toggle; without it, OS-level colour scheme detection still works and the toggle button stays hidden.
+- **Plain CSS** — no preprocessor, no framework. CSS custom properties for the design system. Three stylesheets (`base.css`, `components.css`, `visual.css`). Keep CSS lean by pruning unused or redundant rules rather than letting files accumulate dead styles.
+- **Progressive enhancement** — the site must work without JS entirely. Minimal JS (`static/js/theme.js`, ~45 lines) powers the dark/light mode toggle and closes the mobile nav on link click; without it, OS-level colour scheme detection still works, the toggle button stays hidden, and the nav menu works natively via `<details>`/`<summary>`.
 - **System fonts** — no external font requests. `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` for body. `Georgia, "Times New Roman", serif` for headings.
 - **No cookies, no tracking** — no analytics beyond what may be added later (Plausible or Fathom, privacy-respecting only).
 - **GitHub Pages** deployment via GitHub Actions. Push to `main` triggers build.
@@ -39,7 +39,7 @@ The site has a **front door** (homepage) and **three sections**:
 The sections are not silos. They connect through:
 - **Contextual bridges** — tailored prompts at the bottom of each section page linking to the other two. Written per-section, not auto-generated.
 - **Sidenotes** — Tufte-style margin notes for cross-section references. Use `{{</* sidenote */>}}...{{</* /sidenote */>}}` shortcode.
-- **Inline citations** — Use `{{</* cite "source-id" */>}}` to reference library sources from any page.
+- **Inline citations** — Use `{{</* cite "source-id" */>}}` to reference library sources from any page. Renders as a superscript numbered indicator with a hover tooltip; clicking navigates to the evidence page entry.
 - **Woven homepage** — the front door intermixes teasers from all three sections.
 
 ## Library reference system
@@ -83,7 +83,7 @@ static/          Static assets (favicon, robots.txt)
 - Do not add JavaScript unless there is no CSS-only alternative. Any JS must be progressive enhancement (site works fully without it).
 - Do not add external dependencies (fonts, libraries, frameworks).
 - Do not add emojis to content or commit messages.
-- Keep each CSS file under 400 lines. If any file grows beyond that, the design is too complex.
+- Keep CSS lean. When modifying styles, prune any rules that become unused or redundant rather than leaving dead code in place.
 - When adding a library source, follow the schema in `docs/library-schema.md`.
 - Test with `hugo server` before committing.
 

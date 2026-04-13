@@ -3,8 +3,6 @@ title: "Fund Your Internet"
 summary: "A practical guide to sustaining the things you rely on online."
 ---
 
-# Fund your internet
-
 You rely on things online that were made by people. Journalists, developers, podcasters, writers, moderators, tool-builders. Most of them you have never paid, and many of them are struggling to keep going.
 
 This is not a guilt trip. It is more like noticing something obvious for the first time.

@@ -1,16 +1,14 @@
 {{ define "main" }}
 <article class="homepage">
   <div class="homepage-hero">
-    <div class="container">
-      <div class="hero">
-        {{ .Content }}
-      </div>
-    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="section-hero-subtitle">{{ . }}</p>{{ end }}
   </div>
 
-  {{ partial "section-nav.html" . }}
-
   <div class="container">
+    <div class="hero">
+      {{ .Content }}
+    </div>
     <p class="woven-heading">Three threads, one conversation</p>
 
     {{ $oldway := site.GetPage "/the-old-way" }}

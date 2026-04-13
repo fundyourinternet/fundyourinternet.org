@@ -1,14 +1,9 @@
 /* === Fund Your Internet — Component Styles === */
 
-/* --- Homepage hero --- */
+/* --- Homepage body content --- */
 
 .hero {
-  padding: var(--space-xl) 0 var(--space-lg);
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-md);
+  padding: var(--space-lg) 0;
 }
 
 .hero p {
@@ -171,14 +166,6 @@
   color: var(--colour-muted);
 }
 
-/* --- Section content headings with icons --- */
-
-.section-page h2 .section-icon {
-  color: var(--colour-branch, var(--colour-muted));
-  vertical-align: -0.1em;
-  margin-right: 0.2em;
-}
-
 /* --- Section pages --- */
 
 .section-page {
@@ -285,28 +272,6 @@
   display: block;
 }
 
-/* --- Inline citations --- */
-
-.cite {
-  font-style: normal;
-  font-size: 0.85em;
-  white-space: nowrap;
-}
-
-.cite a {
-  color: var(--colour-evidence);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--colour-evidence-border);
-}
-
-.cite a:hover {
-  border-bottom-style: solid;
-}
-
-.cite--missing {
-  color: var(--colour-error, #c0392b);
-}
-
 /* --- Library (evidence base) --- */
 
 .library-topic {
@@ -380,10 +345,6 @@
 /* --- Responsive components --- */
 
 @media (min-width: 48em) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
   .page-toc {
     grid-template-columns: 1fr 1fr;
   }

@@ -4,7 +4,6 @@
     <h1>{{ partial "section-icon.html" "evidence" }} {{ .Title }}</h1>
     {{ with .Params.summary }}<p class="section-hero-subtitle">{{ . }}</p>{{ end }}
   </div>
-  {{ partial "section-nav.html" . }}
   <div class="container">
     {{ .Content }}
 
