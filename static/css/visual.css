@@ -59,18 +59,18 @@ h1 .section-icon {
 
 /* --- Header navigation (visual) --- */
 
-.nav-toggle {
+.nav-toggle-label {
   color: var(--colour-muted);
   border: 1px solid var(--colour-border);
   border-radius: 4px;
 }
 
-.nav-toggle:hover {
+.nav-toggle-label:hover {
   color: var(--colour-text);
   border-color: var(--colour-text);
 }
 
-.nav-toggle:focus-visible {
+.nav-toggle:focus-visible ~ .nav-toggle-label {
   outline: 2px solid var(--colour-link);
   outline-offset: 2px;
 }
@@ -81,11 +81,7 @@ h1 .section-icon {
 
 /* Dropdown panel (mobile) */
 
-.nav-menu[open] .nav-links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+.nav-toggle:checked ~ .nav-links {
   background: var(--colour-bg);
   border-bottom: 1px solid var(--colour-border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -93,7 +89,7 @@ h1 .section-icon {
   z-index: 10;
 }
 
-.nav-menu[open] .nav-links ul {
+.nav-toggle:checked ~ .nav-links ul {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -162,15 +158,6 @@ h1 .section-icon {
 @media (min-width: 48em) {
   .nav-link {
     padding: 0.6rem var(--space-sm);
-  }
-
-  .nav-menu > .nav-links,
-  .nav-menu[open] .nav-links {
-    position: static;
-    background: none;
-    border-bottom: none;
-    box-shadow: none;
-    padding: 0;
   }
 }
 

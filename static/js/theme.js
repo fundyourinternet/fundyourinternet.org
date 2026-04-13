@@ -36,12 +36,12 @@
 
 // Nav menu — close on link click (mobile)
 (function () {
-  var menu = document.getElementById('nav-menu');
-  if (!menu) return;
-  var links = menu.querySelectorAll('.nav-link');
+  var toggle = document.getElementById('nav-toggle');
+  if (!toggle) return;
+  var links = document.querySelectorAll('.nav-link');
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function () {
-      menu.removeAttribute('open');
+      toggle.checked = false;
     });
   }
 })();
