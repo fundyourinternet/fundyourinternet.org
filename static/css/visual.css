@@ -1,0 +1,185 @@
+/* === Fund Your Internet — Visual Enhancements === */
+/* Theme toggle, icons, hero treatments, figure shortcode */
+
+/* --- Theme toggle --- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 1px solid var(--colour-border);
+  border-radius: 4px;
+  padding: 0.3em 0.6em;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--colour-muted);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  color: var(--colour-text);
+  border-color: var(--colour-text);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
+.theme-toggle-icon {
+  width: 0.9em;
+  height: 0.9em;
+  flex-shrink: 0;
+}
+
+/* --- Section icons --- */
+
+.section-icon {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.15em;
+  display: inline-block;
+}
+
+.strand-label .section-icon,
+.bridge-section .section-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+}
+
+h1 .section-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+}
+
+.site-header nav .section-icon {
+  width: 0.95em;
+  height: 0.95em;
+  vertical-align: -0.1em;
+  opacity: 0.7;
+}
+
+/* --- Section hero (gradient placeholders) --- */
+
+.section-hero {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.section-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+.section-hero .section-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--colour-muted);
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.section-hero--old-way {
+  background: linear-gradient(135deg, var(--colour-feeds-light) 0%, var(--colour-bg) 50%, var(--colour-feeds-light) 100%);
+  border-bottom: 2px solid var(--colour-feeds-border);
+}
+
+.section-hero--old-way h1 {
+  color: var(--colour-feeds);
+}
+
+.section-hero--new-way {
+  background: linear-gradient(135deg, var(--colour-movement-light) 0%, var(--colour-bg) 50%, var(--colour-movement-light) 100%);
+  border-bottom: 2px solid var(--colour-movement-border);
+}
+
+.section-hero--new-way h1 {
+  color: var(--colour-movement);
+}
+
+.section-hero--evidence {
+  background: linear-gradient(135deg, var(--colour-evidence-light) 0%, var(--colour-bg) 50%, var(--colour-evidence-light) 100%);
+  border-bottom: 2px solid var(--colour-evidence-border);
+}
+
+.section-hero--evidence h1 {
+  color: var(--colour-evidence);
+}
+
+/* --- Homepage hero backdrop --- */
+
+.homepage-hero {
+  background: linear-gradient(
+    160deg,
+    var(--colour-feeds-light) 0%,
+    var(--colour-bg) 30%,
+    var(--colour-movement-light) 60%,
+    var(--colour-bg) 80%,
+    var(--colour-evidence-light) 100%
+  );
+  padding: var(--space-lg) 0 0;
+  border-bottom: 1px solid var(--colour-border);
+}
+
+.homepage-hero .container {
+  padding-bottom: var(--space-lg);
+}
+
+/* --- Figure shortcode --- */
+
+.content-figure {
+  margin: var(--space-lg) 0;
+  position: relative;
+}
+
+.content-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.content-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--colour-muted);
+  margin-top: var(--space-xs);
+}
+
+.content-figure-icon {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-sm);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colour-bg);
+  border-radius: 50%;
+  opacity: 0.9;
+  color: var(--colour-branch);
+}
+
+.content-figure-icon .section-icon {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+/* --- Responsive hero --- */
+
+@media (min-width: 48em) {
+  .section-hero h1 {
+    font-size: 3rem;
+  }
+
+  .section-hero {
+    padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  }
+}

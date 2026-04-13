@@ -1,0 +1,13 @@
+{{/* Figure shortcode with optional section icon overlay. */}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $icon := .Get "icon" }}
+<figure class="content-figure{{ if $icon }} content-figure--has-icon{{ end }}">
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+  {{ if $icon }}
+  <span class="content-figure-icon">{{ partial "section-icon.html" $icon }}</span>
+  {{ end }}
+  {{ with .Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{ end }}
+</figure>

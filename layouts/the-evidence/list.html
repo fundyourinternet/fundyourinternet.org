@@ -1,7 +1,10 @@
 {{ define "main" }}
 <article class="section-page section-page--evidence">
+  <div class="section-hero section-hero--evidence">
+    <h1>{{ partial "section-icon.html" "evidence" }} {{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="section-hero-subtitle">{{ . }}</p>{{ end }}
+  </div>
   <div class="container">
-    <h1>{{ .Title }}</h1>
     {{ .Content }}
 
     {{/* Collect all library sources and group by topic */}}
@@ -58,7 +61,7 @@
       <p class="bridges-heading">Continue the conversation</p>
       {{ range .Params.bridges }}
       <a href="{{ .url }}" class="bridge bridge--{{ .branch }}">
-        <span class="bridge-section">{{ .section }}</span>
+        <span class="bridge-section">{{ partial "section-icon.html" .branch }} {{ .section }}</span>
         <span class="bridge-prompt">{{ .prompt }}</span>
       </a>
       {{ end }}

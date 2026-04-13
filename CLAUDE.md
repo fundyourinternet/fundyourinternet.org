@@ -19,12 +19,12 @@ The relationship to at.fund: "built by the at.fund team" in the footer. at.fund 
 ## Technical decisions
 
 - **Hugo** — static site generator. Zero Node.js dependency. Contributors edit markdown and push. Go templating is only touched by maintainers, never by content contributors.
-- **Plain CSS** — no preprocessor, no framework. CSS custom properties for the design system. Single stylesheet under 400 lines.
-- **No JavaScript** — progressive enhancement only. The site must work without JS entirely.
+- **Plain CSS** — no preprocessor, no framework. CSS custom properties for the design system. Three stylesheets (`base.css`, `components.css`, `visual.css`), each under 400 lines.
+- **Progressive enhancement** — the site must work without JS entirely. Minimal JS (`static/js/theme.js`, ~30 lines) powers the dark/light mode toggle; without it, OS-level colour scheme detection still works and the toggle button stays hidden.
 - **System fonts** — no external font requests. `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` for body. `Georgia, "Times New Roman", serif` for headings.
 - **No cookies, no tracking** — no analytics beyond what may be added later (Plausible or Fathom, privacy-respecting only).
 - **GitHub Pages** deployment via GitHub Actions. Push to `main` triggers build.
-- **Icons** — to be sourced from an icon library (not custom SVGs). Not yet implemented.
+- **Icons** — sourced from [Lucide](https://lucide.dev) (MIT-licensed). Three icons stored as inline SVG partials in `layouts/partials/icons/`: `radio` (Old Way), `hand-heart` (New Way), `book-open` (Evidence). They use `stroke="currentColor"` to inherit section colours.
 
 ## Content architecture
 
@@ -51,8 +51,8 @@ Sources are defined as YAML files in `data/library/`. Each file follows a consis
 - All custom properties use `--colour-` prefix (British spelling)
 - Branch colour tokens: `--colour-feeds` (teal), `--colour-movement` (amber), `--colour-evidence` (slate) with `-light` and `-border` variants
 - Section CSS classes use URL slugs: `.section-page--old-way`, `.section-page--new-way`, `.section-page--evidence`
-- Spacing scale: `--space-xs` (0.5rem) through `--space-xl` (5rem)
-- Max content width: `--max-width` (42rem)
+- Spacing scale: `--space-xs` (0.5rem) through `--space-2xl` (8rem)
+- Max content width: `--max-width` (42rem), `--max-width-wide` (58rem) for hero areas and card grids
 
 ## What this site is NOT
 
@@ -70,17 +70,20 @@ content/         Markdown content (what contributors edit)
 data/library/    Source references (YAML, one per source)
 docs/            Planning documents (not published to site)
 layouts/         Hugo templates (maintainers only)
-static/css/      Stylesheet
+  partials/icons/  Section icon SVGs (from Lucide)
+static/css/      Stylesheets (base.css, components.css, visual.css)
+static/js/       Progressive enhancement scripts (theme.js)
+static/images/   Images (hero/, sections/ — added as needed)
 static/          Static assets (favicon, robots.txt)
 ```
 
 ## Before making changes
 
 - Read the content you are modifying. Understand existing voice before writing new content.
-- Do not add JavaScript unless there is no CSS-only alternative.
+- Do not add JavaScript unless there is no CSS-only alternative. Any JS must be progressive enhancement (site works fully without it).
 - Do not add external dependencies (fonts, libraries, frameworks).
 - Do not add emojis to content or commit messages.
-- Keep the CSS under 400 lines. If it grows beyond that, the design is too complex.
+- Keep each CSS file under 400 lines. If any file grows beyond that, the design is too complex.
 - When adding a library source, follow the schema in `docs/library-schema.md`.
 - Test with `hugo server` before committing.
 

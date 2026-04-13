@@ -1,8 +1,10 @@
 {{ define "main" }}
 <article class="homepage">
-  <div class="container">
-    <div class="hero">
-      {{ .Content }}
+  <div class="homepage-hero">
+    <div class="container">
+      <div class="hero">
+        {{ .Content }}
+      </div>
     </div>
   </div>
 
@@ -14,37 +16,38 @@
     {{ $evidence := site.GetPage "/the-evidence" }}
 
     <div class="strand strand--old-way">
-      <p class="strand-label">The Old Way</p>
+      <p class="strand-label">{{ partial "section-icon.html" "old-way" }} The Old Way</p>
       <h2>{{ with $oldway }}{{ .Params.strand_title | default "The system is working as designed" }}{{ end }}</h2>
       <p>{{ with $oldway }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
       <a href="/the-old-way/" class="read-more">Understand the mechanics</a>
     </div>
 
     <div class="strand strand--new-way">
-      <p class="strand-label">A New Way</p>
+      <p class="strand-label">{{ partial "section-icon.html" "new-way" }} A New Way</p>
       <h2>{{ with $newways }}{{ .Params.strand_title | default "It is already happening" }}{{ end }}</h2>
       <p>{{ with $newways }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
       <a href="/the-new-way/" class="read-more">See who is building</a>
     </div>
 
     <div class="strand strand--evidence">
-      <p class="strand-label">The Evidence</p>
+      <p class="strand-label">{{ partial "section-icon.html" "evidence" }} The Evidence</p>
       <h2>{{ with $evidence }}{{ .Params.strand_title | default "The research is clear" }}{{ end }}</h2>
       <p>{{ with $evidence }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
       <a href="/the-evidence/" class="read-more">Read the sources</a>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container container--wide">
     <nav class="branches" aria-label="Explore all sections">
       {{ range .Site.Menus.main }}
         {{ $page := site.GetPage .URL }}
         {{ $branch_class := "" }}
-        {{ if in .URL "old-way" }}{{ $branch_class = "branch-card--old-way" }}
-        {{ else if in .URL "new-way" }}{{ $branch_class = "branch-card--new-way" }}
-        {{ else if in .URL "evidence" }}{{ $branch_class = "branch-card--evidence" }}{{ end }}
+        {{ $branch_section := "" }}
+        {{ if in .URL "old-way" }}{{ $branch_class = "branch-card--old-way" }}{{ $branch_section = "old-way" }}
+        {{ else if in .URL "new-way" }}{{ $branch_class = "branch-card--new-way" }}{{ $branch_section = "new-way" }}
+        {{ else if in .URL "evidence" }}{{ $branch_class = "branch-card--evidence" }}{{ $branch_section = "evidence" }}{{ end }}
         <a href="{{ .URL }}" class="branch-card {{ $branch_class }}">
-          <h2>{{ .Name }}</h2>
+          <h2>{{ if $branch_section }}{{ partial "section-icon.html" $branch_section }} {{ end }}{{ .Name }}</h2>
           {{ with $page }}
             <p>{{ .Params.summary }}</p>
           {{ end }}
