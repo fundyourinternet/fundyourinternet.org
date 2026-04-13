@@ -2,29 +2,12 @@
 
 /* --- Homepage body content --- */
 
-.hero {
+.one-thing {
   padding: var(--space-lg) 0;
 }
 
-.hero p {
+.one-thing p {
   font-size: 1.1rem;
-  max-width: 36rem;
-}
-
-.hero .steps {
-  margin: var(--space-md) 0 var(--space-lg);
-}
-
-.hero .steps li {
-  margin-bottom: var(--space-xs);
-}
-
-.hero .reframe {
-  font-size: 1.05rem;
-  color: var(--colour-muted);
-  border-left: 3px solid var(--colour-border);
-  padding-left: var(--space-md);
-  margin: var(--space-lg) 0;
   max-width: 36rem;
 }
 
@@ -113,6 +96,51 @@
 
 .strand--evidence .read-more {
   color: var(--colour-evidence);
+}
+
+/* --- Homepage call to action --- */
+
+.homepage-cta {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--colour-border);
+}
+
+.homepage-cta h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.cta-link {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  background: var(--colour-text);
+  color: var(--colour-bg);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.15s ease;
+}
+
+.cta-link:hover {
+  opacity: 0.85;
+}
+
+.cta-link:visited {
+  color: var(--colour-bg);
+}
+
+.cta-link:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
+.cta-secondary {
+  font-size: 0.9rem;
+  color: var(--colour-muted);
+  margin-top: var(--space-sm);
 }
 
 /* --- Page table of contents --- */

@@ -6,10 +6,11 @@
   </div>
 
   <div class="container">
-    <div class="hero">
+    <div class="one-thing">
       {{ .Content }}
     </div>
-    <p class="woven-heading">Three threads, one conversation</p>
+
+    <p class="woven-heading">Why this matters</p>
 
     {{ $oldway := site.GetPage "/the-old-way" }}
     {{ $newways := site.GetPage "/a-new-way" }}
@@ -34,6 +35,13 @@
       <h2>{{ with $evidence }}{{ .Params.strand_title | default "The research is clear" }}{{ end }}</h2>
       <p>{{ with $evidence }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
       <a href="/the-evidence/" class="read-more">Read the sources</a>
+    </div>
+
+    <div class="homepage-cta">
+      <h3>Keep going</h3>
+      <p><strong>FYI</strong> is a quarterly reminder to fund the next One Thing — with context on what is changing and what is working. One email, four times a year.</p>
+      <a href="https://fyi.offprint.app/" class="cta-link">Get FYI by email</a>
+      <p class="cta-secondary">Already done your One Thing? Tell someone.</p>
     </div>
   </div>
 
