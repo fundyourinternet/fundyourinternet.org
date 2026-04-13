@@ -1,0 +1,12 @@
+{{- with .Params.outline -}}
+<nav class="section-progress" aria-label="Reading progress" hidden>
+  <div class="section-progress-track">
+    {{- range . }}
+    <a href="#{{ .anchor }}" class="section-progress-step" data-section="{{ .anchor }}" aria-label="{{ .title }}">
+      {{ partial "section-icon.html" .icon }}
+    </a>
+    {{- end }}
+  </div>
+  <span class="section-progress-title"></span>
+</nav>
+{{- end -}}

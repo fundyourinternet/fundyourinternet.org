@@ -298,21 +298,17 @@ html[data-theme="dark"] .homepage-hero::before {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .page-outline-item a {
-  display: grid;
-  grid-template-columns: 1.5em 1fr;
-  grid-template-rows: auto auto;
-  gap: 0 0.6em;
-  align-items: baseline;
-  padding: var(--space-sm) var(--space-md);
-  border-left: 3px solid var(--colour-branch-border);
-  border-radius: 0 6px 6px 0;
+  display: block;
+  padding: var(--space-md);
+  border: 1px solid var(--colour-branch-border, var(--colour-border));
+  border-radius: 6px;
   text-decoration: none;
   color: var(--colour-text);
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .page-outline-item a:visited {
@@ -320,29 +316,34 @@ html[data-theme="dark"] .homepage-hero::before {
 }
 
 .page-outline-item a:hover {
-  background: var(--colour-branch-light);
-  border-left-color: var(--colour-branch);
+  background: var(--colour-branch-light, var(--colour-subtle));
+  border-color: var(--colour-branch, var(--colour-border));
+}
+
+.page-outline-item a:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
 }
 
 .page-outline-icon {
-  grid-row: 1 / 3;
-  color: var(--colour-branch);
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  padding-top: 0.15em;
+  display: block;
+  font-size: 1.5rem;
+  color: var(--colour-branch, var(--colour-muted));
+  margin-bottom: var(--space-xs);
 }
 
 .page-outline-title {
+  display: block;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
 }
 
 .page-outline-desc {
-  font-size: 0.85rem;
+  display: block;
+  font-size: 0.9rem;
   color: var(--colour-muted);
-  grid-column: 2;
 }
 
 /* --- Section heading icons --- */
@@ -355,21 +356,111 @@ html[data-theme="dark"] .homepage-hero::before {
   margin-right: 0.3em;
 }
 
-/* --- Responsive hero --- */
+/* --- Section progress bar (sticky scroll spy) --- */
+
+.section-progress {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--colour-bg);
+  border-bottom: 1px solid var(--colour-border);
+  padding: 0.5rem var(--space-md) 0.4rem;
+  text-align: center;
+}
+
+.section-progress-track {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.section-progress-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colour-muted);
+  text-decoration: none;
+  padding: 0.15rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.section-progress-step:visited {
+  color: var(--colour-muted);
+}
+
+.section-progress-step:hover {
+  color: var(--colour-branch);
+}
+
+.section-progress-step:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
+.section-progress-step.is-active {
+  color: var(--colour-branch);
+  border-bottom-color: var(--colour-branch);
+}
+
+.section-progress-step .section-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.section-progress-title {
+  display: block;
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  color: var(--colour-branch);
+  margin-top: 0.15rem;
+  line-height: 1.2;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 47.999em) {
+  .section-progress-title {
+    display: none;
+  }
+  .section-progress-track {
+    gap: var(--space-sm);
+  }
+}
 
 @media (min-width: 48em) {
   .section-hero h1 {
     font-size: 3rem;
   }
+
+  .page-outline-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-outline-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
-/* --- Print: hide hero image layers --- */
+/* --- Reduced motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+  .section-progress-step {
+    transition: none;
+  }
+}
+
+/* --- Print --- */
 
 @media print {
   .section-hero::before,
   .section-hero::after,
   .homepage-hero::before,
   .homepage-hero::after {
+    display: none;
+  }
+
+  .section-progress {
     display: none;
   }
 }
