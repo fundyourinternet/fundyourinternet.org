@@ -1,0 +1,19 @@
+id: "surgeon-general-social-media-2023"
+title: "Social Media and Youth Mental Health: The U.S. Surgeon General's Advisory"
+author: "Office of the U.S. Surgeon General"
+year: 2023
+url: "https://www.hhs.gov/surgeongeneral/reports-and-publications/youth-mental-health/social-media/index.html"
+type: report
+topics:
+  - ad-driven-wellbeing
+annotation: >
+  The most high-profile institutional statement on social media and youth
+  wellbeing, finding that teens spending more than three hours daily on social
+  media face double the risk of depression and anxiety. Important not as the
+  final word on the science -- the evidence is more nuanced than the advisory
+  suggests -- but as the document that shifted the policy conversation.
+recommended: false
+related:
+  - vuorre-wellbeing-internet-2024
+  - haidt-anxious-generation-2024
+access: open

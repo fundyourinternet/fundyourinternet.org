@@ -1,0 +1,20 @@
+id: "przymus-xz-utils-2025"
+title: "Wolves in the Repository: A Software Engineering Analysis of the XZ Utils Supply Chain Attack"
+author: "Piotr Przymus, Thomas Durieux"
+year: 2025
+url: "https://arxiv.org/abs/2504.17473"
+type: research
+topics:
+  - open-source-funding
+annotation: >
+  A detailed forensic analysis of the XZ Utils backdoor (CVE-2024-3094), in
+  which an attacker spent 2.6 years building trust in an under-resourced open
+  source project before injecting a critical backdoor into Linux compression
+  infrastructure. Makes the abstract problem of open source underfunding
+  viscerally concrete: this is what happens when critical infrastructure depends
+  on overstretched volunteer maintainers.
+recommended: false
+related:
+  - hoffmann-value-oss-2024
+  - tidelift-maintainer-survey-2024
+access: open

@@ -1,0 +1,17 @@
+id: "germano-ranking-engagement-2025"
+title: "Ranking for Engagement: How Social Media Algorithms Fuel Misinformation and Polarization"
+author: "Fabrizio Germano, Vicenc Gomez, Francesco Sobbrio"
+year: 2025
+url: "https://www.sciencedirect.com/science/article/pii/S0047272726000253"
+type: research
+topics:
+  - algorithmic-feeds
+  - platform-economics
+annotation: >
+  A theoretical and empirical analysis showing a fundamental trade-off: weighting
+  engagement signals such as likes and shares increases platform engagement but
+  also increases misinformation and polarisation. Provides evidence that Facebook's
+  2018 "Meaningful Social Interactions" update contributed to increased ideological
+  extremism, and proposes an "engagement tax" as a policy mechanism.
+recommended: false
+access: paywalled
