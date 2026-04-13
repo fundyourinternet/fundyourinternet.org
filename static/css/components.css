@@ -120,64 +120,63 @@
   color: var(--colour-evidence);
 }
 
-/* --- Branch cards (compact, on homepage bottom) --- */
+/* --- Page table of contents --- */
 
-.branches {
+.page-toc {
   display: grid;
-  gap: var(--space-md);
-  padding-bottom: var(--space-xl);
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
 }
 
-.branch-card {
+.toc-card {
   display: block;
   padding: var(--space-md);
-  border: 1px solid var(--colour-border);
-  border-left: 3px solid var(--colour-border);
-  border-radius: 0 6px 6px 0;
+  border: 1px solid var(--colour-branch-border, var(--colour-border));
+  border-radius: 6px;
   text-decoration: none;
   color: var(--colour-text);
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.branch-card:visited {
-  color: var(--colour-text);
+.toc-card:visited { color: var(--colour-text); }
+
+.toc-card:hover {
+  background: var(--colour-branch-light, var(--colour-subtle));
+  border-color: var(--colour-branch, var(--colour-border));
 }
 
-.branch-card--old-way {
-  border-left-color: var(--colour-feeds);
-}
-
-.branch-card--new-way {
-  border-left-color: var(--colour-movement);
-}
-
-.branch-card--evidence {
-  border-left-color: var(--colour-evidence);
-}
-
-.branch-card--old-way:hover { background-color: var(--colour-feeds-light); }
-.branch-card--new-way:hover { background-color: var(--colour-movement-light); }
-.branch-card--evidence:hover { background-color: var(--colour-evidence-light); }
-
-.branch-card:focus-visible {
+.toc-card:focus-visible {
   outline: 2px solid var(--colour-link);
   outline-offset: 2px;
-  border-radius: 6px;
 }
 
-.branch-card h2 {
-  font-size: 1.1rem;
-  margin: 0 0 var(--space-xs);
+.toc-card-icon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--colour-branch, var(--colour-muted));
+  margin-bottom: var(--space-xs);
 }
 
-.branch-card--old-way h2 { color: var(--colour-feeds); }
-.branch-card--new-way h2 { color: var(--colour-movement); }
-.branch-card--evidence h2 { color: var(--colour-evidence); }
+.toc-card-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
 
-.branch-card p {
+.toc-card-desc {
+  display: block;
   font-size: 0.9rem;
   color: var(--colour-muted);
-  margin: 0;
+}
+
+/* --- Section content headings with icons --- */
+
+.section-page h2 .section-icon {
+  color: var(--colour-branch, var(--colour-muted));
+  vertical-align: -0.1em;
+  margin-right: 0.2em;
 }
 
 /* --- Section pages --- */
@@ -385,8 +384,8 @@
     font-size: 3rem;
   }
 
-  .branches {
-    grid-template-columns: repeat(3, 1fr);
+  .page-toc {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* Sidenotes float into the margin on wide screens */

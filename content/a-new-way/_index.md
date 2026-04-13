@@ -20,7 +20,14 @@ This is not easy. Most independent creators earn less than $30,000 a year. {{< c
 
 That is a pattern worth understanding. The sections below are organised by pattern rather than by industry, because the same logic — people connecting directly with things they value — shows up everywhere. In journalism, in open source software, in podcasting, in the decentralised web. What varies is the shape it takes.
 
-## Direct support
+{{< page-toc >}}
+{{< toc-card icon="heart-handshake" title="Direct support" anchor="#direct-support" >}}One person, one creator, one recurring pledge. The simplest version of funding your internet.{{< /toc-card >}}
+{{< toc-card icon="users" title="Cooperative ownership" anchor="#cooperative-ownership" >}}When the people who make something or use something own it together.{{< /toc-card >}}
+{{< toc-card icon="landmark" title="Funding the commons" anchor="#funding-the-commons" >}}Grants, foundations, and the argument for treating digital infrastructure as a public good.{{< /toc-card >}}
+{{< toc-card icon="compass" title="Infrastructure for giving" anchor="#infrastructure-for-giving" >}}The tools that reduce friction and connect supporters to the things they value.{{< /toc-card >}}
+{{< /page-toc >}}
+
+## {{< icon "heart-handshake" >}} Direct support {#direct-support}
 
 The simplest version of this pattern is the oldest: one person decides to pay for something they value.
 
@@ -36,7 +43,7 @@ There are hidden costs too. Sustaining a patronage income requires what research
 
 None of this means direct support is a bad idea. It means it is not a complete solution. But it does something the ad model never does: it creates a relationship where the supporter is the customer, not the product. The person paying decides what is worth sustaining. That shift in incentive is the point, even when the amounts are small.
 
-## Cooperative ownership
+## {{< icon "users" >}} Cooperative ownership {#cooperative-ownership}
 
 Direct support has a structural weakness: even when people pay creators directly, they usually do so through platforms that capture the relationship. Patreon, Substack, YouTube — each one sets the terms, takes a cut, and can change the rules at any time. The creator gets revenue. The platform gets the audience.
 
@@ -50,7 +57,7 @@ In journalism, the picture is more dramatic. In the United States, 213 counties 
 
 These are not easy models. Cooperatives require governance, and governance is slower than venture capital. Willingness to pay for news remains low — about 17 per cent globally. {{< cite "reuters-digital-news-2025" >}} But the question is not whether cooperatives will replace every platform. It is whether they prove that a different ownership model is possible. They do.
 
-## Funding the commons
+## {{< icon "landmark" >}} Funding the commons {#funding-the-commons}
 
 Some things on the internet are not made for an audience. They are made for everyone, often by very few people, and almost nobody notices until they break.
 
@@ -66,7 +73,7 @@ The same public-good logic applies beyond software. Journalism is democratic inf
 
 Individual contributions to open source projects through Open Collective or [GitHub Sponsors](https://github.com/sponsors), or to journalism cooperatives through membership, are part of this same picture. The public-good argument is not a reason to leave it all to institutions. It is a reason to see your own contribution as part of something larger.
 
-## Infrastructure for giving
+## {{< icon "compass" >}} Infrastructure for giving {#infrastructure-for-giving}
 
 The obstacle to sustaining the things you value online is rarely unwillingness. It is friction. Too many platforms, no coherent picture of who needs support and how, no sense that any single action makes a difference.
 
