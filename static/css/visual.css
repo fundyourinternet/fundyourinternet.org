@@ -212,15 +212,21 @@ h1 .section-icon {
 /* Section-tinted gradient overlays */
 
 .section-hero--old-way::after {
-  background: linear-gradient(to bottom, var(--colour-feeds-light) 0%, var(--colour-bg) 100%);
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--colour-feeds-light) 40%, transparent) 0%,
+    var(--colour-bg) 100%);
 }
 
 .section-hero--new-way::after {
-  background: linear-gradient(to bottom, var(--colour-movement-light) 0%, var(--colour-bg) 100%);
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--colour-movement-light) 40%, transparent) 0%,
+    var(--colour-bg) 100%);
 }
 
 .section-hero--evidence::after {
-  background: linear-gradient(to bottom, var(--colour-evidence-light) 0%, var(--colour-bg) 100%);
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--colour-evidence-light) 40%, transparent) 0%,
+    var(--colour-bg) 100%);
 }
 
 /* Hero images — dark mode (explicit toggle) */
