@@ -1,0 +1,18 @@
+id: "inn-nonprofit-news-2025"
+title: "The 2025 INN Index"
+author: "Institute for Nonprofit News"
+year: 2025
+url: "https://inn.org/research/inn-index/2025-index/about-the-index/"
+type: dataset
+topics:
+  - journalism-economics
+  - direct-funding-models
+annotation: >
+  The most comprehensive dataset on the nonprofit news sector in North America,
+  tracking roughly 400 nonprofit newsrooms with a combined revenue exceeding
+  $650 million — a 14 per cent increase from 2023. Local outlets now make up
+  51 per cent of membership. Essential for understanding the scale and growth
+  of noncommercial, community-funded journalism as a structural alternative
+  to ad-dependent news.
+recommended: false
+access: open
