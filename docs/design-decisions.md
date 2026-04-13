@@ -4,6 +4,24 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 ---
 
+## Visual redesign: heroes, icons, toggle, layout (April 2026)
+
+**Decision:** A visual redesign adding five capabilities: (1) dark/light mode toggle, (2) section icons from Lucide, (3) gradient hero blocks on section pages and homepage, (4) wider layout for card grids, (5) a `figure` shortcode for future inline images.
+
+**Why:** The site was narrow, text-only, and visually flat. The colour wayfinding system worked but lacked visual anchors. Users had no way to override OS dark mode. The goal is to make the site inviting and engaging while preserving its editorial, non-product character.
+
+**Key choices:**
+- **CSS split into three files** (`base.css`, `components.css`, `visual.css`) — the single-file approach hit 700+ lines and the redesign would push further. Each file stays under 300 lines with a clear responsibility.
+- **Theme toggle via ~30 lines of JS** — the only JavaScript on the site. Uses `data-theme` attribute on `<html>` with `localStorage` persistence. Progressive enhancement: without JS, OS-level `prefers-color-scheme` detection still works and the toggle button remains hidden.
+- **Lucide icons** (MIT-licensed) — `radio` for Old Way, `hand-heart` for New Way, `book-open` for Evidence. Stored as inline SVG partials, not loaded from a CDN. Use `stroke="currentColor"` to inherit section colours.
+- **Gradient hero blocks** as placeholders for real photography. Each section uses its colour tokens in a `linear-gradient`. Real CC0 photos to be sourced and swapped in later.
+- **Selective layout widening** — body text stays at 42rem for readability. Card grids and heroes break out to 58rem (`--max-width-wide`).
+- **Figure shortcode** with optional section icon overlay, ready for subsection images when content is written.
+
+**Alternatives considered:** CSS-only dark mode toggle (not possible with persistence); custom icon illustrations (CLAUDE.md specifies library icons); full-bleed heroes (too dramatic for the editorial tone); global layout widening (hurts readability).
+
+---
+
 ## Logo: FYI ligature mark (April 2026)
 
 **Decision:** The FYI mark is a bespoke SVG ligature — letters tightly spaced with rounded terminals, designed as a monogram rather than three separate characters. The F crossbar flows into the Y.
@@ -14,11 +32,11 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 ---
 
-## Section icons: abstract geometric (April 2026)
+## Section icons: Lucide library (April 2026)
 
-**Decision:** Each branch gets an abstract geometric SVG icon using `currentColor`. Simple shapes that suggest the section's character without being literal.
+**Decision:** Each branch gets an icon from the Lucide library (MIT-licensed): `radio` for Old Way, `hand-heart` for New Way, `book-open` for Evidence. Stored as inline SVG partials in `layouts/partials/icons/`. Use `stroke="currentColor"` and `width="1em"` to inherit colour and scale with text.
 
-**Why:** Abstract shapes age better than representational illustrations, work at tiny sizes (16px), and avoid the clip-art problem. Using `currentColor` means they automatically inherit the branch colour system.
+**Why:** Lucide icons are minimal line art that match the editorial tone. Using an established library avoids the clip-art problem of bespoke illustrations. Inline SVG avoids external requests. Icons appear in nav, strand cards, branch cards, section headings, and bridge links for consistent visual anchoring.
 
 ---
 
@@ -70,9 +88,9 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 ## Plain CSS, no preprocessor (April 2026)
 
-**Decision:** Single CSS file in `static/css/style.css`. No Sass, PostCSS, or CSS-in-JS.
+**Decision:** Three CSS files in `static/css/` (`base.css`, `components.css`, `visual.css`). No Sass, PostCSS, or CSS-in-JS.
 
-**Why:** Modern CSS custom properties handle variables. CSS nesting is broadly supported. A single well-structured file under 400 lines needs no build step. One fewer thing for contributors to understand, one fewer dependency to maintain.
+**Why:** Modern CSS custom properties handle variables. The original single-file approach was outgrown at 700+ lines. Splitting by concern (base/components/visual) keeps each file under 300 lines with no build step. Browsers fetch the three files in parallel and cache them independently.
 
 ---
 

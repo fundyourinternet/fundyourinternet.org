@@ -1,0 +1,9 @@
+{{- if eq . "one-thing" -}}
+  {{- partial "icons/one-thing.html" . -}}
+{{- else if eq . "old-way" -}}
+  {{- partial "icons/old-way.html" . -}}
+{{- else if eq . "new-way" -}}
+  {{- partial "icons/new-way.html" . -}}
+{{- else if eq . "evidence" -}}
+  {{- partial "icons/evidence.html" . -}}
+{{- end -}}

@@ -1,0 +1,20 @@
+<nav class="section-nav-bar" aria-label="Main navigation">
+  <ul>
+    {{- $rel := .RelPermalink -}}
+    {{- range .Site.Menus.main -}}
+    {{- $section := "" -}}
+    {{- if eq .URL "/" -}}{{- $section = "one-thing" -}}
+    {{- else if in .URL "old-way" -}}{{- $section = "old-way" -}}
+    {{- else if in .URL "new-way" -}}{{- $section = "new-way" -}}
+    {{- else if in .URL "evidence" -}}{{- $section = "evidence" -}}
+    {{- end -}}
+    {{- $active := false -}}
+    {{- if eq .URL "/" -}}
+      {{- $active = eq $rel "/" -}}
+    {{- else -}}
+      {{- $active = hasPrefix $rel .URL -}}
+    {{- end -}}
+    <li><a href="{{ .URL }}" class="section-nav-link{{ with $section }} section-nav-link--{{ . }}{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{- if $section -}}{{ partial "section-icon.html" $section }}{{- end -}}<span>{{ .Name }}</span></a></li>
+    {{- end }}
+  </ul>
+</nav>
