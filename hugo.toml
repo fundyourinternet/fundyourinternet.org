@@ -18,8 +18,8 @@ disableKinds = ["taxonomy"]
     pageRef = "/the-old-way"
     weight = 1
   [[menus.main]]
-    name = "The New Ways"
-    pageRef = "/the-new-ways"
+    name = "A New Way"
+    pageRef = "/a-new-way"
     weight = 2
   [[menus.main]]
     name = "The Evidence"

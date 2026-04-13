@@ -10,7 +10,7 @@
     <p class="woven-heading">Three threads, one conversation</p>
 
     {{ $oldway := site.GetPage "/the-old-way" }}
-    {{ $newways := site.GetPage "/the-new-ways" }}
+    {{ $newways := site.GetPage "/the-new-way" }}
     {{ $evidence := site.GetPage "/the-evidence" }}
 
     <div class="strand strand--old-way">
@@ -20,11 +20,11 @@
       <a href="/the-old-way/" class="read-more">Understand the mechanics</a>
     </div>
 
-    <div class="strand strand--new-ways">
-      <p class="strand-label">The New Ways</p>
+    <div class="strand strand--new-way">
+      <p class="strand-label">A New Way</p>
       <h2>{{ with $newways }}{{ .Params.strand_title | default "It is already happening" }}{{ end }}</h2>
       <p>{{ with $newways }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
-      <a href="/the-new-ways/" class="read-more">See who is building</a>
+      <a href="/the-new-way/" class="read-more">See who is building</a>
     </div>
 
     <div class="strand strand--evidence">
@@ -41,7 +41,7 @@
         {{ $page := site.GetPage .URL }}
         {{ $branch_class := "" }}
         {{ if in .URL "old-way" }}{{ $branch_class = "branch-card--old-way" }}
-        {{ else if in .URL "new-ways" }}{{ $branch_class = "branch-card--new-ways" }}
+        {{ else if in .URL "new-way" }}{{ $branch_class = "branch-card--new-way" }}
         {{ else if in .URL "evidence" }}{{ $branch_class = "branch-card--evidence" }}{{ end }}
         <a href="{{ .URL }}" class="branch-card {{ $branch_class }}">
           <h2>{{ .Name }}</h2>

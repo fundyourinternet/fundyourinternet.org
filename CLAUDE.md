@@ -31,7 +31,7 @@ The relationship to at.fund: "built by the at.fund team" in the footer. at.fund 
 The site has a **front door** (homepage) and **three sections**:
 
 1. **The Old Way** (`/the-old-way/`, colour: teal `--colour-feeds`) — How the ad-driven internet works and what it costs. Professional and clear, not zealous.
-2. **The New Ways** (`/the-new-ways/`, colour: amber `--colour-movement`) — Communities building direct funding relationships. The most emotionally important section.
+2. **A New Way** (`/a-new-way/`, colour: amber `--colour-movement`) — Communities building direct funding relationships. The most emotionally important section.
 3. **The Evidence** (`/the-evidence/`, colour: slate blue `--colour-evidence`) — A curated, annotated library organised by question.
 
 ### Interweaving pattern
@@ -50,7 +50,7 @@ Sources are defined as YAML files in `data/library/`. Each file follows a consis
 
 - All custom properties use `--colour-` prefix (British spelling)
 - Branch colour tokens: `--colour-feeds` (teal), `--colour-movement` (amber), `--colour-evidence` (slate) with `-light` and `-border` variants
-- Section CSS classes use URL slugs: `.section-page--old-way`, `.section-page--new-ways`, `.section-page--evidence`
+- Section CSS classes use URL slugs: `.section-page--old-way`, `.section-page--new-way`, `.section-page--evidence`
 - Spacing scale: `--space-xs` (0.5rem) through `--space-xl` (5rem)
 - Max content width: `--max-width` (42rem)
 

@@ -313,7 +313,7 @@ a:focus-visible {
   border-left-color: var(--colour-feeds);
 }
 
-.strand--new-ways {
+.strand--new-way {
   border-left-color: var(--colour-movement);
 }
 
@@ -333,7 +333,7 @@ a:focus-visible {
   color: var(--colour-feeds);
 }
 
-.strand--new-ways .strand-label {
+.strand--new-way .strand-label {
   color: var(--colour-movement);
 }
 
@@ -361,7 +361,7 @@ a:focus-visible {
   color: var(--colour-feeds);
 }
 
-.strand--new-ways .read-more {
+.strand--new-way .read-more {
   color: var(--colour-movement);
 }
 
@@ -399,7 +399,7 @@ a:focus-visible {
   border-left-color: var(--colour-feeds);
 }
 
-.branch-card--new-ways {
+.branch-card--new-way {
   border-left-color: var(--colour-movement);
 }
 
@@ -413,7 +413,7 @@ a:focus-visible {
 }
 
 .branch-card--old-way h2 { color: var(--colour-feeds); }
-.branch-card--new-ways h2 { color: var(--colour-movement); }
+.branch-card--new-way h2 { color: var(--colour-movement); }
 .branch-card--evidence h2 { color: var(--colour-evidence); }
 
 .branch-card p {
@@ -434,7 +434,7 @@ a:focus-visible {
 }
 
 .section-page--old-way { --colour-branch: var(--colour-feeds); --colour-branch-light: var(--colour-feeds-light); --colour-branch-border: var(--colour-feeds-border); }
-.section-page--new-ways { --colour-branch: var(--colour-movement); --colour-branch-light: var(--colour-movement-light); --colour-branch-border: var(--colour-movement-border); }
+.section-page--new-way { --colour-branch: var(--colour-movement); --colour-branch-light: var(--colour-movement-light); --colour-branch-border: var(--colour-movement-border); }
 .section-page--evidence { --colour-branch: var(--colour-evidence); --colour-branch-light: var(--colour-evidence-light); --colour-branch-border: var(--colour-evidence-border); }
 
 .section-nav {
@@ -501,7 +501,7 @@ a:focus-visible {
 }
 
 .bridge--old-way { border-left-color: var(--colour-feeds); }
-.bridge--new-ways { border-left-color: var(--colour-movement); }
+.bridge--new-way { border-left-color: var(--colour-movement); }
 .bridge--evidence { border-left-color: var(--colour-evidence); }
 
 .bridge-section {
@@ -514,7 +514,7 @@ a:focus-visible {
 }
 
 .bridge--old-way .bridge-section { color: var(--colour-feeds); }
-.bridge--new-ways .bridge-section { color: var(--colour-movement); }
+.bridge--new-way .bridge-section { color: var(--colour-movement); }
 .bridge--evidence .bridge-section { color: var(--colour-evidence); }
 
 .bridge-prompt {

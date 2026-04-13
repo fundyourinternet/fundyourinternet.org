@@ -1,5 +1,5 @@
 ---
-title: "The New Ways"
+title: "A New Way"
 summary: "The people and communities already building a different kind of internet, and how to find them."
 strand_title: "It is already happening"
 strand_teaser: "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern."

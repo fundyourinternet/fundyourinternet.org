@@ -4,9 +4,9 @@ summary: "What happens when algorithms decide what you see, and what it means fo
 strand_title: "The system is working as designed"
 strand_teaser: "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written — not because of bad intentions, but because of basic arithmetic."
 bridges:
-  - branch: new-ways
-    section: The New Ways
-    url: /the-new-ways/
+  - branch: new-way
+    section: A New Way
+    url: /a-new-way/
     prompt: "See who is already building alternatives to the ad-driven model."
   - branch: evidence
     section: The Evidence

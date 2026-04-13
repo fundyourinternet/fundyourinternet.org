@@ -8,9 +8,9 @@ bridges:
     section: The Old Way
     url: /the-old-way/
     prompt: "See these findings explained in plain terms."
-  - branch: new-ways
-    section: The New Ways
-    url: /the-new-ways/
+  - branch: new-way
+    section: A New Way
+    url: /a-new-way/
     prompt: "Meet the communities putting this research into practice."
 ---
 

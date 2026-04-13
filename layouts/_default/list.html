@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $section_class := "" }}
 {{ if in .RelPermalink "old-way" }}{{ $section_class = "section-page--old-way" }}
-{{ else if in .RelPermalink "new-ways" }}{{ $section_class = "section-page--new-ways" }}
+{{ else if in .RelPermalink "new-way" }}{{ $section_class = "section-page--new-way" }}
 {{ else if in .RelPermalink "evidence" }}{{ $section_class = "section-page--evidence" }}{{ end }}
 <article class="section-page {{ $section_class }}">
   <div class="container">
