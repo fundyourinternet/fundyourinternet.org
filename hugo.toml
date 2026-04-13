@@ -14,6 +14,10 @@ disableKinds = ["taxonomy"]
 
 [menus]
   [[menus.main]]
+    name = "One Thing"
+    url = "/"
+    weight = -1
+  [[menus.main]]
     name = "The Old Way"
     pageRef = "/the-old-way"
     weight = 1

@@ -159,6 +159,12 @@
 .branch-card--new-way:hover { background-color: var(--colour-movement-light); }
 .branch-card--evidence:hover { background-color: var(--colour-evidence-light); }
 
+.branch-card:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 .branch-card h2 {
   font-size: 1.1rem;
   margin: 0 0 var(--space-xs);
@@ -177,7 +183,7 @@
 /* --- Section pages --- */
 
 .section-page {
-  padding: var(--space-lg) 0;
+  padding: 0 0 var(--space-lg);
 }
 
 .section-page h1 {
@@ -256,6 +262,11 @@
 .bridge--new-way:hover { background-color: var(--colour-movement-light); }
 .bridge--evidence:hover { background-color: var(--colour-evidence-light); }
 
+.bridge:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
 .bridge-section {
   font-size: 0.8rem;
   font-weight: 600;
@@ -294,7 +305,7 @@
 }
 
 .cite--missing {
-  color: #c0392b;
+  color: var(--colour-error, #c0392b);
 }
 
 /* --- Library (evidence base) --- */

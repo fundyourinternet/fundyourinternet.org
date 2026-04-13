@@ -93,11 +93,22 @@ h1 .section-icon {
   color: var(--colour-text);
 }
 
+.section-nav-link:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
 .section-nav-link .section-icon {
   width: 1em;
   height: 1em;
   vertical-align: -0.1em;
   opacity: 0.7;
+}
+
+.section-nav-link:not([class*="--"]):hover,
+.section-nav-link:not([class*="--"])[aria-current="page"] {
+  color: var(--colour-text);
+  border-bottom-color: var(--colour-text);
 }
 
 .section-nav-link--old-way:hover,
@@ -228,9 +239,5 @@ h1 .section-icon {
 @media (min-width: 48em) {
   .section-hero h1 {
     font-size: 3rem;
-  }
-
-  .section-hero {
-    padding: var(--space-2xl) var(--space-md) var(--space-xl);
   }
 }
