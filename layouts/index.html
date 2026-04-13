@@ -6,44 +6,67 @@
   </div>
 
   <div class="container">
-    <div class="one-thing">
-      {{ .Content }}
-    </div>
 
-    <p class="woven-heading">Why this matters</p>
+    {{/* Domain 1: Fund */}}
+    <section class="domain">
+      <h2 class="domain-heading">One thing. Today.</h2>
+      {{ range .Params.steps }}
+      <div class="domain-item">
+        {{ with .icon }}<p class="domain-item-label">{{ partial "section-icon.html" . }}</p>{{ end }}
+        <h3>{{ .title }}</h3>
+        <p>{{ .detail }}</p>
+      </div>
+      {{ end }}
+      {{ with .Params.reframe }}<p class="domain-context">{{ . }}</p>{{ end }}
+    </section>
 
-    {{ $oldway := site.GetPage "/the-old-way" }}
-    {{ $newways := site.GetPage "/a-new-way" }}
-    {{ $evidence := site.GetPage "/the-evidence" }}
+    {{/* Domain 2: Explore */}}
+    <section class="domain">
+      <h2 class="domain-heading">Why this matters</h2>
+      {{ with .Params.bridge }}<p class="domain-context">{{ . }}</p>{{ end }}
 
-    <div class="strand strand--old-way">
-      <p class="strand-label">{{ partial "section-icon.html" "old-way" }} The Old Way</p>
-      <h2>{{ with $oldway }}{{ .Params.strand_title | default "The system is working as designed" }}{{ end }}</h2>
-      <p>{{ with $oldway }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
-      <a href="/the-old-way/" class="read-more">Understand the mechanics</a>
-    </div>
+      {{ $oldway := site.GetPage "/the-old-way" }}
+      {{ $newways := site.GetPage "/a-new-way" }}
+      {{ $evidence := site.GetPage "/the-evidence" }}
 
-    <div class="strand strand--new-way">
-      <p class="strand-label">{{ partial "section-icon.html" "new-way" }} A New Way</p>
-      <h2>{{ with $newways }}{{ .Params.strand_title | default "It is already happening" }}{{ end }}</h2>
-      <p>{{ with $newways }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
-      <a href="/a-new-way/" class="read-more">See who is building</a>
-    </div>
+      <div class="domain-item domain-item--old-way">
+        <p class="domain-item-label">{{ partial "section-icon.html" "old-way" }} The Old Way</p>
+        <h3>{{ with $oldway }}{{ .Params.strand_title | default "The system is working as designed" }}{{ end }}</h3>
+        <p>{{ with $oldway }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
+        <a href="/the-old-way/" class="domain-item-link">Understand the mechanics</a>
+      </div>
 
-    <div class="strand strand--evidence">
-      <p class="strand-label">{{ partial "section-icon.html" "evidence" }} The Evidence</p>
-      <h2>{{ with $evidence }}{{ .Params.strand_title | default "The research is clear" }}{{ end }}</h2>
-      <p>{{ with $evidence }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
-      <a href="/the-evidence/" class="read-more">Read the sources</a>
-    </div>
+      <div class="domain-item domain-item--new-way">
+        <p class="domain-item-label">{{ partial "section-icon.html" "new-way" }} A New Way</p>
+        <h3>{{ with $newways }}{{ .Params.strand_title | default "It is already happening" }}{{ end }}</h3>
+        <p>{{ with $newways }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
+        <a href="/a-new-way/" class="domain-item-link">See who is building</a>
+      </div>
 
-    <div class="homepage-cta">
-      <h3>Keep going</h3>
-      <p><strong>FYI</strong> is a quarterly reminder to fund the next One Thing — with context on what is changing and what is working. One email, four times a year.</p>
-      <a href="https://fyi.offprint.app/" class="cta-link">Get FYI by email</a>
-      <p class="cta-secondary">Already done your One Thing? Tell someone.</p>
-    </div>
+      <div class="domain-item domain-item--evidence">
+        <p class="domain-item-label">{{ partial "section-icon.html" "evidence" }} The Evidence</p>
+        <h3>{{ with $evidence }}{{ .Params.strand_title | default "The research is clear" }}{{ end }}</h3>
+        <p>{{ with $evidence }}{{ .Params.strand_teaser | default "" }}{{ end }}</p>
+        <a href="/the-evidence/" class="domain-item-link">Read the sources</a>
+      </div>
+    </section>
+
+    {{/* Domain 3: Keep going */}}
+    <section class="domain">
+      <h2 class="domain-heading">Keep going</h2>
+      <div class="domain-item">
+        <p class="domain-item-label">{{ partial "section-icon.html" "mail" }}</p>
+        <h3>FYI</h3>
+        <p>A quarterly reminder to fund the next One Thing — with context on what is changing and what is working. One email, four times a year.</p>
+        <a href="https://fyi.offprint.app/" class="domain-item-link">Get FYI by email</a>
+      </div>
+      <div class="domain-item">
+        <p class="domain-item-label">{{ partial "section-icon.html" "users" }}</p>
+        <h3>Tell someone</h3>
+        <p>Already done your One Thing? The idea is simple enough to share in a sentence.</p>
+      </div>
+    </section>
+
   </div>
-
 </article>
 {{ end }}

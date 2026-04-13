@@ -1,147 +1,96 @@
 /* === Fund Your Internet — Component Styles === */
 
-/* --- Homepage body content --- */
+/* --- Homepage domains --- */
 
-.one-thing {
+.domain {
   padding: var(--space-lg) 0;
 }
 
-.one-thing p {
-  font-size: 1.1rem;
-  max-width: 36rem;
+.domain + .domain {
+  border-top: 1px solid var(--colour-border);
 }
 
-/* --- Woven section: homepage teasers --- */
-
-.woven {
-  padding: var(--space-lg) 0 var(--space-xl);
-}
-
-.woven-heading {
+.domain-heading {
   font-size: 1.1rem;
   font-family: var(--font-body);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--colour-muted);
-  margin-bottom: var(--space-lg);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
 }
 
-.strand {
-  margin-bottom: var(--space-lg);
+.domain-context {
+  font-size: 1.05rem;
+  color: var(--colour-muted);
+  max-width: 36rem;
+  margin-bottom: var(--space-md);
+}
+
+/* --- Domain items (shared card component) --- */
+
+.domain-item {
+  margin-bottom: var(--space-sm);
   padding: var(--space-md);
-  border-left: 3px solid var(--colour-branch-border);
+  border-left: 3px solid var(--colour-border);
   border-radius: 0 6px 6px 0;
   background: var(--colour-subtle);
 }
 
-.strand--old-way {
+.domain-item:last-child {
+  margin-bottom: 0;
+}
+
+.domain-item--old-way {
   border-left-color: var(--colour-feeds);
   background: var(--colour-feeds-light);
 }
 
-.strand--new-way {
+.domain-item--new-way {
   border-left-color: var(--colour-movement);
   background: var(--colour-movement-light);
 }
 
-.strand--evidence {
+.domain-item--evidence {
   border-left-color: var(--colour-evidence);
   background: var(--colour-evidence-light);
 }
 
-.strand-label {
+.domain-item-label {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  color: var(--colour-muted);
   margin-bottom: var(--space-xs);
 }
 
-.strand--old-way .strand-label {
-  color: var(--colour-feeds);
-}
+.domain-item--old-way .domain-item-label { color: var(--colour-feeds); }
+.domain-item--new-way .domain-item-label { color: var(--colour-movement); }
+.domain-item--evidence .domain-item-label { color: var(--colour-evidence); }
 
-.strand--new-way .strand-label {
-  color: var(--colour-movement);
-}
-
-.strand--evidence .strand-label {
-  color: var(--colour-evidence);
-}
-
-.strand h2 {
+.domain-item h3 {
+  font-family: var(--font-heading);
   font-size: 1.3rem;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: var(--space-xs);
 }
 
-.strand p {
+.domain-item p {
   color: var(--colour-muted);
   margin-bottom: var(--space-xs);
 }
 
-.strand .read-more {
+.domain-item-link {
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.strand--old-way .read-more {
-  color: var(--colour-feeds);
-}
-
-.strand--new-way .read-more {
-  color: var(--colour-movement);
-}
-
-.strand--evidence .read-more {
-  color: var(--colour-evidence);
-}
-
-/* --- Homepage call to action --- */
-
-.homepage-cta {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--colour-border);
-}
-
-.homepage-cta h3 {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  margin-bottom: var(--space-sm);
-}
-
-.cta-link {
-  display: inline-block;
-  padding: 0.5em 1.2em;
-  background: var(--colour-text);
-  color: var(--colour-bg);
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: opacity 0.15s ease;
-}
-
-.cta-link:hover {
-  opacity: 0.85;
-}
-
-.cta-link:visited {
-  color: var(--colour-bg);
-}
-
-.cta-link:focus-visible {
-  outline: 2px solid var(--colour-link);
-  outline-offset: 2px;
-}
-
-.cta-secondary {
-  font-size: 0.9rem;
-  color: var(--colour-muted);
-  margin-top: var(--space-sm);
-}
+.domain-item--old-way .domain-item-link { color: var(--colour-feeds); }
+.domain-item--new-way .domain-item-link { color: var(--colour-movement); }
+.domain-item--evidence .domain-item-link { color: var(--colour-evidence); }
 
 /* --- Page table of contents --- */
 
