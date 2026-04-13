@@ -192,6 +192,10 @@ a:focus-visible {
 
 /* --- Layout --- */
 
+main {
+  counter-reset: cite;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -228,13 +232,19 @@ a:focus-visible {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: var(--space-sm) 0;
+  padding: 0;
+  background: color-mix(in srgb, var(--colour-bg) 40%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--colour-border) 40%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .site-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .site-title {
@@ -261,10 +271,89 @@ a:focus-visible {
   line-height: 1;
 }
 
-.site-name {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: normal;
+/* --- Navigation (checkbox-hack responsive burger) --- */
+
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.4em;
+  line-height: 1;
+  order: 2;
+}
+
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  order: 4;
+}
+
+.nav-toggle:checked ~ .nav-links {
+  max-height: 20rem;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: contents;
+}
+
+.site-header .container {
+  flex-wrap: wrap;
+}
+
+.site-title {
+  order: 1;
+}
+
+.theme-toggle {
+  order: 3;
+}
+
+@media (min-width: 48em) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    order: 2;
+  }
+
+  .nav-links ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
+
+  .site-header .container {
+    flex-wrap: nowrap;
+  }
+
+  .theme-toggle {
+    order: 3;
+  }
 }
 
 /* --- Site footer --- */
@@ -300,7 +389,8 @@ a:focus-visible {
 /* --- Print --- */
 
 @media print {
-  .section-nav-bar,
+  .nav-toggle,
+  .nav-toggle-label,
   .skip-link,
   .back-link,
   .theme-toggle {
@@ -334,6 +424,23 @@ a:focus-visible {
   .library-entry {
     background: none;
     border-radius: 0;
+  }
+
+  .cite a::before {
+    content: "[" counter(cite) "]";
+  }
+
+  .cite a::after {
+    content: " (" attr(data-cite-info) ")";
+    position: static;
+    opacity: 1;
+    background: none;
+    color: #000;
+    font-size: 0.8em;
+    padding: 0;
+    max-width: none;
+    width: auto;
+    white-space: normal;
   }
 
   .section-hero,
