@@ -1,0 +1,20 @@
+id: "linuxfoundation-oss-funding-2024"
+title: "2024 Open Source Software Funding Report"
+author: "Linux Foundation, GitHub, Harvard University"
+year: 2024
+url: "https://www.linuxfoundation.org/research/open-source-funding-2024"
+type: report
+topics:
+  - open-source-funding
+annotation: >
+  The most comprehensive survey of how organisations fund open source, finding
+  that responding organisations collectively invest $1.7 billion annually, with
+  86% of that value being employee labour rather than direct financial
+  contributions. Only 4% of financial contributions go directly to maintainers.
+  Makes visible the enormous gap between the economic value open source creates
+  and the resources directed to sustaining it.
+recommended: false
+related:
+  - hoffmann-value-oss-2024
+  - tidelift-maintainer-survey-2024
+access: registration

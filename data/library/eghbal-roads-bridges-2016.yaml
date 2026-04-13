@@ -1,0 +1,18 @@
+id: "eghbal-roads-bridges-2016"
+title: "Roads and Bridges: The Unseen Labor Behind Our Digital Infrastructure"
+author: "Nadia Eghbal"
+year: 2016
+url: "https://www.fordfoundation.org/learning/library/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/"
+type: report
+topics:
+  - open-source-funding
+annotation: >
+  The foundational report that framed open source software as public
+  infrastructure. Commissioned by the Ford Foundation, it argued that digital
+  infrastructure should be treated as a public good and that money alone would
+  not solve sustainability problems without understanding open source culture.
+  A decade on, the problems it identified have only intensified.
+recommended: false
+related:
+  - hoffmann-value-oss-2024
+access: open

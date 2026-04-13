@@ -1,0 +1,19 @@
+id: "reuters-digital-news-2024"
+title: "Digital News Report 2024"
+author: "Reuters Institute for the Study of Journalism"
+year: 2024
+url: "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024"
+type: research
+topics:
+  - subscription-fatigue
+  - journalism-economics
+annotation: >
+  Companion to the 2025 edition. Includes detailed data on willingness to pay
+  for news across dozens of markets: only 17% globally say they are willing to
+  pay, 57% will not consider paying anything, and among non-payers just 2%
+  would pay the price of a full subscription. Suggests the news industry has
+  already captured most of those willing to pay.
+recommended: false
+related:
+  - reuters-digital-news-2025
+access: open

@@ -1,0 +1,16 @@
+id: "liu-filter-bubble-2025"
+title: "Short-Term Exposure to Filter-Bubble Recommendation Systems Has Limited Polarization Effects"
+author: "Naijia Liu, Xinlan Emily Hu, Yasemin Savas, Matthew A. Baum, Adam J. Berinsky, et al."
+year: 2025
+url: "https://www.pnas.org/doi/10.1073/pnas.2318127122"
+type: research
+topics:
+  - algorithmic-feeds
+annotation: >
+  An important counterweight to algorithmic panic. Four experiments with nearly
+  9,000 participants show that manipulating YouTube's recommendations to create
+  filter bubbles and rabbit holes has no detectable short-term effect on political
+  attitudes. Essential for a balanced evidence base, though it does not address
+  longer-term or non-attitudinal effects.
+recommended: true
+access: open

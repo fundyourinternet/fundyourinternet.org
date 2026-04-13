@@ -1,0 +1,16 @@
+id: "pew-newspapers-2024"
+title: "Newspapers Fact Sheet"
+author: "Pew Research Center"
+year: 2024
+url: "https://www.pewresearch.org/journalism/fact-sheet/newspapers/"
+type: dataset
+topics:
+  - journalism-economics
+annotation: >
+  Pew's regularly updated fact sheet compiling industry data on newspaper
+  circulation, advertising revenue, and newsroom employment over time. Print
+  advertising revenue has fallen from roughly $49 billion in 2006 to a fraction
+  of that, and digital advertising has never come close to replacing it.
+  Valuable as a longitudinal data source.
+recommended: false
+access: open

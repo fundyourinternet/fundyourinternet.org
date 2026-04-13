@@ -1,0 +1,16 @@
+id: "corsi-twitter-amplification-2024"
+title: "Evaluating Twitter's Algorithmic Amplification of Low-Credibility Content: An Observational Study"
+author: "Giulio Corsi"
+year: 2024
+url: "https://link.springer.com/article/10.1140/epjds/s13688-024-00456-3"
+type: research
+topics:
+  - algorithmic-feeds
+annotation: >
+  Using 2.7 million posts on COVID-19 and climate change, this study measures
+  how Twitter's algorithm treats low-credibility content. Tweets sharing
+  information from low-credibility domains perform better in the algorithmic
+  feed, with the effect concentrated among high-engagement, high-follower
+  accounts.
+recommended: false
+access: open
