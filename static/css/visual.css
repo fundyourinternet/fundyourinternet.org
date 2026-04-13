@@ -290,25 +290,28 @@ html[data-theme="dark"] .homepage-hero::before {
 /* --- Page outline (in-page TOC) --- */
 
 .page-outline {
-  margin: var(--space-lg) 0;
+  margin: var(--space-lg) 0 var(--space-sm);
+  border-left: 3px solid var(--colour-branch, var(--colour-border));
+  padding-left: var(--space-md);
 }
 
 .page-outline-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  gap: var(--space-sm);
+}
+
+.page-outline-item + .page-outline-item {
+  border-top: 1px solid var(--colour-border);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
 }
 
 .page-outline-item a {
   display: block;
-  padding: var(--space-md);
-  border: 1px solid var(--colour-branch-border, var(--colour-border));
-  border-radius: 6px;
   text-decoration: none;
   color: var(--colour-text);
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .page-outline-item a:visited {
@@ -316,34 +319,37 @@ html[data-theme="dark"] .homepage-hero::before {
 }
 
 .page-outline-item a:hover {
-  background: var(--colour-branch-light, var(--colour-subtle));
-  border-color: var(--colour-branch, var(--colour-border));
+  color: var(--colour-branch, var(--colour-link));
 }
 
 .page-outline-item a:focus-visible {
   outline: 2px solid var(--colour-link);
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .page-outline-icon {
-  display: block;
-  font-size: 1.5rem;
   color: var(--colour-branch, var(--colour-muted));
-  margin-bottom: var(--space-xs);
+  margin-right: 0.3em;
+}
+
+.page-outline-icon .section-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
 }
 
 .page-outline-title {
-  display: block;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
+  font-size: 1rem;
 }
 
 .page-outline-desc {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--colour-muted);
+  margin-top: 0.15rem;
 }
 
 /* --- Section heading icons --- */
@@ -364,8 +370,11 @@ html[data-theme="dark"] .homepage-hero::before {
   z-index: 10;
   background: var(--colour-bg);
   border-bottom: 1px solid var(--colour-border);
-  padding: 0.5rem var(--space-md) 0.4rem;
+  padding: 0.5rem 0 0.4rem;
+  margin-bottom: var(--space-md);
   text-align: center;
+  /* Extend background to viewport edges when sticky */
+  box-shadow: -100vw 0 0 var(--colour-bg), 100vw 0 0 var(--colour-bg);
 }
 
 .section-progress-track {
@@ -431,14 +440,6 @@ html[data-theme="dark"] .homepage-hero::before {
 @media (min-width: 48em) {
   .section-hero h1 {
     font-size: 3rem;
-  }
-
-  .page-outline-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .page-outline-item:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
   }
 }
 
