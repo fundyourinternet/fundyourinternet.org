@@ -137,11 +137,13 @@ h1 .section-icon {
   opacity: 1;
 }
 
-/* --- Section hero (gradient placeholders) --- */
+/* --- Section hero (photo + desaturated gradient fade) --- */
 
 .section-hero {
   padding: calc(var(--space-2xl) + 3rem) var(--space-md) var(--space-xl);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-hero h1 {
@@ -156,46 +158,93 @@ h1 .section-icon {
   margin: 0 auto;
 }
 
-.section-hero--old-way {
-  background: linear-gradient(135deg, var(--colour-feeds-light) 0%, var(--colour-bg) 50%, var(--colour-feeds-light) 100%);
-}
-
-.section-hero--old-way h1 {
-  color: var(--colour-feeds);
-}
-
-.section-hero--new-way {
-  background: linear-gradient(135deg, var(--colour-movement-light) 0%, var(--colour-bg) 50%, var(--colour-movement-light) 100%);
-}
-
-.section-hero--new-way h1 {
-  color: var(--colour-movement);
-}
-
-.section-hero--evidence {
-  background: linear-gradient(135deg, var(--colour-evidence-light) 0%, var(--colour-bg) 50%, var(--colour-evidence-light) 100%);
-}
-
-.section-hero--evidence h1 {
-  color: var(--colour-evidence);
-}
+.section-hero--old-way h1 { color: var(--colour-feeds); }
+.section-hero--new-way h1 { color: var(--colour-movement); }
+.section-hero--evidence h1 { color: var(--colour-evidence); }
 
 /* --- Homepage hero backdrop --- */
 
 .homepage-hero {
-  background: linear-gradient(
-    160deg,
-    var(--colour-feeds-light) 0%,
-    var(--colour-bg) 30%,
-    var(--colour-movement-light) 60%,
-    var(--colour-bg) 80%,
-    var(--colour-evidence-light) 100%
-  );
   padding: calc(var(--space-lg) + 3rem) 0 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .homepage-hero .container {
   padding-bottom: var(--space-lg);
+}
+
+/* --- Hero image layers (shared) --- */
+
+.section-hero::before,
+.homepage-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: grayscale(30%);
+  opacity: 0.7;
+}
+
+.section-hero::after,
+.homepage-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 10%, var(--colour-bg) 100%);
+}
+
+.section-hero > *,
+.homepage-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-hero image assignments */
+
+.homepage-hero::before { background-image: url("/images/hero/homepage.jpg"); }
+.section-hero--old-way::before { background-image: url("/images/hero/old-way.jpg"); }
+.section-hero--new-way::before { background-image: url("/images/hero/new-way.jpg"); }
+.section-hero--evidence::before { background-image: url("/images/hero/evidence.jpg"); }
+
+/* Section-tinted gradient overlays */
+
+.section-hero--old-way::after {
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--colour-feeds-light) 20%, transparent) 0%,
+    var(--colour-bg) 100%);
+}
+
+.section-hero--new-way::after {
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--colour-movement-light) 20%, transparent) 0%,
+    var(--colour-bg) 100%);
+}
+
+.section-hero--evidence::after {
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--colour-evidence-light) 20%, transparent) 0%,
+    var(--colour-bg) 100%);
+}
+
+/* Hero images — dark mode (explicit toggle) */
+
+html[data-theme="dark"] .section-hero::before,
+html[data-theme="dark"] .homepage-hero::before {
+  filter: grayscale(50%);
+  opacity: 0.35;
+}
+
+/* Hero images — dark mode (OS detection) */
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .section-hero::before,
+  html:not([data-theme="light"]) .homepage-hero::before {
+    filter: grayscale(80%);
+    opacity: 0.2;
+  }
 }
 
 /* --- Figure shortcode --- */
@@ -311,5 +360,16 @@ h1 .section-icon {
 @media (min-width: 48em) {
   .section-hero h1 {
     font-size: 3rem;
+  }
+}
+
+/* --- Print: hide hero image layers --- */
+
+@media print {
+  .section-hero::before,
+  .section-hero::after,
+  .homepage-hero::before,
+  .homepage-hero::after {
+    display: none;
   }
 }

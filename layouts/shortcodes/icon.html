@@ -1,1 +1,2 @@
-{{- partial "section-icon.html" (.Get 0) -}}
+{{- $name := .Get 0 -}}
+{{- partial (printf "icons/%s.html" $name) -}}
