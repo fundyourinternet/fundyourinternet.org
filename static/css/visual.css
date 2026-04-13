@@ -57,31 +57,53 @@ h1 .section-icon {
   vertical-align: -0.05em;
 }
 
-/* --- Section navigation bar (below hero) --- */
+/* --- Header navigation (visual) --- */
 
-.section-nav-bar {
+.nav-toggle {
+  color: var(--colour-muted);
+  border: 1px solid var(--colour-border);
+  border-radius: 4px;
+}
+
+.nav-toggle:hover {
+  color: var(--colour-text);
+  border-color: var(--colour-text);
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
+.nav-toggle-icon {
+  display: block;
+}
+
+/* Dropdown panel (mobile) */
+
+.nav-menu[open] .nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--colour-bg);
   border-bottom: 1px solid var(--colour-border);
-  background: var(--colour-subtle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: var(--space-xs) 0;
+  z-index: 10;
 }
 
-.section-nav-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.nav-menu[open] .nav-links ul {
   display: flex;
-  justify-content: center;
-  gap: var(--space-xs);
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.section-nav-bar li {
-  display: contents;
-}
-
-.section-nav-link {
+.nav-link {
   display: flex;
   align-items: center;
   gap: 0.35em;
-  padding: 0.6rem var(--space-sm);
+  padding: 0.6rem var(--space-md);
   font-size: 0.85rem;
   color: var(--colour-muted);
   text-decoration: none;
@@ -89,52 +111,122 @@ h1 .section-icon {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.section-nav-link:visited {
+.nav-link:visited {
   color: var(--colour-muted);
 }
 
-.section-nav-link:hover {
+.nav-link:hover {
   color: var(--colour-text);
 }
 
-.section-nav-link:focus-visible {
+.nav-link:focus-visible {
   outline: 2px solid var(--colour-link);
   outline-offset: 2px;
 }
 
-.section-nav-link .section-icon {
+.nav-link .section-icon {
   width: 1em;
   height: 1em;
   vertical-align: -0.1em;
   opacity: 0.7;
 }
 
-.section-nav-link--one-thing:hover,
-.section-nav-link--one-thing[aria-current="page"] {
+.nav-link--one-thing:hover,
+.nav-link--one-thing[aria-current="page"] {
   color: var(--colour-text);
   border-bottom-color: var(--colour-text);
 }
 
-.section-nav-link--old-way:hover,
-.section-nav-link--old-way[aria-current="page"] {
+.nav-link--old-way:hover,
+.nav-link--old-way[aria-current="page"] {
   color: var(--colour-feeds);
   border-bottom-color: var(--colour-feeds);
 }
 
-.section-nav-link--new-way:hover,
-.section-nav-link--new-way[aria-current="page"] {
+.nav-link--new-way:hover,
+.nav-link--new-way[aria-current="page"] {
   color: var(--colour-movement);
   border-bottom-color: var(--colour-movement);
 }
 
-.section-nav-link--evidence:hover,
-.section-nav-link--evidence[aria-current="page"] {
+.nav-link--evidence:hover,
+.nav-link--evidence[aria-current="page"] {
   color: var(--colour-evidence);
   border-bottom-color: var(--colour-evidence);
 }
 
-.section-nav-link[aria-current="page"] .section-icon {
+.nav-link[aria-current="page"] .section-icon {
   opacity: 1;
+}
+
+@media (min-width: 48em) {
+  .nav-link {
+    padding: 0.6rem var(--space-sm);
+  }
+
+  .nav-menu > .nav-links,
+  .nav-menu[open] .nav-links {
+    position: static;
+    background: none;
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+/* --- Inline citations (superscript indicators with tooltips) --- */
+
+.cite {
+  font-style: normal;
+  counter-increment: cite;
+  white-space: nowrap;
+}
+
+.cite a {
+  display: inline-block;
+  position: relative;
+  color: var(--colour-evidence);
+  text-decoration: none;
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 1;
+  padding: 0 0.1em;
+}
+
+.cite a::before {
+  content: "[" counter(cite) "]";
+}
+
+.cite a::after {
+  content: attr(data-cite-info);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4em 0.6em;
+  background: var(--colour-text);
+  color: var(--colour-bg);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  border-radius: 4px;
+  white-space: normal;
+  width: max-content;
+  max-width: 18rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 20;
+}
+
+.cite a:hover::after,
+.cite a:focus::after {
+  opacity: 1;
+}
+
+.cite--missing {
+  color: var(--colour-error, #c0392b);
+  font-size: 0.75em;
+  vertical-align: super;
 }
 
 /* --- Section hero (photo + desaturated gradient fade) --- */
@@ -360,6 +452,16 @@ html[data-theme="dark"] .homepage-hero::before {
 @media (min-width: 48em) {
   .section-hero h1 {
     font-size: 3rem;
+  }
+
+  .homepage-hero::before {
+    background-position: left center;
+  }
+
+  .homepage-hero::after {
+    background:
+      linear-gradient(to right, transparent 30%, var(--colour-bg) 70%),
+      linear-gradient(to bottom, transparent 40%, var(--colour-bg) 100%);
   }
 }
 

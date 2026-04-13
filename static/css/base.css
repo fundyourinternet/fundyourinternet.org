@@ -189,6 +189,10 @@ a:focus-visible {
 
 /* --- Layout --- */
 
+main {
+  counter-reset: cite;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -264,6 +268,55 @@ a:focus-visible {
   font-weight: normal;
 }
 
+/* --- Navigation menu (details/summary burger) --- */
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.4em;
+  line-height: 1;
+}
+
+.nav-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: contents;
+}
+
+@media (min-width: 48em) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu > .nav-links {
+    display: flex;
+  }
+
+  .nav-links ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
+}
+
 /* --- Site footer --- */
 
 .site-footer {
@@ -297,7 +350,7 @@ a:focus-visible {
 /* --- Print --- */
 
 @media print {
-  .section-nav-bar,
+  .nav-toggle,
   .skip-link,
   .back-link,
   .theme-toggle {
@@ -331,6 +384,23 @@ a:focus-visible {
   .library-entry {
     background: none;
     border-radius: 0;
+  }
+
+  .cite a::before {
+    content: "[" counter(cite) "]";
+  }
+
+  .cite a::after {
+    content: " (" attr(data-cite-info) ")";
+    position: static;
+    opacity: 1;
+    background: none;
+    color: #000;
+    font-size: 0.8em;
+    padding: 0;
+    max-width: none;
+    width: auto;
+    white-space: normal;
   }
 
   .section-hero,

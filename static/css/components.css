@@ -171,14 +171,6 @@
   color: var(--colour-muted);
 }
 
-/* --- Section content headings with icons --- */
-
-.section-page h2 .section-icon {
-  color: var(--colour-branch, var(--colour-muted));
-  vertical-align: -0.1em;
-  margin-right: 0.2em;
-}
-
 /* --- Section pages --- */
 
 .section-page {
@@ -283,28 +275,6 @@
   font-family: var(--font-heading);
   font-size: 1.05rem;
   display: block;
-}
-
-/* --- Inline citations --- */
-
-.cite {
-  font-style: normal;
-  font-size: 0.85em;
-  white-space: nowrap;
-}
-
-.cite a {
-  color: var(--colour-evidence);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--colour-evidence-border);
-}
-
-.cite a:hover {
-  border-bottom-style: solid;
-}
-
-.cite--missing {
-  color: var(--colour-error, #c0392b);
 }
 
 /* --- Library (evidence base) --- */

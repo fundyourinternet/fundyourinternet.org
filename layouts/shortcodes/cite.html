@@ -1,7 +1,7 @@
 {{- $id := .Get 0 -}}
 {{- $source := index .Site.Data.library $id -}}
 {{- if $source -}}
-<cite class="cite"><a href="/the-evidence/#{{ $id }}" title="{{ $source.title }} ({{ $source.author }}, {{ $source.year }})">{{ $source.author }}, {{ $source.year }}</a></cite>
+<cite class="cite"><a href="/the-evidence/#{{ $id }}" aria-label="{{ $source.title }} ({{ $source.author }}, {{ $source.year }})" data-cite-info="{{ $source.author }}, {{ $source.year }}. {{ $source.title }}"></a></cite>
 {{- else -}}
-<cite class="cite cite--missing">[source not found: {{ $id }}]</cite>
+<cite class="cite cite--missing">[?]</cite>
 {{- end -}}

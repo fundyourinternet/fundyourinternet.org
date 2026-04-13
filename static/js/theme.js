@@ -33,3 +33,15 @@
     apply(next);
   });
 })();
+
+// Nav menu — close on link click (mobile)
+(function () {
+  var menu = document.getElementById('nav-menu');
+  if (!menu) return;
+  var links = menu.querySelectorAll('.nav-link');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+      menu.removeAttribute('open');
+    });
+  }
+})();
