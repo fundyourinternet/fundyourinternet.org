@@ -57,21 +57,76 @@ h1 .section-icon {
   vertical-align: -0.05em;
 }
 
-.site-header nav .section-icon {
-  width: 0.95em;
-  height: 0.95em;
+/* --- Section navigation bar (below hero) --- */
+
+.section-nav-bar {
+  border-bottom: 1px solid var(--colour-border);
+  background: var(--colour-subtle);
+}
+
+.section-nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.section-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.6rem var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--colour-muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.section-nav-link:visited {
+  color: var(--colour-muted);
+}
+
+.section-nav-link:hover {
+  color: var(--colour-text);
+}
+
+.section-nav-link .section-icon {
+  width: 1em;
+  height: 1em;
   vertical-align: -0.1em;
   opacity: 0.7;
+}
+
+.section-nav-link--old-way:hover,
+.section-nav-link--old-way[aria-current="page"] {
+  color: var(--colour-feeds);
+  border-bottom-color: var(--colour-feeds);
+}
+
+.section-nav-link--new-way:hover,
+.section-nav-link--new-way[aria-current="page"] {
+  color: var(--colour-movement);
+  border-bottom-color: var(--colour-movement);
+}
+
+.section-nav-link--evidence:hover,
+.section-nav-link--evidence[aria-current="page"] {
+  color: var(--colour-evidence);
+  border-bottom-color: var(--colour-evidence);
+}
+
+.section-nav-link[aria-current="page"] .section-icon {
+  opacity: 1;
 }
 
 /* --- Section hero (gradient placeholders) --- */
 
 .section-hero {
-  max-width: var(--max-width-wide);
-  margin: 0 auto;
   padding: var(--space-2xl) var(--space-md) var(--space-xl);
   text-align: center;
-  border-radius: 0 0 8px 8px;
 }
 
 .section-hero h1 {
@@ -88,7 +143,6 @@ h1 .section-icon {
 
 .section-hero--old-way {
   background: linear-gradient(135deg, var(--colour-feeds-light) 0%, var(--colour-bg) 50%, var(--colour-feeds-light) 100%);
-  border-bottom: 2px solid var(--colour-feeds-border);
 }
 
 .section-hero--old-way h1 {
@@ -97,7 +151,6 @@ h1 .section-icon {
 
 .section-hero--new-way {
   background: linear-gradient(135deg, var(--colour-movement-light) 0%, var(--colour-bg) 50%, var(--colour-movement-light) 100%);
-  border-bottom: 2px solid var(--colour-movement-border);
 }
 
 .section-hero--new-way h1 {
@@ -106,7 +159,6 @@ h1 .section-icon {
 
 .section-hero--evidence {
   background: linear-gradient(135deg, var(--colour-evidence-light) 0%, var(--colour-bg) 50%, var(--colour-evidence-light) 100%);
-  border-bottom: 2px solid var(--colour-evidence-border);
 }
 
 .section-hero--evidence h1 {
@@ -125,7 +177,6 @@ h1 .section-icon {
     var(--colour-evidence-light) 100%
   );
   padding: var(--space-lg) 0 0;
-  border-bottom: 1px solid var(--colour-border);
 }
 
 .homepage-hero .container {

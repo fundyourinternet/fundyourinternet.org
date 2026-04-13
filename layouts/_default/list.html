@@ -11,6 +11,7 @@
     {{ with .Params.summary }}<p class="section-hero-subtitle">{{ . }}</p>{{ end }}
   </div>
   {{ end }}
+  {{ partial "section-nav.html" . }}
   <div class="container">
     {{ .Content }}
 

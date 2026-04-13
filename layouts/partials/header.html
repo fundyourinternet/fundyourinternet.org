@@ -1,20 +1,9 @@
 <header class="site-header">
-  <div class="container">
+  <div class="container container--wide">
     <a href="/" class="site-title" aria-label="Fund Your Internet — home">
       <span class="site-mark" aria-hidden="true">FYI</span>
       <span class="site-name">Fund Your Internet</span>
     </a>
-    <nav aria-label="Main navigation">
-      <ul>
-        {{- $rel := .RelPermalink -}}
-        {{- range .Site.Menus.main }}
-        {{- $active := hasPrefix $rel .URL -}}
-        {{- $section := "" -}}
-        {{- if in .URL "old-way" }}{{ $section = "old-way" }}{{ else if in .URL "new-way" }}{{ $section = "new-way" }}{{ else if in .URL "evidence" }}{{ $section = "evidence" }}{{ end -}}
-        <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ if $section }}{{ partial "section-icon.html" $section }} {{ end }}{{ .Name }}</a></li>
-        {{- end }}
-      </ul>
-    </nav>
     <button class="theme-toggle" hidden aria-label="Colour scheme: Auto">
       <svg class="theme-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
       <span class="theme-toggle-label">Auto</span>
