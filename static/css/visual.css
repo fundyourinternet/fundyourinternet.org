@@ -185,7 +185,7 @@ h1 .section-icon {
   background-position: center top;
   background-repeat: no-repeat;
   filter: grayscale(60%);
-  opacity: 0.35;
+  opacity: 0.55;
 }
 
 .section-hero::after,
@@ -193,7 +193,7 @@ h1 .section-icon {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 30%, var(--colour-bg) 100%);
+  background: linear-gradient(to bottom, transparent 50%, var(--colour-bg) 100%);
 }
 
 .section-hero > *,
@@ -213,19 +213,19 @@ h1 .section-icon {
 
 .section-hero--old-way::after {
   background: linear-gradient(to bottom,
-    color-mix(in srgb, var(--colour-feeds-light) 40%, transparent) 0%,
+    color-mix(in srgb, var(--colour-feeds-light) 20%, transparent) 0%,
     var(--colour-bg) 100%);
 }
 
 .section-hero--new-way::after {
   background: linear-gradient(to bottom,
-    color-mix(in srgb, var(--colour-movement-light) 40%, transparent) 0%,
+    color-mix(in srgb, var(--colour-movement-light) 20%, transparent) 0%,
     var(--colour-bg) 100%);
 }
 
 .section-hero--evidence::after {
   background: linear-gradient(to bottom,
-    color-mix(in srgb, var(--colour-evidence-light) 40%, transparent) 0%,
+    color-mix(in srgb, var(--colour-evidence-light) 20%, transparent) 0%,
     var(--colour-bg) 100%);
 }
 
