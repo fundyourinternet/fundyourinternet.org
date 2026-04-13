@@ -378,29 +378,28 @@ html[data-theme="dark"] .homepage-hero::before {
 /* --- Page outline (in-page TOC) --- */
 
 .page-outline {
-  margin: var(--space-lg) 0;
+  margin: var(--space-lg) 0 var(--space-sm);
+  border-left: 3px solid var(--colour-branch, var(--colour-border));
+  padding-left: var(--space-md);
 }
 
 .page-outline-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  gap: var(--space-xs);
+}
+
+.page-outline-item + .page-outline-item {
+  border-top: 1px solid var(--colour-border);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
 }
 
 .page-outline-item a {
-  display: grid;
-  grid-template-columns: 1.5em 1fr;
-  grid-template-rows: auto auto;
-  gap: 0 0.6em;
-  align-items: baseline;
-  padding: var(--space-sm) var(--space-md);
-  border-left: 3px solid var(--colour-branch-border);
-  border-radius: 0 6px 6px 0;
+  display: block;
   text-decoration: none;
   color: var(--colour-text);
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .page-outline-item a:visited {
@@ -408,17 +407,24 @@ html[data-theme="dark"] .homepage-hero::before {
 }
 
 .page-outline-item a:hover {
-  background: var(--colour-branch-light);
-  border-left-color: var(--colour-branch);
+  color: var(--colour-branch, var(--colour-link));
+}
+
+.page-outline-item a:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .page-outline-icon {
-  grid-row: 1 / 3;
-  color: var(--colour-branch);
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  padding-top: 0.15em;
+  color: var(--colour-branch, var(--colour-muted));
+  margin-right: 0.3em;
+}
+
+.page-outline-icon .section-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
 }
 
 .page-outline-title {
@@ -428,9 +434,10 @@ html[data-theme="dark"] .homepage-hero::before {
 }
 
 .page-outline-desc {
+  display: block;
   font-size: 0.85rem;
   color: var(--colour-muted);
-  grid-column: 2;
+  margin-top: 0.15rem;
 }
 
 /* --- Section heading icons --- */
@@ -443,7 +450,21 @@ html[data-theme="dark"] .homepage-hero::before {
   margin-right: 0.3em;
 }
 
-/* --- Responsive hero --- */
+/* --- Section page H2 emphasis (long-form content) --- */
+
+.section-page h2 {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--colour-border);
+}
+
+.section-page h2:first-of-type {
+  margin-top: var(--space-lg);
+  padding-top: 0;
+  border-top: none;
+}
+
+/* --- Responsive --- */
 
 @media (min-width: 48em) {
   .section-hero h1 {
@@ -455,7 +476,7 @@ html[data-theme="dark"] .homepage-hero::before {
   }
 }
 
-/* --- Print: hide hero image layers --- */
+/* --- Print --- */
 
 @media print {
   .section-hero::before,

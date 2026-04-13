@@ -119,23 +119,26 @@ body {
 h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.25;
-  font-weight: normal;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: normal;
   margin-bottom: var(--space-md);
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: normal;
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
 }
 
 h3 {
-  font-size: 1.15rem;
-  margin-top: var(--space-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  margin-top: 2rem;
   margin-bottom: var(--space-xs);
 }
 
