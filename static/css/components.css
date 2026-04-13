@@ -1,17 +1,17 @@
 /* === Fund Your Internet — Component Styles === */
 
-/* --- Homepage domains --- */
+/* --- Homepage domains (card containers) --- */
 
 .domain {
-  padding: var(--space-lg) 0;
-}
-
-.domain + .domain {
-  border-top: 1px solid var(--colour-border);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  border-left: 3px solid var(--colour-border);
+  border-radius: 0 6px 6px 0;
+  background: var(--colour-subtle);
 }
 
 .domain-heading {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-family: var(--font-body);
   font-weight: 600;
   text-transform: uppercase;
@@ -22,75 +22,81 @@
 }
 
 .domain-context {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--colour-muted);
   max-width: 36rem;
-  margin-bottom: var(--space-md);
-}
-
-/* --- Domain items (shared card component) --- */
-
-.domain-item {
   margin-bottom: var(--space-sm);
-  padding: var(--space-md);
-  border-left: 3px solid var(--colour-border);
-  border-radius: 0 6px 6px 0;
-  background: var(--colour-subtle);
 }
 
-.domain-item:last-child {
+.domain-context:last-child {
   margin-bottom: 0;
 }
 
-.domain-item--old-way {
-  border-left-color: var(--colour-feeds);
-  background: var(--colour-feeds-light);
+/* --- Domain entries (icon + content rows) --- */
+
+.domain-entry {
+  display: flex;
+  gap: var(--space-sm);
 }
 
-.domain-item--new-way {
-  border-left-color: var(--colour-movement);
-  background: var(--colour-movement-light);
+.domain-entry + .domain-entry {
+  border-top: 1px solid var(--colour-border);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
 }
 
-.domain-item--evidence {
-  border-left-color: var(--colour-evidence);
-  background: var(--colour-evidence-light);
+.domain-entry-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--colour-muted);
+  padding-top: 0.15em;
 }
 
-.domain-item-label {
+.domain-entry-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.domain-entry-body p {
+  color: var(--colour-muted);
+  margin-bottom: 0.25rem;
+}
+
+.domain-entry-body p:last-child {
+  margin-bottom: 0;
+}
+
+.domain-entry-label {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--colour-muted);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.15rem;
 }
 
-.domain-item--old-way .domain-item-label { color: var(--colour-feeds); }
-.domain-item--new-way .domain-item-label { color: var(--colour-movement); }
-.domain-item--evidence .domain-item-label { color: var(--colour-evidence); }
-
-.domain-item h3 {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: var(--space-xs);
-}
-
-.domain-item p {
-  color: var(--colour-muted);
-  margin-bottom: var(--space-xs);
-}
-
-.domain-item-link {
+.domain-entry-link {
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.domain-item--old-way .domain-item-link { color: var(--colour-feeds); }
-.domain-item--new-way .domain-item-link { color: var(--colour-movement); }
-.domain-item--evidence .domain-item-link { color: var(--colour-evidence); }
+/* Branch colour accents for Explore entries */
+
+.domain-entry--old-way .domain-entry-icon { color: var(--colour-feeds); }
+.domain-entry--new-way .domain-entry-icon { color: var(--colour-movement); }
+.domain-entry--evidence .domain-entry-icon { color: var(--colour-evidence); }
+
+.domain-entry--old-way .domain-entry-label { color: var(--colour-feeds); }
+.domain-entry--new-way .domain-entry-label { color: var(--colour-movement); }
+.domain-entry--evidence .domain-entry-label { color: var(--colour-evidence); }
+
+.domain-entry--old-way .domain-entry-link { color: var(--colour-feeds); }
+.domain-entry--new-way .domain-entry-link { color: var(--colour-movement); }
+.domain-entry--evidence .domain-entry-link { color: var(--colour-evidence); }
 
 /* --- Page table of contents --- */
 
