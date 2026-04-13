@@ -362,92 +362,25 @@ html[data-theme="dark"] .homepage-hero::before {
   margin-right: 0.3em;
 }
 
-/* --- Section progress bar (sticky scroll spy) --- */
+/* --- Section page H2 emphasis (long-form content) --- */
 
-.section-progress {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--colour-bg);
-  border-bottom: 1px solid var(--colour-border);
-  padding: 0.5rem 0 0.4rem;
-  margin-bottom: var(--space-md);
-  text-align: center;
-  /* Extend background to viewport edges when sticky */
-  box-shadow: -100vw 0 0 var(--colour-bg), 100vw 0 0 var(--colour-bg);
+.section-page h2 {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--colour-border);
 }
 
-.section-progress-track {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-}
-
-.section-progress-step {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--colour-muted);
-  text-decoration: none;
-  padding: 0.15rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.section-progress-step:visited {
-  color: var(--colour-muted);
-}
-
-.section-progress-step:hover {
-  color: var(--colour-branch);
-}
-
-.section-progress-step:focus-visible {
-  outline: 2px solid var(--colour-link);
-  outline-offset: 2px;
-}
-
-.section-progress-step.is-active {
-  color: var(--colour-branch);
-  border-bottom-color: var(--colour-branch);
-}
-
-.section-progress-step .section-icon {
-  width: 1.15em;
-  height: 1.15em;
-}
-
-.section-progress-title {
-  display: block;
-  font-size: 0.75rem;
-  font-family: var(--font-heading);
-  color: var(--colour-branch);
-  margin-top: 0.15rem;
-  line-height: 1.2;
+.section-page h2:first-of-type {
+  margin-top: var(--space-lg);
+  padding-top: 0;
+  border-top: none;
 }
 
 /* --- Responsive --- */
 
-@media (max-width: 47.999em) {
-  .section-progress-title {
-    display: none;
-  }
-  .section-progress-track {
-    gap: var(--space-sm);
-  }
-}
-
 @media (min-width: 48em) {
   .section-hero h1 {
     font-size: 3rem;
-  }
-}
-
-/* --- Reduced motion --- */
-
-@media (prefers-reduced-motion: reduce) {
-  .section-progress-step {
-    transition: none;
   }
 }
 
@@ -458,10 +391,6 @@ html[data-theme="dark"] .homepage-hero::before {
   .section-hero::after,
   .homepage-hero::before,
   .homepage-hero::after {
-    display: none;
-  }
-
-  .section-progress {
     display: none;
   }
 }
