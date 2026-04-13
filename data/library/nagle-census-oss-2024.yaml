@@ -1,0 +1,18 @@
+id: "nagle-census-oss-2024"
+title: "Census III of Free and Open Source Software -- Application Libraries"
+author: "Frank Nagle, Kate Powell, Richie Zitomer, David A. Wheeler"
+year: 2024
+url: "https://www.linuxfoundation.org/press/open-source-usage-trends-and-security-challenges-revealed-in-new-study"
+type: research
+topics:
+  - open-source-funding
+annotation: >
+  The most comprehensive measurement of which open source libraries are actually
+  used in production, based on over 12 million observations across more than
+  10,000 companies. Confirms that much of the most widely used open source
+  software is maintained by only a handful of contributors. Essential for
+  understanding where open source infrastructure is most vulnerable.
+recommended: false
+related:
+  - hoffmann-value-oss-2024
+access: open

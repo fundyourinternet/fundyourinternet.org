@@ -1,0 +1,19 @@
+id: "elsanyoura-patreon-2022"
+title: "Quantifying the Creator Economy: A Large-Scale Analysis of Patreon"
+author: "Lana El Sanyoura, Ashton Anderson"
+year: 2022
+url: "https://ojs.aaai.org/index.php/ICWSM/article/view/19338"
+type: research
+topics:
+  - direct-funding-models
+  - platform-economics
+annotation: >
+  The most rigorous large-scale academic study of Patreon, analysing the
+  complete set of pledges exceeding $2 billion from 2013 to 2020. Examines
+  the membership platform from three perspectives -- patrons, creators, and
+  the platform as a whole -- and finds that patrons who pledge to a narrow
+  set of creators are more loyal but churn off the platform more often.
+recommended: false
+related:
+  - bonifacio-patreon-labour-2023
+access: open

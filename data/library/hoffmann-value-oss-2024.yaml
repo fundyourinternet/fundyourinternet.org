@@ -1,0 +1,19 @@
+id: "hoffmann-value-oss-2024"
+title: "The Value of Open Source Software"
+author: "Manuel Hoffmann, Frank Nagle, Yanuo Zhou"
+year: 2024
+url: "https://www.hbs.edu/faculty/Pages/item.aspx?num=65230"
+type: research
+topics:
+  - open-source-funding
+annotation: >
+  A Harvard Business School study estimating that firms would need to spend
+  $8.8 trillion to replace existing open source software -- roughly 3.5 times
+  their current software spending. Built on the most complete measurement of
+  OSS usage to date. The single most striking quantification of how much
+  economic value rests on largely uncompensated open source labour.
+recommended: true
+related:
+  - tidelift-maintainer-survey-2024
+  - nagle-census-oss-2024
+access: open

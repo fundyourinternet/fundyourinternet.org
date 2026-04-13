@@ -1,0 +1,17 @@
+id: "milli-engagement-amplification-2025"
+title: "Engagement, User Satisfaction, and the Amplification of Divisive Content on Social Media"
+author: "Smitha Milli, Micah Carroll, Yike Wang, Sashrika Pandey, Sebastian Zhao, Anca D. Dragan"
+year: 2025
+url: "https://academic.oup.com/pnasnexus/article/4/3/pgaf062/8052060"
+type: research
+topics:
+  - algorithmic-feeds
+  - ad-driven-wellbeing
+annotation: >
+  An algorithmic audit of Twitter/X showing that its engagement-based ranking
+  algorithm amplifies emotionally charged, out-group hostile content significantly
+  more than a reverse-chronological baseline. Users themselves report wanting to
+  see less of this divisive content, revealing a structural misalignment between
+  what engagement metrics optimise for and what users actually value.
+recommended: true
+access: open
