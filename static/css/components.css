@@ -2,12 +2,23 @@
 
 /* --- Homepage domains (card containers) --- */
 
+.homepage-domains {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
 .domain {
   margin-bottom: var(--space-md);
   padding: var(--space-md);
-  border-left: 3px solid var(--colour-border);
-  border-radius: 0 6px 6px 0;
-  background: var(--colour-subtle);
+  border: 1px solid var(--colour-border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--colour-subtle) 88%, transparent);
+}
+
+.domain--primary {
+  border-color: color-mix(in srgb, var(--colour-border) 65%, var(--colour-link));
+  background: color-mix(in srgb, var(--colour-subtle) 92%, var(--colour-evidence-light));
 }
 
 .domain-heading {
@@ -84,6 +95,13 @@
   font-weight: 500;
 }
 
+@media (min-width: 48em) {
+  .homepage-domains {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
 /* Branch colour accents for Explore entries */
 
 .domain-entry--old-way .domain-entry-icon { color: var(--colour-feeds); }
@@ -97,57 +115,6 @@
 .domain-entry--old-way .domain-entry-link { color: var(--colour-feeds); }
 .domain-entry--new-way .domain-entry-link { color: var(--colour-movement); }
 .domain-entry--evidence .domain-entry-link { color: var(--colour-evidence); }
-
-/* --- Page table of contents --- */
-
-.page-toc {
-  display: grid;
-  gap: var(--space-sm);
-  margin: var(--space-lg) 0;
-}
-
-.toc-card {
-  display: block;
-  padding: var(--space-md);
-  border: 1px solid var(--colour-branch-border, var(--colour-border));
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--colour-text);
-  transition: border-color 0.15s ease, background-color 0.15s ease;
-}
-
-.toc-card:visited { color: var(--colour-text); }
-
-.toc-card:hover {
-  background: var(--colour-branch-light, var(--colour-subtle));
-  border-color: var(--colour-branch, var(--colour-border));
-}
-
-.toc-card:focus-visible {
-  outline: 2px solid var(--colour-link);
-  outline-offset: 2px;
-}
-
-.toc-card-icon {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--colour-branch, var(--colour-muted));
-  margin-bottom: var(--space-xs);
-}
-
-.toc-card-title {
-  display: block;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
-}
-
-.toc-card-desc {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--colour-muted);
-}
 
 /* --- Section pages --- */
 
@@ -328,10 +295,6 @@
 /* --- Responsive components --- */
 
 @media (min-width: 48em) {
-  .page-toc {
-    grid-template-columns: 1fr 1fr;
-  }
-
   /* Sidenotes float into the margin on wide screens */
   .has-sidenotes .container {
     max-width: var(--max-width-wide);
