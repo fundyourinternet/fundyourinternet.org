@@ -1,5 +1,5 @@
 {{- $id := .Get 0 -}}
-{{- $source := index .Site.Data.library $id -}}
+{{- $source := index hugo.Data.library $id -}}
 {{- if $source -}}
 <cite class="cite"><a href="/the-evidence/#{{ $id }}" aria-label="{{ $source.title }} ({{ $source.author }}, {{ $source.year }})" data-cite-info="{{ $source.author }}, {{ $source.year }}. {{ $source.title }}"></a></cite>
 {{- else -}}

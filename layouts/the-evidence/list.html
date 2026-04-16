@@ -25,7 +25,7 @@
 
     {{/* Collect all library sources and group by topic */}}
     {{ $sources := slice }}
-    {{ range $id, $source := .Site.Data.library }}
+    {{ range $id, $source := hugo.Data.library }}
       {{ $sources = $sources | append $source }}
     {{ end }}
 

@@ -2,6 +2,7 @@ baseURL = "https://fundyourinternet.org/"
 languageCode = "en-GB"
 title = "Fund Your Internet"
 disableKinds = ["taxonomy"]
+ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   description = "A practical guide to sustaining the things you rely on online."
