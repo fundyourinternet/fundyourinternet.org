@@ -97,7 +97,7 @@
 
 @media (min-width: 48em) {
   .homepage-domains {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: start;
   }
 }

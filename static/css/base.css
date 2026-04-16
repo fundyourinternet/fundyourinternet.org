@@ -200,21 +200,10 @@ main {
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.site-title {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: var(--colour-text);
-}
-
-.site-title:visited {
-  color: var(--colour-text);
+  position: relative;
 }
 
 .site-mark {
@@ -244,7 +233,10 @@ main {
   cursor: pointer;
   padding: 0.4em;
   line-height: 1;
-  order: 2;
+  position: absolute;
+  right: var(--space-xs);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav-links {
@@ -276,10 +268,6 @@ main {
   flex-wrap: wrap;
 }
 
-.site-title {
-  order: 1;
-}
-
 @media (min-width: 48em) {
   .nav-toggle-label {
     display: none;
@@ -289,10 +277,8 @@ main {
     position: static;
     max-height: none;
     overflow: visible;
-    flex: 1;
     display: flex;
     justify-content: center;
-    order: 2;
   }
 
   .nav-links ul {
@@ -392,7 +378,7 @@ main {
   }
 
   .section-hero,
-  .homepage-hero {
+  .section-hero {
     background: none;
     padding-top: var(--space-md);
   }
