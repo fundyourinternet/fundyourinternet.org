@@ -9,3 +9,18 @@
     });
   }
 })();
+
+// Web Share API — progressive enhancement for share link
+(function () {
+  var shareLink = document.querySelector('.js-share');
+  if (!shareLink || !navigator.share) return;
+  shareLink.textContent = 'Share this idea';
+  shareLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    navigator.share({
+      title: 'Fund Your Internet',
+      text: 'Pick one thing you value online. Fund it today.',
+      url: 'https://fundyourinternet.org'
+    });
+  });
+})();

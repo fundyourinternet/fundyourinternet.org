@@ -10,7 +10,7 @@
   display: inline-block;
 }
 
-.domain-entry-label .section-icon,
+.domain-teaser-label .section-icon,
 .bridge-section .section-icon {
   width: 1em;
   height: 1em;
@@ -90,7 +90,7 @@ h1 .section-icon {
   width: 1em;
   height: 1em;
   vertical-align: -0.1em;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .nav-link--home:hover,
@@ -119,6 +119,25 @@ h1 .section-icon {
 
 .nav-link[aria-current="page"] .section-icon {
   opacity: 1;
+}
+
+.nav-link[aria-current="page"] {
+  border-bottom-width: 3px;
+}
+
+.nav-link--old-way[aria-current="page"] { background: var(--colour-feeds-light); border-radius: 4px 4px 0 0; }
+.nav-link--new-way[aria-current="page"] { background: var(--colour-movement-light); border-radius: 4px 4px 0 0; }
+.nav-link--evidence[aria-current="page"] { background: var(--colour-evidence-light); border-radius: 4px 4px 0 0; }
+
+@media (max-width: 47.999em) {
+  .nav-link[aria-current="page"] {
+    border-left: 3px solid var(--colour-text);
+    padding-left: calc(var(--space-md) - 3px);
+  }
+
+  .nav-link--old-way[aria-current="page"] { border-left-color: var(--colour-feeds); }
+  .nav-link--new-way[aria-current="page"] { border-left-color: var(--colour-movement); }
+  .nav-link--evidence[aria-current="page"] { border-left-color: var(--colour-evidence); }
 }
 
 @media (min-width: 48em) {
@@ -185,7 +204,7 @@ h1 .section-icon {
 /* --- Section hero (photo + desaturated gradient fade) --- */
 
 .section-hero {
-  padding: calc(var(--space-2xl) + 1.5rem) var(--space-md) var(--space-xl);
+  padding: calc(var(--space-xl) + 1.5rem) var(--space-md) var(--space-lg);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -216,8 +235,8 @@ h1 .section-icon {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  filter: grayscale(30%);
-  opacity: 0.7;
+  filter: grayscale(35%);
+  opacity: 0.48;
 }
 
 .section-hero::after {
@@ -234,6 +253,24 @@ h1 .section-icon {
 .section-hero > * {
   position: relative;
   z-index: 1;
+}
+
+/* Homepage hero — more visible image, more breathing room */
+.section-hero--home {
+  padding-bottom: var(--space-2xl);
+}
+
+.section-hero--home::before {
+  filter: grayscale(20%);
+  opacity: 0.55;
+}
+
+.section-hero--home::after {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--colour-bg) 40%, transparent) 0%,
+    var(--colour-bg) 100%
+  );
 }
 
 /* Per-hero image assignments */
@@ -263,10 +300,35 @@ h1 .section-icon {
     var(--colour-bg) 100%);
 }
 
-/* Single theme: keep hero images present, not gloomy */
-.section-hero::before {
-  filter: grayscale(35%);
-  opacity: 0.42;
+/* --- CTA button --- */
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75em 1.75em;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--colour-bg);
+  background: var(--colour-text);
+  border: 2px solid var(--colour-text);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  margin-top: var(--space-md);
+}
+
+.cta-button:visited {
+  color: var(--colour-bg);
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--colour-text);
+  transform: translateY(-1px);
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 3px;
 }
 
 /* --- Figure shortcode --- */
@@ -335,7 +397,9 @@ h1 .section-icon {
   display: block;
   text-decoration: none;
   color: var(--colour-text);
-  transition: color 0.15s ease;
+  border-left: 3px solid transparent;
+  padding-left: var(--space-xs);
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .page-outline-item a:visited {
@@ -344,6 +408,7 @@ h1 .section-icon {
 
 .page-outline-item a:hover {
   color: var(--colour-branch, var(--colour-link));
+  border-left-color: var(--colour-branch, var(--colour-link));
 }
 
 .page-outline-item a:focus-visible {
@@ -390,8 +455,8 @@ h1 .section-icon {
 
 .section-page h2 {
   margin-top: var(--space-xl);
-  padding-top: var(--space-sm);
-  border-top: 1px solid var(--colour-border);
+  padding-top: var(--space-md);
+  border-top: 2px solid var(--colour-branch-border);
 }
 
 .section-page h2:first-of-type {
@@ -403,6 +468,10 @@ h1 .section-icon {
 /* --- Responsive --- */
 
 @media (min-width: 48em) {
+  .section-hero {
+    padding: calc(var(--space-2xl) + 1.5rem) var(--space-md) var(--space-xl);
+  }
+
   .section-hero h1 {
     font-size: 3rem;
   }

@@ -67,6 +67,8 @@ A local newspaper earns a fraction of a penny per page view from digital adverti
 
 The most visible casualty is local journalism. The United States now has 213 counties with no local news source at all. These are news deserts, where no one is covering the school board, the water treatment plant, the local court. In a single recent year, 136 newspapers closed. Web traffic to the 100 largest newspapers plunged 45 per cent over four years. {{< cite "medill-local-news-2025" >}}
 
+{{< callout stat="213 counties" label="in the United States now have no local news source at all" >}}
+
 The financial picture explains why. Print advertising revenue fell from roughly $49 billion in 2006 to a small fraction of that. Digital advertising was supposed to replace it. It never came close. {{< cite "pew-newspapers-2024" >}}
 
 Globally, print circulation and advertising now account for less than half of publisher revenue for the first time in history. {{< cite "wanifra-press-trends-2025" >}} Over 300 digital news startups have launched in five years, but they are overwhelmingly concentrated in metro areas with educated, affluent populations. The news deserts are not being filled. {{< cite "medill-local-news-2025" >}}
@@ -75,11 +77,15 @@ Globally, print circulation and advertising now account for less than half of pu
 
 Goldman Sachs puts the creator economy at $250 billion today and projects $480 billion by 2027. {{< cite "goldmansachs-creator-economy-2025" >}} But a third of independent creators in the United States make less than $5,000 a year, while fewer than one in ten earn a professional wage. {{< cite "mbo-creator-economy-2024" >}} The market is enormous partly because millions of people are trying to earn from it, while only a small minority sustain a living.
 
+{{< callout stat="$250 billion" label="The creator economy's projected size, yet fewer than one in ten creators earn a professional wage" >}}
+
 On influencer platforms like TikTok, brand deals account for roughly 70 per cent of creator revenue. Influencers may look independent, but their work is shaped by the interests of their advertisers. {{< cite "goldmansachs-creator-economy-2025" >}} The better someone can hold attention, trigger reaction, and stay visible in the feed, the more valuable they become to brands. A few win big. Most supply the platform with cheap, abundant labour. And they all need you to keep watching.
 
 ### Trained to expect free
 
 Only 17 per cent of people globally say they are willing to pay for online news. Fifty-seven per cent say they will not consider paying anything. Among the non-payers, just 2 per cent say they would pay the price of a full subscription. {{< cite "reuters-digital-news-2024" >}} This is not because people do not value journalism. It is because three decades of ad-supported internet have trained everyone to expect content for free. {{< cite "reuters-digital-news-2025" >}}
+
+{{< callout stat="17%" label="of people globally say they are willing to pay for online news" >}}
 
 The result is a squeeze from both sides. Advertising revenue collapses. Willingness to pay remains low. What survives is whatever can be produced cheaply enough to sustain itself on fractions of pennies per view — or whatever is funded by someone with a reason to fund it that has nothing to do with its quality.
 

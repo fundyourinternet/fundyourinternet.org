@@ -35,6 +35,8 @@ The response to the ad-driven web is already happening. It is not fringe, not cr
 
 This is not easy. Most independent creators earn less than $30,000 a year. {{< cite "mbo-creator-economy-2024" >}} Nearly half of all consumers say they feel overwhelmed by subscription management. {{< cite "deloitte-digital-media-2025" >}} And yet, last year, over eight million people in 200 countries gave an average of $10.58 each to keep Wikipedia running — no paywall, no algorithm, just people choosing to sustain something they use. {{< cite "wikimedia-fundraising-2024" >}}
 
+{{< callout stat="8 million people" label="in 200 countries chose to fund Wikipedia last year, with no paywall and no algorithm" >}}
+
 That is a pattern worth understanding. The sections below are organised by pattern rather than by industry, because the same logic — people connecting directly with things they value — shows up everywhere. In journalism, in open source software, in podcasting, in the decentralised web. What varies is the shape it takes.
 
 {{< outline >}}
@@ -46,6 +48,8 @@ The simplest version of this pattern is the oldest: one person decides to pay fo
 A recurring pledge to a journalist. A monthly contribution to a podcast. A sponsorship of a software project. This is not charity — it is sustaining something you use. The same logic as shopping at a local market instead of a supermarket.
 
 At scale, it works. Since 2013, the patronage platform Patreon has channelled over two billion dollars in pledges from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}} Research on recurring crowdfunding models shows that this kind of sustained patronage is more durable than one-off campaigns, particularly when creators invest in ongoing engagement with their supporters. {{< cite "tan-recurring-crowdfunding-2024" >}}
+
+{{< callout stat="$2 billion" label="channelled from supporters to creators through Patreon since 2013" >}}
 
 But the distribution is stark. The creator economy is projected to reach $480 billion by 2027, yet only about four per cent of creators earn more than $100,000 a year, and brand deals — not direct support — account for roughly 70 per cent of revenue. {{< cite "goldmansachs-creator-economy-2025" >}} Newsletter platforms like Substack offer independence from traditional newsrooms, but the most successful newsletters are overwhelmingly authored by already-established journalists, and algorithmic recommendations increasingly shape what gets read. {{< cite "mdpi-substack-journalism-2024" >}}
 
@@ -74,6 +78,8 @@ These are not easy models. Cooperatives require governance, and governance is sl
 Some things on the internet are not made for an audience. They are made for everyone, often by very few people, and almost nobody notices until they break.
 
 Open source software is the sharpest example. A Harvard Business School study estimated that firms would need to spend $8.8 trillion to replace the open source software they currently use for free — roughly three and a half times their total software spending. {{< cite "hoffmann-value-oss-2024" >}} A decade earlier, Nadia Eghbal's report *Roads and Bridges* argued that this software should be treated as public infrastructure, like roads or water systems. The problems she identified have only intensified since. {{< cite "eghbal-roads-bridges-2016" >}}
+
+{{< callout stat="$8.8 trillion" label="The estimated cost to replace the open source software that firms currently use for free" >}}
 
 What underfunding looks like in practice: in 2024, a security researcher discovered that an attacker had spent 2.6 years building trust within the XZ Utils project — a small, under-resourced piece of compression software used by most Linux systems — before injecting a backdoor into it. {{< cite "przymus-xz-utils-2025" >}} The project had essentially one active maintainer. The Census III study of open source usage confirms this is not an anomaly: much of the most widely used software depends on a handful of contributors. {{< cite "nagle-census-oss-2024" >}}
 
