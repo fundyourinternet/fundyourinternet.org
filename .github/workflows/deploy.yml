@@ -19,10 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
       - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "0.147.0"
-      - run: hugo --minify
+      - name: Clear Hugo build artefacts
+        run: |
+          rm -rf public resources
+          rm -rf ~/.cache/hugo_cache
+      - name: Build site (no cache)
+        env:
+          HUGO_BUILD_REVISION: ${{ github.sha }}
+        run: hugo --minify --gc --cleanDestinationDir --ignoreCache
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
