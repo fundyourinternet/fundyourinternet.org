@@ -1,8 +1,8 @@
 ---
 title: "The Old Way"
 summary: "What happens when algorithms decide what you see, and what it means for the things you rely on."
-strand_title: "The system is working as designed"
-strand_teaser: "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written — not because of bad intentions, but because of basic arithmetic."
+strand_title: "Isn't the internet meant to be free?"
+strand_teaser: "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written - and what you're allowed to discover."
 outline:
   - title: "How Feeds Choose for You"
     icon: "list-filter"
@@ -23,7 +23,7 @@ outline:
   - title: "Seeing Clearly"
     icon: "eye"
     anchor: "seeing-clearly"
-    description: "What changes when you understand the model, and where to go next."
+    description: "What changes when you understand the model, and what to do next."
 bridges:
   - branch: new-way
     section: A New Way
@@ -35,7 +35,7 @@ bridges:
     prompt: "Read the research behind these claims."
 ---
 
-Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it shapes everything. {{< cite "doctorow-enshittification-2023" >}}
+Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it defines the internet experience. {{< cite "doctorow-enshittification-2023" >}}
 
 {{< outline >}}
 
@@ -43,11 +43,11 @@ Most of what you see online is chosen for you. Not by editors, not by your frien
 
 Open any social media app and you will see a feed. It looks like a stream of things people posted, roughly in order. It is not.
 
-What you see is a ranking. Every post, video, and link has been scored by a system that predicts how likely you are to engage with it — to tap, to comment, to share, to keep watching. The posts that score highest appear first. The ones that score lowest disappear, even if the person who posted them intended you to see them. On most platforms, you cannot turn this off. {{< sidenote >}}An algorithm is just a set of rules for making decisions. Your email spam filter is an algorithm. The difference is that a spam filter is designed to help you. A feed algorithm is designed to help the platform.{{< /sidenote >}}
+What you see is a ranking. Every post, video, and link has been scored by a system that predicts how likely you are to engage with it: to tap, to comment, to share, to keep watching. The posts that score highest appear first. The ones that score lowest disappear, even if the person who posted them intended you to see them. On most platforms, you cannot turn this off. {{< sidenote >}}An algorithm is just a set of rules for making decisions. Your email spam filter is an algorithm. The difference is that a spam filter is designed to help you. A feed algorithm is designed to help the platform.{{< /sidenote >}}
 
 ### Engagement is not enjoyment
 
-The ranking optimises for engagement — taps, likes, shares, comments, watch time. But engagement is not the same as enjoyment, and it is definitely not the same as value.
+The ranking optimises for engagement - taps, likes, shares, comments, watch time. But engagement is not the same as enjoyment, and it is definitely not the same as value.
 
 An algorithmic audit of Twitter/X found that engagement-based ranking amplifies emotionally charged, hostile content significantly more than a reverse-chronological feed would. {{< cite "milli-engagement-amplification-2025" >}} Users themselves reported wanting to see *less* of the divisive content that the algorithm was showing them *more* of. The business model and the ranking system are the same thing.
 
@@ -57,13 +57,7 @@ Research on Facebook's ranking system found the same trade-off: weighting engage
 
 ### An old pattern in new clothes
 
-The pattern — free content subsidised by advertising, then advertising reshaping the content — is as old as mass media. Tim Wu traces it from the penny press of the 1830s through radio, television, and into the internet age. {{< cite "wu-attention-merchants-2016" >}} Each new medium attracted an audience with something useful, then turned that audience into a product for advertisers. What makes the internet version distinctive is scale and automation: an algorithmic feed makes millions of ranking decisions per second, for each individual user, with no human oversight of any individual result.
-
-### What the evidence does not show
-
-The story is sometimes told as "algorithms are brainwashing you" or "filter bubbles are polarising the world." The research is more specific.
-
-Four experiments with nearly 9,000 participants found that manipulating YouTube's recommendations to create filter bubbles and rabbit holes had no detectable short-term effect on political attitudes. {{< cite "liu-filter-bubble-2025" >}} The studies on emotional content and misinformation are robust, but the effects are more structural than the broadest claims suggest. Algorithms do not change what you believe overnight. They change what you see, what gets made, and what gets funded — over years, across millions of people, one ranking decision at a time. {{< sidenote >}}For the full research on how algorithmic feeds affect information quality, see [the evidence base](/the-evidence/).{{< /sidenote >}}
+The pattern of "free content subsidised by advertising, then advertising reshaping the content" is as old as mass media. Tim Wu traces it from the penny press of the 1830s through radio, television, and into the internet age. {{< cite "wu-attention-merchants-2016" >}} Each new medium attracted an audience with something useful, then turned that audience into a product for advertisers. What makes the internet version distinctive is scale and automation: an algorithmic feed makes millions of ranking decisions per second, for each individual user, with no human oversight of any individual result.
 
 ## {{< icon "newspaper" >}} What Gets Made (and What Does Not) {#what-gets-made}
 
@@ -71,7 +65,7 @@ A local newspaper earns a fraction of a penny per page view from digital adverti
 
 ### The collapse of local news
 
-The most visible casualty is local journalism. The United States now has 213 counties with no local news source at all — news deserts where no one is covering the school board, the water treatment plant, the local court. In a single recent year, 136 newspapers closed. Web traffic to the 100 largest newspapers plunged 45 per cent over four years. {{< cite "medill-local-news-2025" >}}
+The most visible casualty is local journalism. The United States now has 213 counties with no local news source at all. These are news deserts, where no one is covering the school board, the water treatment plant, the local court. In a single recent year, 136 newspapers closed. Web traffic to the 100 largest newspapers plunged 45 per cent over four years. {{< cite "medill-local-news-2025" >}}
 
 The financial picture explains why. Print advertising revenue fell from roughly $49 billion in 2006 to a small fraction of that. Digital advertising was supposed to replace it. It never came close. {{< cite "pew-newspapers-2024" >}}
 
@@ -79,9 +73,9 @@ Globally, print circulation and advertising now account for less than half of pu
 
 ### The creator economy's arithmetic
 
-The "creator economy" is often described as a $250 billion market on its way to $480 billion by 2027. {{< cite "goldmansachs-creator-economy-2025" >}} Of the roughly 8.9 million independent content creators in the United States, 71 per cent earn under $30,000 a year. Only 9 per cent earn more than $100,000. A third make less than $5,000. {{< cite "mbo-creator-economy-2024" >}} For most, "creator" is a side project subsidised by a day job, a partner's income, or savings.
+Goldman Sachs puts the creator economy at $250 billion today and projects $480 billion by 2027. {{< cite "goldmansachs-creator-economy-2025" >}} But a third of independent creators in the United States make less than $5,000 a year, while fewer than one in ten earn a professional wage. {{< cite "mbo-creator-economy-2024" >}} The market is enormous partly because millions of people are trying to earn from it, while only a small minority sustain a living.
 
-Brand deals account for roughly 70 per cent of creator revenue, which means most creator income depends on the same advertising system that funds the platforms. {{< cite "goldmansachs-creator-economy-2025" >}} {{< sidenote >}}Television still dominates news consumption at a ratio of more than five to one over online sources, which complicates the narrative that algorithmic feeds have replaced traditional media. The shift is real but not as complete as it is sometimes described. {{< cite "yang-platforms-news-2025" >}}{{< /sidenote >}}
+On influencer platforms like TikTok, brand deals account for roughly 70 per cent of creator revenue. Influencers may look independent, but their work is shaped by the interests of their advertisers. {{< cite "goldmansachs-creator-economy-2025" >}} The better someone can hold attention, trigger reaction, and stay visible in the feed, the more valuable they become to brands. A few win big. Most supply the platform with cheap, abundant labour. And they all need you to keep watching.
 
 ### Trained to expect free
 
