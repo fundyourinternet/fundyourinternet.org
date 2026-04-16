@@ -19,13 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
       - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.147.0"
+          hugo-version: "latest"
       - name: Clear Hugo build artefacts
         run: |
           rm -rf public resources
