@@ -1,8 +1,0 @@
-{{- $icon := .Get "icon" -}}
-{{- $title := .Get "title" -}}
-{{- $anchor := .Get "anchor" -}}
-<a href="{{ $anchor }}" class="toc-card">
-  <span class="toc-card-icon">{{ partial (printf "icons/%s.html" $icon) }}</span>
-  <span class="toc-card-title">{{ $title }}</span>
-  <span class="toc-card-desc">{{ .Inner }}</span>
-</a>

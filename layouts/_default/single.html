@@ -9,6 +9,21 @@
 <article class="section-page {{ $section_class }}">
   <div class="container">
     <h1>{{ .Title }}</h1>
+    {{ with .Params.outline }}
+    <nav class="page-outline" aria-label="In this section">
+      <ol class="page-outline-list">
+        {{- range . -}}
+        <li class="page-outline-item">
+          <a href="#{{ .anchor }}">
+            <span class="page-outline-icon">{{ partial "section-icon.html" .icon }}</span>
+            <span class="page-outline-title">{{ .title }}</span>
+            <span class="page-outline-desc">{{ .description }}</span>
+          </a>
+        </li>
+        {{- end -}}
+      </ol>
+    </nav>
+    {{ end }}
     {{ .Content }}
 
     {{ with $section }}

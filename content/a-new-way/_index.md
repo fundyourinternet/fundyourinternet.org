@@ -3,6 +3,23 @@ title: "A New Way"
 summary: "The people and communities already building a different kind of internet, and how to find them."
 strand_title: "It is already happening"
 strand_teaser: "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern."
+outline:
+  - title: "Direct support"
+    icon: "heart-handshake"
+    anchor: "direct-support"
+    description: "One person, one creator, one recurring pledge. The simplest version of funding your internet."
+  - title: "Cooperative ownership"
+    icon: "users"
+    anchor: "cooperative-ownership"
+    description: "When the people who make something or use something own it together."
+  - title: "Funding the commons"
+    icon: "landmark"
+    anchor: "funding-the-commons"
+    description: "Grants, foundations, and the argument for treating digital infrastructure as a public good."
+  - title: "Infrastructure for giving"
+    icon: "compass"
+    anchor: "infrastructure-for-giving"
+    description: "The tools that reduce friction and connect supporters to the things they value."
 bridges:
   - branch: old-way
     section: The Old Way
@@ -20,12 +37,7 @@ This is not easy. Most independent creators earn less than $30,000 a year. {{< c
 
 That is a pattern worth understanding. The sections below are organised by pattern rather than by industry, because the same logic — people connecting directly with things they value — shows up everywhere. In journalism, in open source software, in podcasting, in the decentralised web. What varies is the shape it takes.
 
-{{< page-toc >}}
-{{< toc-card icon="heart-handshake" title="Direct support" anchor="#direct-support" >}}One person, one creator, one recurring pledge. The simplest version of funding your internet.{{< /toc-card >}}
-{{< toc-card icon="users" title="Cooperative ownership" anchor="#cooperative-ownership" >}}When the people who make something or use something own it together.{{< /toc-card >}}
-{{< toc-card icon="landmark" title="Funding the commons" anchor="#funding-the-commons" >}}Grants, foundations, and the argument for treating digital infrastructure as a public good.{{< /toc-card >}}
-{{< toc-card icon="compass" title="Infrastructure for giving" anchor="#infrastructure-for-giving" >}}The tools that reduce friction and connect supporters to the things they value.{{< /toc-card >}}
-{{< /page-toc >}}
+{{< outline >}}
 
 ## {{< icon "heart-handshake" >}} Direct support {#direct-support}
 

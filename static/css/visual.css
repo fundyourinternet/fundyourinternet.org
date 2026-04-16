@@ -1,40 +1,6 @@
 /* === Fund Your Internet — Visual Enhancements === */
 /* Theme toggle, icons, hero treatments, figure shortcode */
 
-/* --- Theme toggle --- */
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: none;
-  border: 1px solid var(--colour-border);
-  border-radius: 4px;
-  padding: 0.3em 0.6em;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--colour-muted);
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  line-height: 1;
-}
-
-.theme-toggle:hover {
-  color: var(--colour-text);
-  border-color: var(--colour-text);
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--colour-link);
-  outline-offset: 2px;
-}
-
-.theme-toggle-icon {
-  width: 0.9em;
-  height: 0.9em;
-  flex-shrink: 0;
-}
-
 /* --- Section icons --- */
 
 .section-icon {
@@ -127,8 +93,8 @@ h1 .section-icon {
   opacity: 0.7;
 }
 
-.nav-link--one-thing:hover,
-.nav-link--one-thing[aria-current="page"] {
+.nav-link--home:hover,
+.nav-link--home[aria-current="page"] {
   color: var(--colour-text);
   border-bottom-color: var(--colour-text);
 }
@@ -241,31 +207,9 @@ h1 .section-icon {
 .section-hero--new-way h1 { color: var(--colour-movement); }
 .section-hero--evidence h1 { color: var(--colour-evidence); }
 
-/* --- Homepage hero backdrop --- */
-
-.homepage-hero {
-  padding: var(--space-2xl) var(--space-md) var(--space-lg);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.homepage-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-xs);
-}
-
-.homepage-hero .section-hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--colour-muted);
-  max-width: 36rem;
-  margin: 0 auto;
-}
-
 /* --- Hero image layers (shared) --- */
 
-.section-hero::before,
-.homepage-hero::before {
+.section-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -276,23 +220,25 @@ h1 .section-icon {
   opacity: 0.7;
 }
 
-.section-hero::after,
-.homepage-hero::after {
+.section-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 10%, var(--colour-bg) 100%);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--colour-bg) 15%, transparent) 0%,
+    var(--colour-bg) 100%
+  );
 }
 
-.section-hero > *,
-.homepage-hero > * {
+.section-hero > * {
   position: relative;
   z-index: 1;
 }
 
 /* Per-hero image assignments */
 
-.homepage-hero::before { background-image: url("/images/hero/homepage.jpg"); }
+.section-hero--home::before { background-image: url("/images/hero/homepage.jpg"); }
 .section-hero--old-way::before { background-image: url("/images/hero/old-way.jpg"); }
 .section-hero--new-way::before { background-image: url("/images/hero/new-way.jpg"); }
 .section-hero--evidence::before { background-image: url("/images/hero/evidence.jpg"); }
@@ -317,22 +263,10 @@ h1 .section-icon {
     var(--colour-bg) 100%);
 }
 
-/* Hero images — dark mode (explicit toggle) */
-
-html[data-theme="dark"] .section-hero::before,
-html[data-theme="dark"] .homepage-hero::before {
-  filter: grayscale(50%);
-  opacity: 0.35;
-}
-
-/* Hero images — dark mode (OS detection) */
-
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) .section-hero::before,
-  html:not([data-theme="light"]) .homepage-hero::before {
-    filter: grayscale(80%);
-    opacity: 0.2;
-  }
+/* Single theme: keep hero images present, not gloomy */
+.section-hero::before {
+  filter: grayscale(35%);
+  opacity: 0.42;
 }
 
 /* --- Figure shortcode --- */
@@ -379,8 +313,10 @@ html[data-theme="dark"] .homepage-hero::before {
 
 .page-outline {
   margin: var(--space-lg) 0 var(--space-sm);
-  border-left: 3px solid var(--colour-branch, var(--colour-border));
-  padding-left: var(--space-md);
+  padding: var(--space-md);
+  background: var(--colour-subtle);
+  border: 1px solid var(--colour-border);
+  border-radius: 10px;
 }
 
 .page-outline-list {
@@ -391,8 +327,8 @@ html[data-theme="dark"] .homepage-hero::before {
 
 .page-outline-item + .page-outline-item {
   border-top: 1px solid var(--colour-border);
-  padding-top: var(--space-sm);
-  margin-top: var(--space-sm);
+  padding-top: 0.65rem;
+  margin-top: 0.65rem;
 }
 
 .page-outline-item a {
@@ -470,19 +406,13 @@ html[data-theme="dark"] .homepage-hero::before {
   .section-hero h1 {
     font-size: 3rem;
   }
-
-  .homepage-hero h1 {
-    font-size: 3rem;
-  }
 }
 
 /* --- Print --- */
 
 @media print {
   .section-hero::before,
-  .section-hero::after,
-  .homepage-hero::before,
-  .homepage-hero::after {
+  .section-hero::after {
     display: none;
   }
 }
