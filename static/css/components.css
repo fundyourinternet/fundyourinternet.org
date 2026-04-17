@@ -3,7 +3,7 @@
 /* --- Homepage (mirror layout) --- */
 
 .homepage-opening {
-  padding: calc(var(--space-2xl) + 2rem) var(--space-md) var(--space-xl);
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
   text-align: center;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -60,29 +60,49 @@
   .cycle-item:first-child { opacity: 1; }
 }
 
-.homepage-reflection {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 36rem;
-}
-
-.homepage-reflection p {
-  margin-bottom: var(--space-md);
-}
-
 .homepage-threads {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-xl);
+  margin-top: var(--space-xl);
+  display: grid;
+  gap: var(--space-md);
 }
 
-.homepage-closing {
+.homepage-thread {
+  display: block;
+  padding: var(--space-md);
+  border-left: 3px solid var(--colour-border);
+  text-decoration: none;
+  color: var(--colour-text);
+  transition: background-color 0.15s ease;
+}
+
+.homepage-thread:visited {
+  color: var(--colour-text);
+}
+
+.homepage-thread:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+}
+
+.homepage-thread--old-way { border-left-color: var(--colour-feeds); }
+.homepage-thread--new-way { border-left-color: var(--colour-movement); }
+
+.homepage-thread--old-way:hover { background-color: var(--colour-feeds-light); }
+.homepage-thread--new-way:hover { background-color: var(--colour-movement-light); }
+
+.homepage-thread-heading {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem);
+  margin-bottom: var(--space-xs);
+}
+
+.homepage-thread-blurb {
+  display: block;
   font-size: 0.95rem;
   color: var(--colour-muted);
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  max-width: 32rem;
+  line-height: 1.6;
+}
 }
 
 /* --- Section pages --- */

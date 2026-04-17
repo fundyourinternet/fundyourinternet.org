@@ -6,7 +6,6 @@
     {{ with .Params.pairs }}
     <div class="homepage-lead">
       <span class="homepage-lead-line">Why does it feel like</span>
-      <span class="homepage-lead-line">your</span>
       <span class="cycle">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.noun }}</span>{{ end }}</span>
       <span class="homepage-lead-line">keep</span>
       <span class="cycle">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.verb }}</span>{{ end }}</span>
@@ -15,25 +14,15 @@
   </div>
 
   <div class="container">
-    {{ with .Params.reflection }}
-    <div class="homepage-reflection">
-      {{ . | markdownify }}
-    </div>
-    {{ end }}
-
     {{ with .Params.threads }}
-    <nav class="homepage-threads" aria-label="Explore further">
+    <div class="homepage-threads">
       {{ range . }}
-      <a href="{{ .url }}" class="bridge bridge--{{ .section }}">
-        <span class="bridge-section">{{ partial "section-icon.html" .section }} {{ if eq .section "old-way" }}The Old Way{{ else if eq .section "new-way" }}A New Way{{ else if eq .section "evidence" }}The Evidence{{ end }}</span>
-        <span class="bridge-prompt">{{ .question }}</span>
+      <a href="{{ .url }}" class="homepage-thread homepage-thread--{{ .section }}">
+        <span class="homepage-thread-heading">{{ .heading }}</span>
+        <span class="homepage-thread-blurb">{{ .blurb }}</span>
       </a>
       {{ end }}
-    </nav>
-    {{ end }}
-
-    {{ with .Params.closing }}
-    <p class="homepage-closing">{{ . }}</p>
+    </div>
     {{ end }}
   </div>
 
