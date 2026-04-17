@@ -22,5 +22,5 @@ threads:
   - heading: "What can I do?"
     blurb: "Pick one thing you rely on online. A podcast, a newsletter, an open source tool, a local news source. Find out if they accept support. Do it once. That is the entire practice."
     section: action
-    url: /a-new-way/#infrastructure-for-giving
+    url: /what-can-i-do/
 ---

@@ -15,18 +15,18 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
 [menus]
   [[menus.main]]
-    name = "One Thing"
+    name = "Why do good apps get worse?"
     url = "/"
     weight = -1
   [[menus.main]]
-    name = "The Old Way"
+    name = "How did we get here?"
     pageRef = "/the-old-way"
     weight = 1
   [[menus.main]]
-    name = "A New Way"
+    name = "Is there another way?"
     pageRef = "/a-new-way"
     weight = 2
   [[menus.main]]
-    name = "The Evidence"
-    pageRef = "/the-evidence"
+    name = "What can I do?"
+    pageRef = "/what-can-i-do"
     weight = 3

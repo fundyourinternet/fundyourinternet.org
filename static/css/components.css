@@ -262,6 +262,95 @@
   margin: 0;
 }
 
+/* --- Action page (/what-can-i-do/) --- */
+
+.action-hero {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.action-hero h1 {
+  font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  margin-bottom: var(--space-sm);
+}
+
+.action-hero-lead {
+  font-size: 1.05rem;
+  color: var(--colour-muted);
+  line-height: 1.7;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.action-cards {
+  display: grid;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+.action-card {
+  padding: var(--space-md);
+  border: 1px solid var(--colour-border);
+  border-radius: 10px;
+}
+
+.action-card h2 {
+  font-size: 1.3rem;
+  margin: 0 0 var(--space-xs);
+}
+
+.action-card p {
+  color: var(--colour-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.5em 1em;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: var(--colour-muted);
+  background: var(--colour-subtle);
+  border: 1px solid var(--colour-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.copy-btn:hover {
+  color: var(--colour-text);
+  border-color: var(--colour-text);
+}
+
+.action-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 0.85rem;
+  color: var(--colour-muted);
+  background: var(--colour-subtle);
+  border: 1px solid var(--colour-border);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.action-link:visited {
+  color: var(--colour-muted);
+}
+
+.action-link:hover {
+  color: var(--colour-text);
+  border-color: var(--colour-text);
+}
+
+.action-fallback {
+  font-size: 0.85rem;
+}
+
 /* --- Responsive components --- */
 
 @media (min-width: 48em) {

@@ -25,10 +25,10 @@ bridges:
     section: The Old Way
     url: /the-old-way/
     prompt: "Understand the mechanics these communities are responding to."
-  - branch: evidence
-    section: The Evidence
-    url: /the-evidence/
-    prompt: "See the research on which funding models are actually working."
+  - branch: action
+    section: What can I do?
+    url: /what-can-i-do/
+    prompt: "Ready to do something about it."
 ---
 
 The response to the ad-driven web is already happening. It is not fringe, not crypto-utopian, not dependent on any single technology. In lots of different places, people are building the same kind of thing: direct relationships between people who make things and people who value them.
