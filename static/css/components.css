@@ -2,6 +2,14 @@
 
 /* --- Homepage (mirror layout) --- */
 
+.homepage {
+  background: linear-gradient(
+    to bottom,
+    var(--colour-bg),
+    color-mix(in srgb, var(--colour-bg) 90%, #000)
+  );
+}
+
 .homepage-opening {
   padding: var(--space-2xl) var(--space-md) var(--space-xl);
   text-align: center;
@@ -90,17 +98,18 @@
 
 .homepage-threads {
   margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
   display: grid;
-  gap: var(--space-md);
+  gap: var(--space-xl);
 }
 
 .homepage-thread {
   display: block;
-  padding: var(--space-md);
-  border-left: 3px solid var(--colour-border);
+  padding: var(--space-lg) var(--space-md);
   text-decoration: none;
   color: var(--colour-text);
-  transition: background-color 0.15s ease;
+  text-align: center;
+  transition: background 0.3s ease;
 }
 
 .homepage-thread:visited {
@@ -112,25 +121,32 @@
   outline-offset: 2px;
 }
 
-.homepage-thread--old-way { border-left-color: var(--colour-feeds); }
-.homepage-thread--new-way { border-left-color: var(--colour-movement); }
+.homepage-thread--old-way { --thread-colour: var(--colour-feeds); --thread-colour-light: var(--colour-feeds-light); }
+.homepage-thread--new-way { --thread-colour: var(--colour-movement); --thread-colour-light: var(--colour-movement-light); }
 
-.homepage-thread--old-way:hover { background-color: var(--colour-feeds-light); }
-.homepage-thread--new-way:hover { background-color: var(--colour-movement-light); }
+.homepage-thread:hover {
+  background: radial-gradient(
+    ellipse at top center,
+    var(--thread-colour-light),
+    transparent 70%
+  );
+}
 
 .homepage-thread-heading {
   display: block;
   font-family: var(--font-heading);
-  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem);
-  margin-bottom: var(--space-xs);
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
+  color: var(--thread-colour);
+  margin-bottom: var(--space-sm);
 }
 
 .homepage-thread-blurb {
   display: block;
   font-size: 0.95rem;
   color: var(--colour-muted);
-  line-height: 1.6;
-}
+  line-height: 1.7;
+  max-width: 36rem;
+  margin: 0 auto;
 }
 
 /* --- Section pages --- */
