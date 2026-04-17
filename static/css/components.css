@@ -41,6 +41,9 @@
   opacity: 0;
   font-size: clamp(1.8rem, 1.3rem + 2vw, 2.8rem);
   line-height: 1.3;
+  animation-duration: 16s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .cycle-item:nth-child(1) { animation-delay: 0s; }
@@ -50,7 +53,7 @@
 
 /* Nouns appear first (beat 1) — pleasant colours */
 .cycle--noun .cycle-item {
-  animation: cycle-noun 16s linear infinite;
+  animation-name: cycle-noun;
 }
 
 .cycle--noun .cycle-item:nth-child(1) { color: #7dd3c0; }
@@ -61,7 +64,7 @@
 /* Verbs follow (beat 2) — ominous tone */
 .cycle--verb .cycle-item {
   color: #c47a6a;
-  animation: cycle-verb 16s linear infinite;
+  animation-name: cycle-verb;
 }
 
 @keyframes cycle-noun {
