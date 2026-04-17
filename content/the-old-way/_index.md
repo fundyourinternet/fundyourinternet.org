@@ -25,7 +25,7 @@ outline:
 bridges:
   - branch: new-way
     heading: "Is there another way?"
-    blurb: "You have seen the system. Now meet the people building something different — in open source, journalism, podcasting, and the decentralised web."
+    blurb: "You have seen the system. Now meet the people building something different."
     url: /a-new-way/
   - branch: action
     heading: "What can I do?"

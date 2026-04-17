@@ -151,7 +151,7 @@ h1 .section-icon {
 /* --- Page outline (in-page TOC) --- */
 
 .page-outline {
-  margin: var(--space-lg) 0 var(--space-sm);
+  margin: var(--space-sm) 0 var(--space-sm);
   padding: var(--space-md);
   background: var(--colour-subtle);
   border: 1px solid var(--colour-border);

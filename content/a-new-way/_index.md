@@ -25,7 +25,7 @@ bridges:
     url: /the-old-way/
   - branch: action
     heading: "What can I do?"
-    blurb: "You have seen what is possible. The practice is simple: pick one thing, find out how they accept support, do it."
+    blurb: "You have seen what is possible. The practice is simpler than you think."
     url: /what-can-i-do/
 ---
 
