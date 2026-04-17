@@ -11,10 +11,59 @@
 }
 
 .homepage-opening {
-  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
   text-align: center;
+}
+
+.homepage-opening-inner {
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--colour-muted);
+  opacity: 0.55;
+  text-decoration: none;
+  transition: opacity 200ms ease;
+}
+
+.scroll-cue:hover,
+.scroll-cue:focus-visible {
+  opacity: 1;
+}
+
+.scroll-cue:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-cue svg {
+    animation: scroll-cue-bob 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes scroll-cue-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
 }
 
 .homepage-title {
@@ -251,8 +300,18 @@
 /* --- Action page (/what-can-i-do/) --- */
 
 .action-hero {
-  padding: var(--space-xl) var(--space-md);
+  position: relative;
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100dvh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
   text-align: center;
+}
+
+.action-hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
 }
