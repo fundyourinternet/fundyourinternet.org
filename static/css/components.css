@@ -287,23 +287,34 @@
 }
 
 .action-card {
+  display: block;
   padding: var(--space-md);
   border: 1px solid var(--colour-border);
   border-radius: 10px;
-  border-left: 3px solid var(--colour-border);
+  text-decoration: none;
+  color: var(--colour-text);
+  transition: border-color 0.15s ease;
+}
+
+.action-card:visited { color: var(--colour-text); }
+
+.action-card:hover {
+  border-color: var(--colour-muted);
 }
 
 .action-card--share {
   background: var(--colour-movement-light);
   border-color: var(--colour-movement-border);
-  border-left-color: var(--colour-movement);
 }
+
+.action-card--share:hover { border-color: var(--colour-movement); }
 
 .action-card--habit {
   background: var(--colour-evidence-light);
   border-color: var(--colour-evidence-border);
-  border-left-color: var(--colour-evidence);
 }
+
+.action-card--habit:hover { border-color: var(--colour-evidence); }
 
 .action-card h2 {
   font-size: 1.3rem;
@@ -312,52 +323,15 @@
 
 .action-card p {
   color: var(--colour-muted);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
-.copy-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  padding: 0.5em 1em;
-  font-size: 0.85rem;
-  font-family: inherit;
-  color: var(--colour-muted);
-  background: var(--colour-subtle);
-  border: 1px solid var(--colour-border);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
+.action-card p:last-child { margin-bottom: 0; }
 
-.copy-btn:hover {
-  color: var(--colour-text);
-  border-color: var(--colour-text);
-}
-
-.action-link {
-  display: inline-block;
-  padding: 0.5em 1em;
+.action-card-cta {
+  display: block;
   font-size: 0.85rem;
   color: var(--colour-muted);
-  background: var(--colour-subtle);
-  border: 1px solid var(--colour-border);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.action-link:visited {
-  color: var(--colour-muted);
-}
-
-.action-link:hover {
-  color: var(--colour-text);
-  border-color: var(--colour-text);
-}
-
-.action-fallback {
-  font-size: 0.85rem;
 }
 
 /* --- Responsive components --- */
