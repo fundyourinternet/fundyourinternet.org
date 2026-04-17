@@ -141,6 +141,7 @@
   font-size: 0.95rem;
   color: var(--colour-muted);
   line-height: 1.7;
+  text-align: right;
 }
 
 /* --- Section pages --- */
