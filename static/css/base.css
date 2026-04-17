@@ -181,22 +181,10 @@ main {
 /* --- Site header --- */
 
 .site-header {
-  z-index: 10;
-  padding: 0;
   border-bottom: 1px solid var(--colour-border);
-}
-
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: var(--space-xs) var(--space-md);
   position: relative;
 }
-
-/* --- Navigation (checkbox-hack burger) --- */
 
 .nav-toggle {
   position: absolute;
@@ -205,23 +193,21 @@ main {
 }
 
 .nav-toggle-label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
   padding: 0.4em;
-  line-height: 1;
-  position: absolute;
-  right: var(--space-xs);
-  top: 50%;
-  transform: translateY(-50%);
+  color: var(--colour-muted);
+  border: 1px solid var(--colour-border);
+  border-radius: 4px;
+}
+
+.nav-toggle-label:hover {
+  color: var(--colour-text);
+  border-color: var(--colour-text);
 }
 
 .nav-links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
@@ -233,12 +219,24 @@ main {
 
 .nav-links ul {
   list-style: none;
-  padding: 0;
+  padding: var(--space-xs) 0 0;
   margin: 0;
 }
 
-.nav-links li {
-  display: contents;
+.nav-link {
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.85rem;
+  color: var(--colour-muted);
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: var(--colour-muted);
+}
+
+.nav-link:hover {
+  color: var(--colour-text);
 }
 
 
@@ -271,8 +269,7 @@ main {
 /* --- Print --- */
 
 @media print {
-  .nav-toggle,
-  .nav-toggle-label,
+  .site-header,
   .skip-link,
   .back-link {
     display: none;
