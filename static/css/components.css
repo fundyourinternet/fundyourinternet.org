@@ -285,7 +285,7 @@
 
 .action-step-1 { color: var(--colour-feeds); }
 .action-step-2 { color: var(--colour-movement); }
-.action-step-3 { color: var(--colour-evidence); }
+.action-step-3 { color: var(--colour-evidence); font-size: 1.15em; }
 
 .action-hero-lead {
   font-size: 1.05rem;
