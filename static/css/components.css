@@ -329,9 +329,13 @@
 .action-card p:last-child { margin-bottom: 0; }
 
 .action-card-cta {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  justify-content: flex-end;
   font-size: 0.85rem;
   color: var(--colour-muted);
+  margin-top: var(--space-sm);
 }
 
 /* --- Responsive components --- */
