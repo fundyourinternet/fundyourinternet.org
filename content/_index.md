@@ -3,13 +3,13 @@ title: "Fund Your Internet"
 summary: "A practical guide to sustaining the things you rely on online."
 pairs:
   - noun: "useful apps"
-    verb: "getting worse"
-  - noun: "local news"
-    verb: "disappearing"
+    verb: "getting worse?"
+  - noun: "local papers"
+    verb: "disappearing?"
   - noun: "trusted voices"
-    verb: "getting buried"
+    verb: "getting buried?"
   - noun: "loudest voices"
-    verb: "shilling promotions"
+    verb: "shilling promotions?"
 reflection: |
   A newsletter. A weather app. A podcast on the way to work. A news site you have read since before you could have said what a browser was.
 

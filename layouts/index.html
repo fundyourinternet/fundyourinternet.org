@@ -4,11 +4,13 @@
   <div class="homepage-opening">
     <h1 class="homepage-title">{{ .Title }}</h1>
     {{ with .Params.pairs }}
-    <p class="homepage-lead">
-      Why does it feel like<br>
-      your <span class="cycle">{{ range . }}<span class="cycle-item">{{ .noun }}</span>{{ end }}</span><br>
-      keep <span class="cycle">{{ range . }}<span class="cycle-item">{{ .verb }}</span>{{ end }}</span>?
-    </p>
+    <div class="homepage-lead">
+      <span class="homepage-lead-line">Why does it feel like</span>
+      <span class="homepage-lead-line">your</span>
+      <span class="cycle">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.noun }}</span>{{ end }}</span>
+      <span class="homepage-lead-line">keep</span>
+      <span class="cycle">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.verb }}</span>{{ end }}</span>
+    </div>
     {{ end }}
   </div>
 
