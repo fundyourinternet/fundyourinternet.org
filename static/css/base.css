@@ -296,8 +296,8 @@ main {
 /* --- Site footer --- */
 
 .site-footer {
-  padding: var(--space-md) 0;
-  margin-top: var(--space-lg);
+  padding: var(--space-xs) 0;
+  margin-top: var(--space-xl);
 }
 
 .site-footer p {
