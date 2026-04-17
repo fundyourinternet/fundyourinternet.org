@@ -9,7 +9,7 @@ pairs:
   - noun: "trusted voices"
     verb: "get buried?"
   - noun: "free services"
-    verb: "sell you?"
+    verb: "manipulate you?"
 threads:
   - heading: "How did we get here?"
     blurb: "Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it defines the internet experience."

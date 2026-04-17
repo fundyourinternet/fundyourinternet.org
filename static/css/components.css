@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25em;
+  gap: 0.5em;
   font-family: var(--font-heading);
   font-size: clamp(1rem, 0.85rem + 0.6vw, 1.25rem);
   color: var(--colour-muted);
@@ -107,8 +107,8 @@
   padding: var(--space-md);
   text-decoration: none;
   color: var(--colour-text);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease;
 }
 
 .homepage-thread:visited {
@@ -116,7 +116,7 @@
 }
 
 .homepage-thread:hover {
-  border-bottom-color: var(--thread-colour);
+  box-shadow: 0 0 24px 0 color-mix(in srgb, var(--thread-colour) 18%, transparent);
 }
 
 .homepage-thread:focus-visible {
