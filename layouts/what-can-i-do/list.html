@@ -2,12 +2,17 @@
 <article class="action-page">
 
   <div class="action-hero">
-    <h1>Fund your internet</h1>
-    <p class="action-hero-prompt"><span class="action-step-1">Pick one thing you value online.</span><br><span class="action-step-2">Learn how they accept funds.</span><br><span class="action-step-3">Fund them.</span></p>
-    <p class="action-hero-lead">That is the entire practice.</p>
+    <div class="action-hero-inner">
+      <h1>Fund your internet</h1>
+      <p class="action-hero-prompt"><span class="action-step-1">Pick one thing you value online.</span><br><span class="action-step-2">Learn how they accept funds.</span><br><span class="action-step-3">Fund them.</span></p>
+      <p class="action-hero-lead">That is the entire practice.</p>
+    </div>
+    <a href="#action-cards" class="scroll-cue" aria-label="See more">
+      {{ partial "icons/chevron-down.html" . }}
+    </a>
   </div>
 
-  <div class="container">
+  <div class="container" id="action-cards">
     <div class="action-cards">
 
       <div class="action-card action-card--share" data-url="{{ .Site.BaseURL }}">

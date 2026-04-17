@@ -300,8 +300,18 @@
 /* --- Action page (/what-can-i-do/) --- */
 
 .action-hero {
-  padding: var(--space-xl) var(--space-md);
+  position: relative;
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100dvh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
   text-align: center;
+}
+
+.action-hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
 }
