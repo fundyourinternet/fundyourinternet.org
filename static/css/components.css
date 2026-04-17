@@ -273,13 +273,25 @@
 
 .action-hero h1 {
   font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  margin-bottom: var(--space-md);
+}
+
+.action-hero-prompt {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
+  line-height: 1.8;
+  color: var(--colour-text);
   margin-bottom: var(--space-sm);
+}
+
+.action-hero-prompt em {
+  font-style: normal;
+  color: var(--colour-movement);
 }
 
 .action-hero-lead {
   font-size: 1.05rem;
   color: var(--colour-muted);
-  line-height: 1.7;
   max-width: 32rem;
   margin: 0 auto;
 }
