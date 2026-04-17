@@ -29,7 +29,8 @@
     <div class="homepage-threads">
       {{ range .Params.bridges }}
       <a href="{{ .url }}" class="homepage-thread homepage-thread--{{ .branch }}">
-        <span class="homepage-thread-heading">{{ .prompt }}</span>
+        <span class="homepage-thread-heading">{{ .heading }}</span>
+        <span class="homepage-thread-blurb">{{ .blurb }}</span>
       </a>
       {{ end }}
     </div>

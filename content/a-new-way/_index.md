@@ -22,13 +22,13 @@ outline:
     description: "The tools that reduce friction and connect supporters to the things they value."
 bridges:
   - branch: old-way
-    section: The Old Way
+    heading: "How did we get here?"
+    blurb: "These communities did not appear from nowhere. Understanding the system they are responding to makes the pattern clearer."
     url: /the-old-way/
-    prompt: "Understand the mechanics these communities are responding to."
   - branch: action
-    section: What can I do?
+    heading: "What can I do?"
+    blurb: "You have seen what is possible. The practice is simple: pick one thing, find out how they accept support, do it."
     url: /what-can-i-do/
-    prompt: "Ready to do something about it."
 ---
 
 The response to the ad-driven web is already happening. It is not fringe, not crypto-utopian, not dependent on any single technology. In lots of different places, people are building the same kind of thing: direct relationships between people who make things and people who value them.

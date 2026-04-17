@@ -38,13 +38,13 @@ outline:
     description: "Attention, extraction, and the market built around both."
 bridges:
   - branch: old-way
-    section: The Old Way
+    heading: "How did we get here?"
+    blurb: "The research makes more sense with the story. See how algorithmic feeds and ad-driven economics play out in practice."
     url: /the-old-way/
-    prompt: "See these findings explained in plain terms."
   - branch: new-way
-    section: A New Way
+    heading: "Is there another way?"
+    blurb: "The data points to real alternatives. Meet the communities putting this research into practice."
     url: /a-new-way/
-    prompt: "Meet the communities putting this research into practice."
 ---
 
 This is the library. If you want to go deep — to cite something, to follow an argument to its source, or to write your own piece — this is where you will find the research.

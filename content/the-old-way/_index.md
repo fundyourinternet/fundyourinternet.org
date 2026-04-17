@@ -26,13 +26,13 @@ outline:
     description: "What changes when you understand the model, and what to do next."
 bridges:
   - branch: new-way
-    section: A New Way
+    heading: "Is there another way?"
+    blurb: "You have seen the system. Now meet the people building something different — in open source, journalism, podcasting, and the decentralised web."
     url: /a-new-way/
-    prompt: "See who is already building alternatives to the ad-driven model."
   - branch: action
-    section: What can I do?
+    heading: "What can I do?"
+    blurb: "You understand the model. The next step is small, concrete, and entirely yours."
     url: /what-can-i-do/
-    prompt: "Ready to do something about it."
 ---
 
 Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it defines the internet experience. {{< cite "doctorow-enshittification-2023" >}}
