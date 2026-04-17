@@ -265,8 +265,8 @@
 .action-hero-prompt {
   font-family: var(--font-heading);
   font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.4rem);
-  line-height: 1.8;
-  margin-bottom: var(--space-sm);
+  line-height: 2.4;
+  margin-bottom: var(--space-md);
 }
 
 .action-step-1 { color: var(--colour-feeds); }
