@@ -126,8 +126,12 @@
 }
 
 .homepage-thread--old-way { --thread-colour: var(--colour-feeds); --thread-colour-light: var(--colour-feeds-light); }
-.homepage-thread--new-way { --thread-colour: var(--colour-movement); --thread-colour-light: var(--colour-movement-light); text-align: right; }
-.homepage-thread--action { --thread-colour: var(--colour-evidence); --thread-colour-light: var(--colour-evidence-light); text-align: center; }
+.homepage-thread--new-way { --thread-colour: var(--colour-movement); --thread-colour-light: var(--colour-movement-light); }
+.homepage-thread--action { --thread-colour: var(--colour-evidence); --thread-colour-light: var(--colour-evidence-light); }
+.homepage-thread--evidence { --thread-colour: var(--colour-evidence); --thread-colour-light: var(--colour-evidence-light); }
+
+.homepage .homepage-thread--new-way { text-align: right; }
+.homepage .homepage-thread--action { text-align: center; }
 
 .homepage-thread-heading {
   display: block;
@@ -186,69 +190,6 @@
 
 .sidenote a {
   color: var(--colour-branch);
-}
-
-/* --- Contextual bridges --- */
-
-.bridges {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--colour-border);
-}
-
-.bridges-heading {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--colour-muted);
-  margin-bottom: var(--space-md);
-}
-
-.bridge {
-  display: block;
-  padding: var(--space-md);
-  margin-bottom: var(--space-sm);
-  border-left: 3px solid var(--colour-border);
-  text-decoration: none;
-  color: var(--colour-text);
-  transition: background-color 0.15s ease;
-}
-
-.bridge:visited {
-  color: var(--colour-text);
-}
-
-.bridge--old-way { border-left-color: var(--colour-feeds); }
-.bridge--new-way { border-left-color: var(--colour-movement); }
-.bridge--evidence { border-left-color: var(--colour-evidence); }
-
-.bridge--old-way:hover { background-color: var(--colour-feeds-light); }
-.bridge--new-way:hover { background-color: var(--colour-movement-light); }
-.bridge--evidence:hover { background-color: var(--colour-evidence-light); }
-
-.bridge:focus-visible {
-  outline: 2px solid var(--colour-link);
-  outline-offset: 2px;
-}
-
-.bridge-section {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.bridge--old-way .bridge-section { color: var(--colour-feeds); }
-.bridge--new-way .bridge-section { color: var(--colour-movement); }
-.bridge--evidence .bridge-section { color: var(--colour-evidence); }
-
-.bridge-prompt {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  display: block;
 }
 
 /* --- Library (evidence base) --- */

@@ -10,11 +10,6 @@
   display: inline-block;
 }
 
-.bridge-section .section-icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.1em;
-}
 
 h1 .section-icon {
   width: 1em;
@@ -68,8 +63,7 @@ h1 .section-icon {
   font-size: 0.85rem;
   color: var(--colour-muted);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .nav-link:visited {
@@ -95,36 +89,27 @@ h1 .section-icon {
 .nav-link--home:hover,
 .nav-link--home[aria-current="page"] {
   color: var(--colour-text);
-  border-bottom-color: var(--colour-text);
 }
 
 .nav-link--old-way:hover,
 .nav-link--old-way[aria-current="page"] {
   color: var(--colour-feeds);
-  border-bottom-color: var(--colour-feeds);
 }
 
 .nav-link--new-way:hover,
 .nav-link--new-way[aria-current="page"] {
   color: var(--colour-movement);
-  border-bottom-color: var(--colour-movement);
 }
 
 .nav-link--evidence:hover,
 .nav-link--evidence[aria-current="page"] {
   color: var(--colour-evidence);
-  border-bottom-color: var(--colour-evidence);
 }
 
 .nav-link[aria-current="page"] .section-icon {
   opacity: 1;
 }
 
-@media (min-width: 48em) {
-  .nav-link {
-    padding: 0.6rem var(--space-sm);
-  }
-}
 
 /* --- Inline citations (superscript indicators with tooltips) --- */
 
@@ -181,17 +166,15 @@ h1 .section-icon {
   vertical-align: super;
 }
 
-/* --- Section hero (photo + desaturated gradient fade) --- */
+/* --- Section hero (typography-forward) --- */
 
 .section-hero {
-  padding: calc(var(--space-2xl) + 1.5rem) var(--space-md) var(--space-xl);
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
 .section-hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
   margin-bottom: var(--space-xs);
 }
 
@@ -205,67 +188,6 @@ h1 .section-icon {
 .section-hero--old-way h1 { color: var(--colour-feeds); }
 .section-hero--new-way h1 { color: var(--colour-movement); }
 .section-hero--evidence h1 { color: var(--colour-evidence); }
-
-/* --- Hero image layers (shared) --- */
-
-.section-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  filter: grayscale(30%);
-  opacity: 0.7;
-}
-
-.section-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--colour-bg) 15%, transparent) 0%,
-    var(--colour-bg) 100%
-  );
-}
-
-.section-hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Per-hero image assignments */
-
-.section-hero--old-way::before { background-image: url("/images/hero/old-way.jpg"); }
-.section-hero--new-way::before { background-image: url("/images/hero/new-way.jpg"); }
-.section-hero--evidence::before { background-image: url("/images/hero/evidence.jpg"); }
-
-/* Section-tinted gradient overlays */
-
-.section-hero--old-way::after {
-  background: linear-gradient(to bottom,
-    color-mix(in srgb, var(--colour-feeds-light) 20%, transparent) 0%,
-    var(--colour-bg) 100%);
-}
-
-.section-hero--new-way::after {
-  background: linear-gradient(to bottom,
-    color-mix(in srgb, var(--colour-movement-light) 20%, transparent) 0%,
-    var(--colour-bg) 100%);
-}
-
-.section-hero--evidence::after {
-  background: linear-gradient(to bottom,
-    color-mix(in srgb, var(--colour-evidence-light) 20%, transparent) 0%,
-    var(--colour-bg) 100%);
-}
-
-/* Single theme: keep hero images present, not gloomy */
-.section-hero::before {
-  filter: grayscale(35%);
-  opacity: 0.42;
-}
 
 /* --- Figure shortcode --- */
 
@@ -398,19 +320,3 @@ h1 .section-icon {
   border-top: none;
 }
 
-/* --- Responsive --- */
-
-@media (min-width: 48em) {
-  .section-hero h1 {
-    font-size: 3rem;
-  }
-}
-
-/* --- Print --- */
-
-@media print {
-  .section-hero::before,
-  .section-hero::after {
-    display: none;
-  }
-}

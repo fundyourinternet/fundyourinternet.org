@@ -73,12 +73,10 @@
     {{ end }}
 
     {{- if .Params.bridges }}
-    <div class="bridges">
-      <p class="bridges-heading">Continue the conversation</p>
+    <div class="homepage-threads">
       {{ range .Params.bridges }}
-      <a href="{{ .url }}" class="bridge bridge--{{ .branch }}">
-        <span class="bridge-section">{{ partial "section-icon.html" .branch }} {{ .section }}</span>
-        <span class="bridge-prompt">{{ .prompt }}</span>
+      <a href="{{ .url }}" class="homepage-thread homepage-thread--{{ .branch }}">
+        <span class="homepage-thread-heading">{{ .prompt }}</span>
       </a>
       {{ end }}
     </div>
