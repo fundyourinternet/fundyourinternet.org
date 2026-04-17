@@ -98,6 +98,7 @@
 
 .homepage-threads {
   margin-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
   display: grid;
   gap: var(--space-lg);
 }
