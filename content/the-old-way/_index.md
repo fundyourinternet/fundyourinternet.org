@@ -1,8 +1,6 @@
 ---
-title: "The Old Way"
-summary: "What happens when algorithms decide what you see, and what it means for the things you rely on."
-strand_title: "Isn't the internet meant to be free?"
-strand_teaser: "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written - and what you're allowed to discover."
+title: "How did we get here?"
+summary: "A business model designed to capture attention. Here is how it works."
 outline:
   - title: "How Feeds Choose for You"
     icon: "list-filter"
@@ -26,16 +24,14 @@ outline:
     description: "What changes when you understand the model, and what to do next."
 bridges:
   - branch: new-way
-    section: A New Way
+    heading: "Is there another way?"
+    blurb: "You have seen the system. Now meet the people building something different."
     url: /a-new-way/
-    prompt: "See who is already building alternatives to the ad-driven model."
-  - branch: evidence
-    section: The Evidence
-    url: /the-evidence/
-    prompt: "Read the research behind these claims."
+  - branch: action
+    heading: "What can I do?"
+    blurb: "You understand the model. The next step is small, concrete, and entirely yours."
+    url: /what-can-i-do/
 ---
-
-Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it defines the internet experience. {{< cite "doctorow-enshittification-2023" >}}
 
 {{< outline >}}
 
@@ -109,17 +105,17 @@ When a platform you rely on degrades — more ads, worse recommendations, featur
 
 ## {{< icon "repeat" >}} How the System Sustains Itself {#how-it-sustains-itself}
 
-The system sustains itself because every part of it is doing something locally rational. The platform maximises engagement because advertisers pay for it. The creator chases engagement because the algorithm rewards it. You stay because the content is compelling and everyone you know is already there. Together, these produce a system nobody chose and almost nobody is happy with — but that persists because no single participant can change it alone.
+The system sustains itself because every part of it is doing something locally rational. Platforms maximise engagement because advertisers pay for it. Creators chase engagement because the algorithm rewards it. People stay because the content is compelling and everyone they know is already there. The result is a system nobody chose and almost nobody is happy with — but that persists because no single participant can change it alone.
 
 ### The enshittification cycle
 
 Cory Doctorow named this pattern in 2023. {{< cite "doctorow-enshittification-2023" >}} A platform launches and offers value to attract users. Once they are locked in — their friends are there, their content is there, their habits are built around it — the platform redirects value away from users and toward advertisers and shareholders. Features degrade. Ads multiply. The feed gets noisier. {{< sidenote >}}The word "enshittification" is crude but precise. It describes the specific process by which platforms that start generous become extractive — through the predictable incentives of venture-funded growth. This site uses the term only where the concept is being explained.{{< /sidenote >}}
 
-The platform that once needed you to love it now only needs you to keep using it. The model requires growth, then monetisation, then returns to investors — and if you keep using it, even while complaining, it is working as designed.
+A platform that once needed to be loved now only needs to be used. The model requires growth, then monetisation, then returns to investors — and as long as people keep using it, even while complaining, it is working as designed.
 
 ### The lock-in is social
 
-You do not stay on a declining platform because the software is good. You stay because the people you know are there. Your group chats, your professional contacts, your community threads — they are all inside the platform, and moving them requires everyone to move at once. That coordination problem is far more powerful than any technical barrier, which is why platforms invest heavily in features that increase your social investment and very little in features that would make it easy to leave.
+Nobody stays on a declining platform because the software is good. They stay because the people they know are there. Group chats, professional contacts, community threads — all inside the platform, and moving them requires everyone to move at once. That coordination problem is far more powerful than any technical barrier, which is why platforms invest heavily in features that deepen social investment and very little in features that would make it easy to leave.
 
 ### Beyond social media
 
@@ -127,26 +123,12 @@ The same pattern — attract, lock in, extract — extends beyond social media. 
 
 ### Not a conspiracy
 
-The system does not require your ignorance. It just does not require your awareness. It operates in the open, documented in earnings calls and annual reports, visible to anyone who looks. Most people do not look because the system is designed to be frictionless — to require no thought, no decision, no awareness of the transaction taking place.
-
-But once you do see it — once you understand that the problem is not any one platform but the business model beneath it — something shifts. If the problem is the funding model, then anything funded differently is worth a look. That is not idealism. It is arithmetic. {{< sidenote >}}If you are thinking "so what *is* funded differently?" — that is exactly what [A New Way](/a-new-way/) covers.{{< /sidenote >}}
+The system does not require ignorance. It just does not require awareness. It operates in the open, documented in earnings calls and annual reports. But it is designed to be frictionless — no thought required, no decision, no awareness of the transaction taking place.
 
 ## {{< icon "eye" >}} Seeing Clearly {#seeing-clearly}
 
-None of what you have just read is secret. It is documented in research, earnings reports, and public statements. What the system does not do is make itself legible. There is no moment, using any platform, where it pauses to explain what it is doing and why. You are never asked to consent to the transaction in which your attention is sold. You are simply enrolled in it, by default, the moment you open the app.
+Knowing how the system works does not mean abandoning the internet. It means seeing the difference between content that was chosen for you and content you chose.
 
-### What changes
+It is like knowing that supermarkets place sweets at the checkout. You still buy sweets sometimes. But you buy them because you decided to, not because a system put them in your path at the moment you were least likely to think about it. The goal is not purity. It is awareness.
 
-Knowing this does not mean you stop using the internet. The internet is full of things worth your time — communities, tools, knowledge, creative work that matters to you. The point is to see the difference between content you chose and content that was chosen for you.
-
-You can notice when you are scrolling from habit rather than interest. You can recognise the pull of variable reinforcement — the "just one more" feeling that has nothing to do with whether the next post will actually be worth your time. You can distinguish between a platform that is serving you and one that is extracting from you.
-
-These are small shifts in perception that, once made, cannot be unmade. It is like knowing that supermarkets place sweets at the checkout. You still buy sweets sometimes. But you buy them because you decided to, not because a system put them in your path at the moment you were least likely to think about it. The goal is not purity. It is awareness.
-
-### What awareness does not solve
-
-Interventions that change how people use social media do improve wellbeing, particularly for depression. {{< cite "vanolst-social-media-interventions-2023" >}} Individual action matters. But the structural problems described here — the misaligned incentives, the degradation of public-interest content, the extraction cycles — require structural responses. {{< cite "hari-stolen-focus-2022" >}} {{< sidenote >}}The front page of this site asks you to pick one thing you rely on online and find out if you can support it. That is the practice version of the understanding this section has outlined. [Start here](/) if you have not already.{{< /sidenote >}}
-
-Those responses already exist. In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between the people who make things and the people who value them. A pattern, emerging independently in different places, grounded in a simple premise: if the problem is the business model, try a different business model.
-
-That is the next thread. {{< sidenote >}}Everything in this section is grounded in research. If you want to follow any claim to its source, or cite something yourself, the full library is at [The Evidence](/the-evidence/).{{< /sidenote >}}
+Interventions that change how people use social media do improve wellbeing, particularly for depression. {{< cite "vanolst-social-media-interventions-2023" >}} Individual awareness matters. But the structural problems — misaligned incentives, degradation of public-interest content, extraction cycles — require structural responses too. {{< cite "hari-stolen-focus-2022" >}} {{< sidenote >}}Everything in this section is grounded in research. If you want to follow any claim to its source, the full library is at [The Evidence](/the-evidence/).{{< /sidenote >}}

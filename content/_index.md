@@ -1,16 +1,36 @@
 ---
 title: "Fund Your Internet"
-summary: "Pick one thing you value online. Fund it today."
-steps:
-  - icon: "heart"
-    title: "Choose something you rely on"
-    detail: "A newsletter you read, a podcast you listen to, an app you use, a news source you trust."
-  - icon: "compass"
-    title: "Find out how you can keep it going"
-    detail: "A subscription, a tip jar, a sponsor page, a \"buy me a coffee\" link."
-  - icon: "heart-handshake"
-    title: "Fund it today"
-    detail: "Any amount. No commitment required."
-reframe: "You are sustaining something you use, not donating to charity. The same way you might shop at a local market instead of a supermarket — not out of obligation, but because you have decided that what you value is worth keeping around."
-bridge: "Most of what you value online is made by people who are not getting paid enough to keep going. The funding model was not built for them. "
+summary: "A practical guide to sustaining the things you rely on online."
+pairs:
+  - noun: "good apps"
+    verb: "get worse?"
+  - noun: "local papers"
+    verb: "disappear?"
+  - noun: "trusted voices"
+    verb: "get buried?"
+  - noun: "quick checks"
+    verb: "last hours?"
+  - noun: "simple recipes"
+    verb: "need scrolling?"
+  - noun: "favourite features"
+    verb: "get removed?"
+  - noun: "good articles"
+    verb: "hide behind paywalls?"
+  - noun: "my recommendations"
+    verb: "feel like ads?"
+  - noun: "the comments"
+    verb: "favour the trolls?"
+threads:
+  - heading: "How did we get here?"
+    blurb: "Most of what you see online is chosen by systems designed to keep you watching. That is not a conspiracy. It is a business model — and it shapes what gets made, what disappears, and what you never see at all."
+    section: old-way
+    url: /the-old-way/
+  - heading: "Is there another way?"
+    blurb: "In open source, journalism, podcasting, and independent communities, people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern — and it is growing."
+    section: new-way
+    url: /a-new-way/
+  - heading: "What can I do?"
+    blurb: "Pick one thing you value online. A podcast, a newsletter, an open source tool, a local news source. Learn how they accept funds. Fund them. That is the entire practice."
+    section: action
+    url: /what-can-i-do/
 ---

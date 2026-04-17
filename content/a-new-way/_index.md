@@ -1,8 +1,6 @@
 ---
-title: "A New Way"
-summary: "The people and communities already building a different kind of internet, and how to find them."
-strand_title: "It is already happening"
-strand_teaser: "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern."
+title: "Is there another way?"
+summary: "Yes. People are already building it."
 outline:
   - title: "Direct support"
     icon: "heart-handshake"
@@ -22,32 +20,26 @@ outline:
     description: "The tools that reduce friction and connect supporters to the things they value."
 bridges:
   - branch: old-way
-    section: The Old Way
+    heading: "How did we get here?"
+    blurb: "These communities did not appear from nowhere. Understanding the system they are responding to makes the pattern clearer."
     url: /the-old-way/
-    prompt: "Understand the mechanics these communities are responding to."
-  - branch: evidence
-    section: The Evidence
-    url: /the-evidence/
-    prompt: "See the research on which funding models are actually working."
+  - branch: action
+    heading: "What can I do?"
+    blurb: "You have seen what is possible. The practice is simpler than you think."
+    url: /what-can-i-do/
 ---
-
-The response to the ad-driven web is already happening. It is not fringe, not crypto-utopian, not dependent on any single technology. In lots of different places, people are building the same kind of thing: direct relationships between people who make things and people who value them.
-
-This is not easy. Most independent creators earn less than $30,000 a year. {{< cite "mbo-creator-economy-2024" >}} Nearly half of all consumers say they feel overwhelmed by subscription management. {{< cite "deloitte-digital-media-2025" >}} And yet, last year, over eight million people in 200 countries gave an average of $10.58 each to keep Wikipedia running — no paywall, no algorithm, just people choosing to sustain something they use. {{< cite "wikimedia-fundraising-2024" >}}
-
-That is a pattern worth understanding. The sections below are organised by pattern rather than by industry, because the same logic — people connecting directly with things they value — shows up everywhere. In journalism, in open source software, in podcasting, in the decentralised web. What varies is the shape it takes.
 
 {{< outline >}}
 
 ## {{< icon "heart-handshake" >}} Direct support {#direct-support}
 
-The simplest version of this pattern is the oldest: one person decides to pay for something they value.
+The simplest version is the oldest: one person decides to pay for something they value.
 
 A recurring pledge to a journalist. A monthly contribution to a podcast. A sponsorship of a software project. This is not charity — it is sustaining something you use. The same logic as shopping at a local market instead of a supermarket.
 
 At scale, it works. Since 2013, the patronage platform Patreon has channelled over two billion dollars in pledges from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}} Research on recurring crowdfunding models shows that this kind of sustained patronage is more durable than one-off campaigns, particularly when creators invest in ongoing engagement with their supporters. {{< cite "tan-recurring-crowdfunding-2024" >}}
 
-But the distribution is stark. The creator economy is projected to reach $480 billion by 2027, yet only about four per cent of creators earn more than $100,000 a year, and brand deals — not direct support — account for roughly 70 per cent of revenue. {{< cite "goldmansachs-creator-economy-2025" >}} Newsletter platforms like Substack offer independence from traditional newsrooms, but the most successful newsletters are overwhelmingly authored by already-established journalists, and algorithmic recommendations increasingly shape what gets read. {{< cite "mdpi-substack-journalism-2024" >}}
+But the distribution is stark. Most creators who rely on direct support earn very little from it — brand deals still dominate creator income, and the platforms that host patronage relationships set the terms. {{< cite "goldmansachs-creator-economy-2025" >}} Even on newsletter platforms like Substack, the most successful accounts tend to be those of already-established journalists. Independence from a newsroom is not independence from a platform. {{< cite "mdpi-substack-journalism-2024" >}}
 
 There are hidden costs too. Sustaining a patronage income requires what researchers call relational labour — the emotional work of building and maintaining relationships with supporters. For many creators, that labour is as demanding as the creative work itself. {{< cite "bonifacio-patreon-labour-2023" >}}
 
@@ -63,11 +55,9 @@ Cooperatives offer a different model entirely. When the people who make somethin
 
 This model is already working in specific corners of the internet. [Stocksy](https://www.stocksy.com/) is a photographer-owned cooperative that pays contributors fairly and shares profits with its members. [Resonate](https://resonate.coop/) is a music streaming cooperative owned by listeners and artists. Neither is a household name. Both prove the model is viable.
 
-In journalism, the picture is more dramatic. In the United States, 213 counties are now news deserts — places with no local newspaper at all. 136 papers closed in a single year. But the same period saw over 300 digital news startups launch, many of them reader-funded. {{< cite "medill-local-news-2025" >}} In the UK, [The Bristol Cable](https://thebristolcable.org/) operates as a media cooperative owned by over 2,500 members. In Scotland, [The Ferret](https://theferret.scot/) runs investigative journalism funded by its readers. {{< cite "gollmitzer-journalism-cooperatives-2024" >}} The Guardian, while not a cooperative, is owned by the Scott Trust and funded significantly by voluntary reader contributions — proof that large-scale reader funding can work within a traditional structure.
+In journalism, the need is acute — local news is disappearing, and the communities left without it are not being served by digital replacements. But cooperatives are filling some of the gaps. In the UK, [The Bristol Cable](https://thebristolcable.org/) operates as a media cooperative owned by over 2,500 members. In Scotland, [The Ferret](https://theferret.scot/) runs investigative journalism funded by its readers. {{< cite "gollmitzer-journalism-cooperatives-2024" >}} The Guardian, while not a cooperative, is owned by the Scott Trust and funded significantly by voluntary reader contributions — proof that large-scale reader funding can work within a traditional structure.
 
-{{< sidenote >}}Newsletter platforms like Substack offer creators independence from newsroom employers but introduce new platform dependencies. The most successful accounts tend to be those of already-established journalists, suggesting that platform independence alone does not level the playing field. {{< cite "mdpi-substack-journalism-2024" >}}{{< /sidenote >}}
-
-These are not easy models. Cooperatives require governance, and governance is slower than venture capital. Willingness to pay for news remains low — about 17 per cent globally. {{< cite "reuters-digital-news-2025" >}} But the question is not whether cooperatives will replace every platform. It is whether they prove that a different ownership model is possible. They do.
+These are not easy models. Cooperatives require governance, and governance is slower than venture capital. But the question is not whether cooperatives will replace every platform. It is whether they prove that a different ownership model is possible. They do.
 
 ## {{< icon "landmark" >}} Funding the commons {#funding-the-commons}
 
@@ -87,7 +77,7 @@ Individual contributions to open source projects through Open Collective or [Git
 
 ## {{< icon "compass" >}} Infrastructure for giving {#infrastructure-for-giving}
 
-The obstacle to sustaining the things you value online is rarely unwillingness. It is friction. Too many platforms, no coherent picture of who needs support and how, no sense that any single action makes a difference.
+The main obstacle is friction. Too many platforms, no coherent picture of who needs support and how, no sense that any single action makes a difference.
 
 A useful distinction: some tools connect you to a specific person or project. Others pool your money into a platform that decides how to distribute it. The first is funding. The second is subscribing to a service. Paying for YouTube Premium is not funding your internet — it is paying a platform that pays creators a fraction of a fraction, on terms the platform controls.
 

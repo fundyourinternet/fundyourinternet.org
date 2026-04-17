@@ -17,35 +17,5 @@
 <link rel="stylesheet" href="/css/components.css{{ $assetQuery }}">
 <link rel="stylesheet" href="/css/visual.css{{ $assetQuery }}">
 
-{{- /* Hero image hints: preload current, prefetch others */ -}}
-{{- $rel := .RelPermalink -}}
-{{- $heroKey := "" -}}
-{{- if .IsHome -}}
-  {{- $heroKey = "home" -}}
-{{- else if in $rel "old-way" -}}
-  {{- $heroKey = "old-way" -}}
-{{- else if in $rel "new-way" -}}
-  {{- $heroKey = "new-way" -}}
-{{- else if in $rel "evidence" -}}
-  {{- $heroKey = "evidence" -}}
-{{- end -}}
-
-{{- $heroImages := dict
-  "home" "/images/hero/homepage.jpg"
-  "old-way" "/images/hero/old-way.jpg"
-  "new-way" "/images/hero/new-way.jpg"
-  "evidence" "/images/hero/evidence.jpg"
--}}
-
-{{- with $heroKey -}}
-  {{- $href := index $heroImages . -}}
-  <link rel="preload" as="image" href="{{ $href }}" fetchpriority="high">
-{{- end -}}
-{{- range $k, $href := $heroImages -}}
-  {{- if ne $k $heroKey -}}
-  <link rel="prefetch" as="image" href="{{ $href }}">
-  {{- end -}}
-{{- end -}}
-
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script defer src="/js/theme.js"></script>
