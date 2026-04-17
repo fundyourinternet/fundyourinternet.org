@@ -1,5 +1,5 @@
 ---
-title: "The Old Way"
+title: "How did we get here?"
 summary: "A business model designed to capture attention. Here is how it works."
 outline:
   - title: "How Feeds Choose for You"

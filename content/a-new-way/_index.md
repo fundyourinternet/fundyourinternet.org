@@ -1,5 +1,5 @@
 ---
-title: "A New Way"
+title: "Is there another way?"
 summary: "Yes. People are already building it."
 outline:
   - title: "Direct support"
