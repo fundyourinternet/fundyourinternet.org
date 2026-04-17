@@ -160,10 +160,6 @@ main {
   padding: var(--space-sm) var(--space-md);
 }
 
-.container--wide {
-  max-width: var(--max-width-wide);
-}
-
 /* --- Skip link (accessibility) --- */
 
 .skip-link {
