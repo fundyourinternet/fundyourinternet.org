@@ -18,10 +18,17 @@ h1 .section-icon {
 
 /* --- Navigation section colours --- */
 
-.nav-link--home { color: var(--colour-text); }
-.nav-link--old-way { color: var(--colour-feeds); }
-.nav-link--new-way { color: var(--colour-movement); }
-.nav-link--action { color: var(--colour-evidence); }
+.nav-link.nav-link--home,
+.nav-link.nav-link--home:visited { color: var(--colour-text); }
+
+.nav-link.nav-link--old-way,
+.nav-link.nav-link--old-way:visited { color: var(--colour-feeds); }
+
+.nav-link.nav-link--new-way,
+.nav-link.nav-link--new-way:visited { color: var(--colour-movement); }
+
+.nav-link.nav-link--action,
+.nav-link.nav-link--action:visited { color: var(--colour-evidence); }
 
 /* --- Inline citations (superscript indicators with tooltips) --- */
 

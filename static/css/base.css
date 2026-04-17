@@ -181,9 +181,10 @@ main {
 /* --- Site header --- */
 
 .site-header {
-  border-bottom: 1px solid var(--colour-border);
   padding: var(--space-xs) var(--space-md);
-  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: right;
 }
 
 .nav-toggle {
@@ -200,6 +201,7 @@ main {
   color: var(--colour-muted);
   border: 1px solid var(--colour-border);
   border-radius: 4px;
+  float: right;
 }
 
 .nav-toggle-label:hover {
@@ -227,16 +229,8 @@ main {
   display: block;
   padding: 0.4rem 0;
   font-size: 0.85rem;
-  color: var(--colour-muted);
   text-decoration: none;
-}
-
-.nav-link:visited {
-  color: var(--colour-muted);
-}
-
-.nav-link:hover {
-  color: var(--colour-text);
+  text-align: right;
 }
 
 
