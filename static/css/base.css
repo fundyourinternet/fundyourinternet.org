@@ -181,16 +181,9 @@ main {
 /* --- Site header --- */
 
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 10;
   padding: 0;
-  background: color-mix(in srgb, var(--colour-bg) 40%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--colour-border) 40%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--colour-border);
 }
 
 .site-header .container {
