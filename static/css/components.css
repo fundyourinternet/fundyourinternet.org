@@ -108,7 +108,8 @@
   text-decoration: none;
   color: var(--colour-text);
   border-radius: 10px;
-  transition: box-shadow 0.2s ease;
+  background: var(--colour-subtle);
+  transition: background-color 0.2s ease;
 }
 
 .homepage-thread:visited {
@@ -116,7 +117,7 @@
 }
 
 .homepage-thread:hover {
-  box-shadow: 0 0 24px 0 color-mix(in srgb, var(--thread-colour) 18%, transparent);
+  background-color: var(--thread-colour-light);
 }
 
 .homepage-thread:focus-visible {
@@ -124,8 +125,8 @@
   outline-offset: 2px;
 }
 
-.homepage-thread--old-way { --thread-colour: var(--colour-feeds); }
-.homepage-thread--new-way { --thread-colour: var(--colour-movement); text-align: right; }
+.homepage-thread--old-way { --thread-colour: var(--colour-feeds); --thread-colour-light: var(--colour-feeds-light); }
+.homepage-thread--new-way { --thread-colour: var(--colour-movement); --thread-colour-light: var(--colour-movement-light); text-align: right; }
 
 .homepage-thread-heading {
   display: block;
