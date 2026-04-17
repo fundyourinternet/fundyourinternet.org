@@ -10,7 +10,6 @@
   display: inline-block;
 }
 
-.domain-entry-label .section-icon,
 .bridge-section .section-icon {
   width: 1em;
   height: 1em;
@@ -238,7 +237,6 @@ h1 .section-icon {
 
 /* Per-hero image assignments */
 
-.section-hero--home::before { background-image: url("/images/hero/homepage.jpg"); }
 .section-hero--old-way::before { background-image: url("/images/hero/old-way.jpg"); }
 .section-hero--new-way::before { background-image: url("/images/hero/new-way.jpg"); }
 .section-hero--evidence::before { background-image: url("/images/hero/evidence.jpg"); }

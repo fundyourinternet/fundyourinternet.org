@@ -1,16 +1,22 @@
 ---
 title: "Fund Your Internet"
-summary: "Pick one thing you value online. Fund it today."
-steps:
-  - icon: "heart"
-    title: "Choose something you rely on"
-    detail: "A newsletter you read, a podcast you listen to, an app you use, a news source you trust."
-  - icon: "compass"
-    title: "Find out how you can keep it going"
-    detail: "A subscription, a tip jar, a sponsor page, a \"buy me a coffee\" link."
-  - icon: "heart-handshake"
-    title: "Fund it today"
-    detail: "Any amount. No commitment required."
-reframe: "You are sustaining something you use, not donating to charity. The same way you might shop at a local market instead of a supermarket — not out of obligation, but because you have decided that what you value is worth keeping around."
-bridge: "Most of what you value online is made by people who are not getting paid enough to keep going. The funding model was not built for them. "
+summary: "A practical guide to sustaining the things you rely on online."
+opening: "You open the same five things every morning."
+reflection: |
+  A newsletter. A weather app. A podcast on the way to work. A news site you have read since before you could have said what a browser was.
+
+  Someone made each of those things. Most of them are not getting paid enough to keep going. Not because people do not value what they make — but because the system that funds the internet was not designed to connect the people who make things with the people who rely on them.
+
+  You already know this. You have felt the thing you liked get worse, or quieter, or gone. You just did not have a frame for why.
+threads:
+  - question: "How did it get this way?"
+    section: old-way
+    url: /the-old-way/
+  - question: "What are people doing about it?"
+    section: new-way
+    url: /a-new-way/
+  - question: "What does the evidence say?"
+    section: evidence
+    url: /the-evidence/
+closing: "This site is not asking you to do anything yet. It is asking you to see clearly. The rest follows."
 ---

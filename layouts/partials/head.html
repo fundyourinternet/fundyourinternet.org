@@ -20,9 +20,7 @@
 {{- /* Hero image hints: preload current, prefetch others */ -}}
 {{- $rel := .RelPermalink -}}
 {{- $heroKey := "" -}}
-{{- if .IsHome -}}
-  {{- $heroKey = "home" -}}
-{{- else if in $rel "old-way" -}}
+{{- if in $rel "old-way" -}}
   {{- $heroKey = "old-way" -}}
 {{- else if in $rel "new-way" -}}
   {{- $heroKey = "new-way" -}}
@@ -31,7 +29,6 @@
 {{- end -}}
 
 {{- $heroImages := dict
-  "home" "/images/hero/homepage.jpg"
   "old-way" "/images/hero/old-way.jpg"
   "new-way" "/images/hero/new-way.jpg"
   "evidence" "/images/hero/evidence.jpg"
