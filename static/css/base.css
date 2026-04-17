@@ -296,9 +296,8 @@ main {
 /* --- Site footer --- */
 
 .site-footer {
-  border-top: 1px solid var(--colour-border);
-  padding: var(--space-lg) 0;
-  margin-top: var(--space-xl);
+  padding: var(--space-md) 0;
+  margin-top: var(--space-lg);
 }
 
 .site-footer p {
