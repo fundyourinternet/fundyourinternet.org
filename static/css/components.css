@@ -97,23 +97,26 @@
 }
 
 .homepage-threads {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
   display: grid;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .homepage-thread {
   display: block;
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-md);
   text-decoration: none;
   color: var(--colour-text);
-  text-align: center;
-  transition: background 0.3s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 .homepage-thread:visited {
   color: var(--colour-text);
+}
+
+.homepage-thread:hover {
+  border-bottom-color: var(--thread-colour);
 }
 
 .homepage-thread:focus-visible {
@@ -121,23 +124,15 @@
   outline-offset: 2px;
 }
 
-.homepage-thread--old-way { --thread-colour: var(--colour-feeds); --thread-colour-light: var(--colour-feeds-light); }
-.homepage-thread--new-way { --thread-colour: var(--colour-movement); --thread-colour-light: var(--colour-movement-light); }
-
-.homepage-thread:hover {
-  background: radial-gradient(
-    ellipse at top center,
-    var(--thread-colour-light),
-    transparent 70%
-  );
-}
+.homepage-thread--old-way { --thread-colour: var(--colour-feeds); }
+.homepage-thread--new-way { --thread-colour: var(--colour-movement); text-align: right; }
 
 .homepage-thread-heading {
   display: block;
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
   color: var(--thread-colour);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .homepage-thread-blurb {
@@ -145,8 +140,6 @@
   font-size: 0.95rem;
   color: var(--colour-muted);
   line-height: 1.7;
-  max-width: 36rem;
-  margin: 0 auto;
 }
 
 /* --- Section pages --- */
