@@ -297,7 +297,6 @@ main {
 
 .site-footer {
   padding: var(--space-xs) 0;
-  margin-top: var(--space-xl);
 }
 
 .site-footer p {
