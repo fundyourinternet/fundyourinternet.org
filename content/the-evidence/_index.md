@@ -1,8 +1,6 @@
 ---
 title: "The Evidence"
 summary: "Curated research and sources on how the internet gets funded, and what happens when it does not."
-strand_title: "The research is clear"
-strand_teaser: "Algorithmic feeds measurably shift what gets made and how people feel. Direct funding models are growing but face real obstacles. The data exists — curated, annotated, and organised by question."
 outline:
   - title: "Algorithmic feeds"
     icon: "list-filter"

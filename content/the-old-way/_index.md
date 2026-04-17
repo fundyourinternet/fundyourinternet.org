@@ -1,8 +1,6 @@
 ---
 title: "The Old Way"
-summary: "What happens when algorithms decide what you see, and what it means for the things you rely on."
-strand_title: "Isn't the internet meant to be free?"
-strand_teaser: "A local news site earns fractions of a penny per page view from ads. To pay one journalist, they need millions of views a month. That changes what gets written - and what you're allowed to discover."
+summary: "A business model designed to capture attention. Here is how it works."
 outline:
   - title: "How Feeds Choose for You"
     icon: "list-filter"
@@ -34,8 +32,6 @@ bridges:
     blurb: "You understand the model. The next step is small, concrete, and entirely yours."
     url: /what-can-i-do/
 ---
-
-Most of what you see online is chosen for you. Not by editors, not by your friends, not by the people who made it — by systems designed to keep you looking at the screen for as long as possible. That is not a conspiracy. It is a business model, and it defines the internet experience. {{< cite "doctorow-enshittification-2023" >}}
 
 {{< outline >}}
 

@@ -1,8 +1,6 @@
 ---
 title: "A New Way"
-summary: "The people and communities already building a different kind of internet, and how to find them."
-strand_title: "It is already happening"
-strand_teaser: "In dozens of communities — open source, journalism, podcasting, the decentralised web — people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern."
+summary: "Yes. People are already building it."
 outline:
   - title: "Direct support"
     icon: "heart-handshake"
@@ -30,12 +28,6 @@ bridges:
     blurb: "You have seen what is possible. The practice is simple: pick one thing, find out how they accept support, do it."
     url: /what-can-i-do/
 ---
-
-The response to the ad-driven web is already happening. It is not fringe, not crypto-utopian, not dependent on any single technology. In lots of different places, people are building the same kind of thing: direct relationships between people who make things and people who value them.
-
-This is not easy. Most independent creators earn less than $30,000 a year. {{< cite "mbo-creator-economy-2024" >}} Nearly half of all consumers say they feel overwhelmed by subscription management. {{< cite "deloitte-digital-media-2025" >}} And yet, last year, over eight million people in 200 countries gave an average of $10.58 each to keep Wikipedia running — no paywall, no algorithm, just people choosing to sustain something they use. {{< cite "wikimedia-fundraising-2024" >}}
-
-That is a pattern worth understanding. The sections below are organised by pattern rather than by industry, because the same logic — people connecting directly with things they value — shows up everywhere. In journalism, in open source software, in podcasting, in the decentralised web. What varies is the shape it takes.
 
 {{< outline >}}
 
