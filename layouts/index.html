@@ -5,10 +5,9 @@
     <h1 class="homepage-title">{{ .Title }}</h1>
     {{ with .Params.pairs }}
     <div class="homepage-lead">
-      <span class="homepage-lead-line">Why does it feel like</span>
-      <span class="cycle">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.noun }}</span>{{ end }}</span>
-      <span class="homepage-lead-line">keep</span>
-      <span class="cycle">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.verb }}</span>{{ end }}</span>
+      <span class="homepage-lead-line">Why do</span>
+      <span class="cycle cycle--noun">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.noun }}</span>{{ end }}</span>
+      <span class="cycle cycle--verb">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.verb }}</span>{{ end }}</span>
     </div>
     {{ end }}
   </div>
