@@ -15,11 +15,12 @@
         {{- $active = hasPrefix $rel .URL -}}
       {{- end -}}
       {{- $section := "" -}}
-      {{- if in .URL "old-way" -}}{{- $section = "old-way" -}}
+      {{- if eq .URL "/" -}}{{- $section = "home" -}}
+      {{- else if in .URL "old-way" -}}{{- $section = "old-way" -}}
       {{- else if in .URL "new-way" -}}{{- $section = "new-way" -}}
-      {{- else if in .URL "evidence" -}}{{- $section = "evidence" -}}
+      {{- else if in .URL "what-can-i-do" -}}{{- $section = "action" -}}
       {{- end -}}
-      <li><a href="{{ .URL }}" class="nav-link{{ with $section }} nav-link--{{ . }}{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ if eq .URL "/" }}Home{{ else }}{{ .Name }}{{ end }}</a></li>
+      <li><a href="{{ .URL }}" class="nav-link{{ with $section }} nav-link--{{ . }}{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
       {{- end }}
     </ul>
   </nav>
