@@ -2,17 +2,22 @@
 <article class="homepage">
 
   <div class="homepage-opening">
-    <h1 class="homepage-title">{{ .Title }}</h1>
-    {{ with .Params.pairs }}
-    <div class="homepage-lead">
-      <span class="homepage-lead-line">Why do</span>
-      <span class="cycle cycle--noun">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.noun }}</span>{{ end }}</span>
-      <span class="cycle cycle--verb">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.verb }}</span>{{ end }}</span>
+    <div class="homepage-opening-inner">
+      <h1 class="homepage-title">{{ .Title }}</h1>
+      {{ with .Params.pairs }}
+      <div class="homepage-lead">
+        <span class="homepage-lead-line">Why do</span>
+        <span class="cycle cycle--noun">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.noun }}</span>{{ end }}</span>
+        <span class="cycle cycle--verb">{{ range $i, $p := . }}<span class="cycle-item"{{ if $i }} aria-hidden="true"{{ end }}>{{ $p.verb }}</span>{{ end }}</span>
+      </div>
+      {{ end }}
     </div>
-    {{ end }}
+    <a href="#threads" class="scroll-cue" aria-label="See more">
+      {{ partial "icons/chevron-down.html" . }}
+    </a>
   </div>
 
-  <div class="container">
+  <div class="container" id="threads">
     {{ with .Params.threads }}
     <div class="homepage-threads">
       {{ range . }}
