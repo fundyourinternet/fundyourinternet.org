@@ -3,7 +3,13 @@
 
   <div class="homepage-opening">
     <h1 class="homepage-title">{{ .Title }}</h1>
-    {{ with .Params.opening }}<p class="homepage-lead">{{ . }}</p>{{ end }}
+    {{ with .Params.pairs }}
+    <p class="homepage-lead">
+      Why does it feel like<br>
+      your <span class="cycle">{{ range . }}<span class="cycle-item">{{ .noun }}</span>{{ end }}</span><br>
+      keep <span class="cycle">{{ range . }}<span class="cycle-item">{{ .verb }}</span>{{ end }}</span>?
+    </p>
+    {{ end }}
   </div>
 
   <div class="container">

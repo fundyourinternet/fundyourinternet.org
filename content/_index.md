@@ -1,7 +1,15 @@
 ---
 title: "Fund Your Internet"
 summary: "A practical guide to sustaining the things you rely on online."
-opening: "You open the same five things every morning."
+pairs:
+  - noun: "useful apps"
+    verb: "getting worse"
+  - noun: "local news"
+    verb: "disappearing"
+  - noun: "trusted voices"
+    verb: "getting buried"
+  - noun: "loudest voices"
+    verb: "shilling promotions"
 reflection: |
   A newsletter. A weather app. A podcast on the way to work. A news site you have read since before you could have said what a browser was.
 
