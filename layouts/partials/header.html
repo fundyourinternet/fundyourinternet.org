@@ -16,7 +16,7 @@
           {{- $active = hasPrefix $rel .URL -}}
         {{- end -}}
         {{- if eq .URL "/" -}}
-        <li><a href="{{ .URL }}" class="nav-link nav-link--home"{{ if $active }} aria-current="page"{{ end }} aria-label="Home"><span class="site-mark" aria-hidden="true">FYI</span></a></li>
+        <li><a href="{{ .URL }}" class="nav-link nav-link--home"{{ if $active }} aria-current="page"{{ end }}>Home</a></li>
         {{- else -}}
         {{- $section := "" -}}
         {{- if in .URL "old-way" -}}{{- $section = "old-way" -}}

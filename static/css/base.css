@@ -201,24 +201,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding-top: 0;
   padding-bottom: 0;
   position: relative;
 }
 
-.site-mark {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  background: var(--colour-text);
-  color: var(--colour-bg);
-  padding: 0.15em 0.35em;
-  border-radius: 3px;
-  line-height: 1;
-}
-
-/* --- Navigation (checkbox-hack responsive burger) --- */
+/* --- Navigation (checkbox-hack burger) --- */
 
 .nav-toggle {
   position: absolute;
@@ -247,7 +236,6 @@ main {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  order: 4;
 }
 
 .nav-toggle:checked ~ .nav-links {
@@ -262,10 +250,6 @@ main {
 
 .nav-links li {
   display: contents;
-}
-
-.site-header .container {
-  flex-wrap: wrap;
 }
 
 

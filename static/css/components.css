@@ -265,7 +265,6 @@
 /* --- Responsive components --- */
 
 @media (min-width: 48em) {
-  /* Sidenotes float into the margin on wide screens */
   .has-sidenotes .container {
     max-width: var(--max-width-wide);
     display: grid;
@@ -277,7 +276,7 @@
     max-width: var(--max-width);
   }
 
-  .sidenote {
+  .has-sidenotes .sidenote {
     float: right;
     clear: right;
     width: 14rem;
