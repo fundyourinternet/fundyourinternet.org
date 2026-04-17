@@ -108,7 +108,6 @@
   text-decoration: none;
   color: var(--colour-text);
   border-radius: 10px;
-  background: var(--colour-subtle);
   transition: background-color 0.2s ease;
 }
 
@@ -127,6 +126,7 @@
 
 .homepage-thread--old-way { --thread-colour: var(--colour-feeds); --thread-colour-light: var(--colour-feeds-light); }
 .homepage-thread--new-way { --thread-colour: var(--colour-movement); --thread-colour-light: var(--colour-movement-light); text-align: right; }
+.homepage-thread--action { --thread-colour: var(--colour-evidence); --thread-colour-light: var(--colour-evidence-light); text-align: center; }
 
 .homepage-thread-heading {
   display: block;
