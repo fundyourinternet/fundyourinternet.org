@@ -219,44 +219,20 @@
 .library-list {
   list-style: none;
   padding: 0;
-  display: grid;
-  gap: var(--space-sm);
 }
 
 .library-entry {
-  padding: var(--space-md);
-  background: var(--colour-subtle);
-  border-radius: 6px;
-  border-left: 3px solid var(--colour-evidence-border);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--colour-border);
 }
 
-.library-entry--recommended {
-  background: var(--colour-evidence-light);
-  border-left-color: var(--colour-evidence);
-}
-
-.library-entry-header {
-  margin-bottom: var(--space-xs);
-}
-
-.library-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--colour-bg);
-  background: var(--colour-evidence);
-  padding: 0.15em 0.5em;
-  border-radius: 3px;
-  margin-right: var(--space-xs);
-  vertical-align: middle;
+.library-entry:last-child {
+  border-bottom: none;
 }
 
 .library-title {
   font-family: var(--font-heading);
   font-size: 1.05rem;
-  color: var(--colour-text);
 }
 
 .library-meta {
@@ -269,7 +245,7 @@
 .library-annotation {
   font-size: 0.9rem;
   color: var(--colour-muted);
-  margin: 0;
+  margin: var(--space-xs) 0 0;
 }
 
 /* --- Action page (/what-can-i-do/) --- */

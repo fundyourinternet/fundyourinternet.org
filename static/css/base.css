@@ -303,10 +303,6 @@ main {
     padding: 0;
   }
 
-  .library-entry {
-    background: none;
-    border-radius: 0;
-  }
 
   .cite a::before {
     content: "[" counter(cite) "]";
