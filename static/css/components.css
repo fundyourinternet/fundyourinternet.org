@@ -271,7 +271,7 @@
 
 .action-step-1 { color: var(--colour-feeds); }
 .action-step-2 { color: var(--colour-movement); }
-.action-step-3 { color: var(--colour-evidence); font-size: 1.15em; }
+.action-step-3 { color: var(--colour-evidence); }
 
 .action-hero-lead {
   font-size: 1.05rem;
@@ -290,6 +290,19 @@
   padding: var(--space-md);
   border: 1px solid var(--colour-border);
   border-radius: 10px;
+  border-left: 3px solid var(--colour-border);
+}
+
+.action-card--share {
+  background: var(--colour-movement-light);
+  border-color: var(--colour-movement-border);
+  border-left-color: var(--colour-movement);
+}
+
+.action-card--habit {
+  background: var(--colour-evidence-light);
+  border-color: var(--colour-evidence-border);
+  border-left-color: var(--colour-evidence);
 }
 
 .action-card h2 {

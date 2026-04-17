@@ -26,7 +26,7 @@ threads:
     section: old-way
     url: /the-old-way/
   - heading: "Is there another way?"
-    blurb: "In open source, journalism, podcasting, and the decentralised web, people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern — and it is growing."
+    blurb: "In open source, journalism, podcasting, and independent communities, people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern — and it is growing."
     section: new-way
     url: /a-new-way/
   - heading: "What can I do?"
