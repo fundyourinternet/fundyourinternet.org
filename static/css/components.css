@@ -278,16 +278,14 @@
 
 .action-hero-prompt {
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
+  font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.4rem);
   line-height: 1.8;
-  color: var(--colour-text);
   margin-bottom: var(--space-sm);
 }
 
-.action-hero-prompt em {
-  font-style: normal;
-  color: var(--colour-movement);
-}
+.action-step-1 { color: var(--colour-feeds); }
+.action-step-2 { color: var(--colour-movement); }
+.action-step-3 { color: var(--colour-evidence); }
 
 .action-hero-lead {
   font-size: 1.05rem;
