@@ -1,12 +1,5 @@
-{{ if not .IsHome }}
 <header class="site-header">
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-  <div class="header-bar">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-    </label>
-  </div>
-  <nav class="nav-links" aria-label="Main navigation">
+  <nav class="icon-nav" aria-label="Main navigation">
     <ul>
       {{- $rel := .RelPermalink -}}
       {{- range .Site.Menus.main -}}
@@ -17,14 +10,26 @@
         {{- $active = hasPrefix $rel .URL -}}
       {{- end -}}
       {{- $section := "" -}}
-      {{- if eq .URL "/" -}}{{- $section = "home" -}}
-      {{- else if in .URL "old-way" -}}{{- $section = "old-way" -}}
-      {{- else if in .URL "new-way" -}}{{- $section = "new-way" -}}
-      {{- else if in .URL "what-can-i-do" -}}{{- $section = "action" -}}
+      {{- $icon := "" -}}
+      {{- if eq .URL "/" -}}
+        {{- $section = "home" -}}{{- $icon = "circle-help" -}}
+      {{- else if in .URL "old-way" -}}
+        {{- $section = "old-way" -}}{{- $icon = "old-way" -}}
+      {{- else if in .URL "new-way" -}}
+        {{- $section = "new-way" -}}{{- $icon = "new-way" -}}
+      {{- else if in .URL "what-can-i-do" -}}
+        {{- $section = "action" -}}{{- $icon = "user" -}}
       {{- end -}}
-      <li><a href="{{ .URL }}" class="nav-link{{ with $section }} nav-link--{{ . }}{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      <li>
+        <a href="{{ .URL }}"
+           class="icon-nav-link{{ with $section }} icon-nav-link--{{ . }}{{ end }}"
+           aria-label="{{ .Name }}"
+           title="{{ .Name }}"
+           {{ if $active }}aria-current="page"{{ end }}>
+          {{- with $icon -}}{{ partial (printf "icons/%s.html" .) $ }}{{- end -}}
+        </a>
+      </li>
       {{- end }}
     </ul>
   </nav>
 </header>
-{{ end }}

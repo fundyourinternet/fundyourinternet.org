@@ -1,5 +1,65 @@
 /* === Fund Your Internet — Component Styles === */
 
+/* --- Icon navigation (site header) --- */
+
+.icon-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md) var(--space-xs);
+}
+
+.icon-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.icon-nav-link {
+  --icon-colour: var(--colour-muted);
+  --icon-colour-bg: var(--colour-subtle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--icon-colour);
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.icon-nav-link:visited {
+  color: var(--icon-colour);
+}
+
+.icon-nav-link:hover,
+.icon-nav-link[aria-current="page"] {
+  opacity: 1;
+  background: var(--icon-colour-bg);
+}
+
+.icon-nav-link:focus-visible {
+  outline: 2px solid var(--colour-link);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.icon-nav-link svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.icon-nav-link--home     { --icon-colour: var(--colour-muted); }
+.icon-nav-link--old-way  { --icon-colour: var(--colour-feeds);    --icon-colour-bg: var(--colour-feeds-light); }
+.icon-nav-link--new-way  { --icon-colour: var(--colour-movement); --icon-colour-bg: var(--colour-movement-light); }
+.icon-nav-link--action   { --icon-colour: var(--colour-evidence); --icon-colour-bg: var(--colour-evidence-light); }
+
 /* --- Homepage (mirror layout) --- */
 
 .homepage {
@@ -12,8 +72,8 @@
 
 .homepage-opening {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100dvh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
