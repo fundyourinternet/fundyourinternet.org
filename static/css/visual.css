@@ -16,20 +16,6 @@ h1 .section-icon {
   vertical-align: -0.05em;
 }
 
-/* --- Navigation section colours --- */
-
-.nav-link.nav-link--home,
-.nav-link.nav-link--home:visited { color: var(--colour-text); }
-
-.nav-link.nav-link--old-way,
-.nav-link.nav-link--old-way:visited { color: var(--colour-feeds); }
-
-.nav-link.nav-link--new-way,
-.nav-link.nav-link--new-way:visited { color: var(--colour-movement); }
-
-.nav-link.nav-link--action,
-.nav-link.nav-link--action:visited { color: var(--colour-evidence); }
-
 /* --- Inline citations (superscript indicators with tooltips) --- */
 
 .cite {

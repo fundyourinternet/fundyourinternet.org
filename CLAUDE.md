@@ -20,11 +20,11 @@ The relationship to at.fund: "built by the at.fund team" in the footer. at.fund 
 
 - **Hugo** — static site generator. Zero Node.js dependency. Contributors edit markdown and push. Go templating is only touched by maintainers, never by content contributors.
 - **Plain CSS** — no preprocessor, no framework. CSS custom properties for the design system. Three stylesheets (`base.css`, `components.css`, `visual.css`). Keep CSS lean by pruning unused or redundant rules rather than letting files accumulate dead styles.
-- **Progressive enhancement** — the site must work without JS entirely. Minimal JS (`static/js/theme.js`, ~45 lines) powers the dark/light mode toggle and closes the mobile nav on link click; without it, OS-level colour scheme detection still works, the toggle button stays hidden, and the nav menu works natively via `<details>`/`<summary>`.
+- **Progressive enhancement** — the site must work without JS entirely. The only script (`static/js/theme.js`) enhances the share card on `/what-can-i-do/` with a one-click copy-link button; without JS, the card still links normally. The site uses a single ink-dark theme (no toggle).
 - **System fonts** — no external font requests. `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` for body. `Georgia, "Times New Roman", serif` for headings.
 - **No cookies, no tracking** — no analytics beyond what may be added later (Plausible or Fathom, privacy-respecting only).
 - **GitHub Pages** deployment via GitHub Actions. Push to `main` triggers build.
-- **Icons** — sourced from [Lucide](https://lucide.dev) (MIT-licensed). Three icons stored as inline SVG partials in `layouts/partials/icons/`: `radio` (Old Way), `hand-heart` (New Way), `book-open` (Evidence). They use `stroke="currentColor"` to inherit section colours.
+- **Icons** — sourced from [Lucide](https://lucide.dev) (MIT-licensed). Stored as inline SVG partials in `layouts/partials/icons/`. They use `stroke="currentColor"` to inherit colour from context. The site-wide icon nav uses four icons: `circle-help` (home), `old-way` / radio (Old Way), `new-way` / hand-heart (New Way), `user` (What can I do).
 
 ## Content architecture
 
