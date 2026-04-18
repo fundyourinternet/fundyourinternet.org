@@ -18,10 +18,6 @@
   align-items: center;
 }
 
-.icon-nav li {
-  margin: 0;
-}
-
 .icon-nav-link {
   --icon-colour: var(--colour-muted);
   --icon-colour-bg: var(--colour-subtle);

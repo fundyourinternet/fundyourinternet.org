@@ -125,11 +125,6 @@ ul, ol {
   margin-bottom: var(--space-sm);
 }
 
-ul:not([class]) > li + li,
-ol > li + li {
-  margin-top: var(--space-xs);
-}
-
 /* --- Links --- */
 
 a {
