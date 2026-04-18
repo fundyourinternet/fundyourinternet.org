@@ -39,7 +39,7 @@ bridges:
 
 Open any social media app and you will see a feed. It looks like a stream of things people posted, roughly in order. It is not.
 
-Every post, video, and link has been scored by a system that predicts how likely you are to engage with it: to tap, to comment, to share, to keep watching. The posts that make it to your feed are the posts most likely to keep you there. You'll never see the rest. On most platforms, you cannot turn this off. 
+Every post, video, and link has been scored by a system that predicts how likely you are to engage with it: to tap, to comment, to share, to keep watching. The posts that make it to your feed are the posts most likely to keep you there. You'll never see the rest. On most platforms, you cannot turn this off.
 
 ### Engagement is not enjoyment
 
@@ -55,7 +55,7 @@ Research on Facebook's ranking system found the same trade-off: weighting engage
 
 The pattern of "free content subsidised by advertising, then advertising reshaping the content" is as old as mass media. Tim Wu traces it from the penny press of the 1830s through radio, television, and into the internet age. {{< cite "wu-attention-merchants-2016" >}} 
 
-Each new medium attracted an audience with something useful, then turned that audience into a product for advertisers. What makes the internet version distinctive is individualization: an algorithmic feed makes millions of ranking decisions per second, for each individual user. Your feed is uniquely tailed, just for you, to keep you watching.
+Each new medium attracted an audience with something useful, then turned that audience into a product for advertisers. What makes the internet version distinctive is individualisation: an algorithmic feed makes millions of ranking decisions per second, for each individual user. Your feed is uniquely tailored, just for you, to keep you watching.
 
 ## {{< icon "newspaper" >}} What Gets Made (and What Does Not) {#what-gets-made}
 
@@ -63,7 +63,7 @@ A local newspaper earns a fraction of a penny per page view from digital adverti
 
 ### The collapse of local news
 
-The most visible casualty is local journalism. The United States now has 213 counties with no local news source at all. These are news deserts, where no one is covering the school board, the water treatment plant, the local court. AI has accelerated this trend, with web traffic to the 100 largest newspapers plunged 45 per cent over four years. {{< cite "medill-local-news-2025" >}}
+The most visible casualty is local journalism. The United States now has 213 counties with no local news source at all. These are news deserts, where no one is covering the school board, the water treatment plant, the local court. AI has accelerated this trend, with web traffic to the 100 largest newspapers plunging 45 per cent over four years. {{< cite "medill-local-news-2025" >}}
 
 The financial picture explains why. Print advertising revenue fell from roughly $49 billion in 2006 to a small fraction of that. Digital advertising was supposed to replace it. It never came close. {{< cite "pew-newspapers-2024" >}}
 
@@ -85,7 +85,7 @@ Think of a slot machine. You pull the lever not because every pull pays out, but
 
 Follower counts, engagement metrics, view totals: these are forms of stored attention that platforms monetise and redistribute. {{< cite "heitmayer-attention-economics-2025" >}} Your capacity to focus has been turned into a commodity, bought and sold without your involvement in the transaction.
 
-Optimizing to monitize your attention is not the same thing as providing a great social experience. This is why many platform appear to degrade - rather than improve - over time. The impact is real: more ads, worse recommendations, deleted features, and more fragmented communities. If you have built habits, relationships, and information routines around that platform, its decline damages your cognitive infrastructure. {{< cite "ardoline-platform-decay-2025" >}}
+Optimising to monetise your attention is not the same thing as providing a great social experience. This is why many platforms appear to degrade — rather than improve — over time. The impact is real: more ads, worse recommendations, deleted features, and more fragmented communities. If you have built habits, relationships, and information routines around that platform, its decline damages your cognitive infrastructure. {{< cite "ardoline-platform-decay-2025" >}}
 
 ## {{< icon "repeat" >}} How the System Sustains Itself {#how-it-sustains-itself}
 
@@ -97,7 +97,7 @@ Cory Doctorow named this pattern in 2023. {{< cite "doctorow-enshittification-20
 
 ### The lock-in is social
 
-Nobody stays on enshittified platform because the experience is good. They stay because the people they know are there. Group chats, professional contacts, and community spaces are all inside the platform. It doesn't matter that you want to move - everyone else would need to move too. That coordination problem is far more powerful than any technical barrier, which is why platforms invest heavily in features that lock in social signal while making it difficult - or even unlawful - to enable interoperability.
+Nobody stays on a declining platform because the experience is good. They stay because the people they know are there. Group chats, professional contacts, and community spaces are all inside the platform. It doesn't matter that you want to move — everyone else would need to move too. That coordination problem is far more powerful than any technical barrier, which is why platforms invest heavily in features that lock users in socially, while making it difficult — or even unlawful — to enable interoperability.
 
 ### Beyond social media
 
