@@ -45,7 +45,7 @@ Every post, video, and link has been scored by a system predicting how likely yo
 
 The feed optimises for engagement — taps, likes, shares, watch time. Engagement is not the same as enjoyment, and it is not the same as value.
 
-An audit of Twitter/X found that engagement-based ranking amplifies emotionally charged, hostile content well beyond what a simple chronological feed would. Users themselves reported wanting to see *less* of the divisive content the algorithm was showing them *more* of. {{< cite "milli-engagement-amplification-2025" >}}
+An audit of Twitter/X found that engagement-based ranking amplifies emotionally charged, hostile content well beyond what a simple chronological feed would. Users themselves reported wanting to see *less* of the divisive content the algorithm was showing them *more* of. {{< cite "milli-engagement-amplification-2025" >}}{{< cite "corsi-twitter-amplification-2024" >}}
 
 The algorithm does not know what is true, or what is good for you. It knows what gets clicks. That is the business model, compressed into a single ranking.
 
@@ -61,13 +61,13 @@ A local newspaper earns a fraction of a penny per page view from digital adverti
 
 ### The collapse of local news
 
-The United States now has 213 counties with no local news source at all. No one covering the school board, the water treatment plant, the local court. Print revenue collapsed, digital advertising never replaced it, and AI has accelerated the remaining traffic losses. {{< cite "medill-local-news-2025" >}}
+The United States now has 213 counties with no local news source at all. No one covering the school board, the water treatment plant, the local court. Print revenue collapsed, digital advertising never replaced it, and AI has accelerated the remaining traffic losses. {{< cite "medill-local-news-2025" >}}{{< cite "pew-newspapers-2024" >}}
 
 The digital startups that have appeared cluster in wealthy metro areas. The deserts are not being filled.
 
 ### The creator economy's arithmetic
 
-On influencer platforms, roughly 70 per cent of creator revenue comes from brand deals. Independence is a look, not a structure. The better someone can hold attention, trigger reaction, and stay visible in the feed, the more valuable they become to advertisers. A few win big. Most supply the platform with cheap, abundant labour.
+On influencer platforms, roughly 70 per cent of creator revenue comes from brand deals. {{< cite "goldmansachs-creator-economy-2025" >}} Independence is a look, not a structure. The better someone can hold attention, trigger reaction, and stay visible in the feed, the more valuable they become to advertisers. A few win big. Most supply the platform with cheap, abundant labour — 71 per cent of US creators earn under $30,000 a year, and a third make less than $5,000. {{< cite "mbo-creator-economy-2024" >}}
 
 ### Trained to expect free
 

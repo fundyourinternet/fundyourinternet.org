@@ -13,7 +13,7 @@ outline:
   - title: "Funding the commons"
     icon: "landmark"
     anchor: "funding-the-commons"
-    description: "Grants, foundations, and the value of treating digital infrastructure as a public good."
+    description: "Grants, foundations, and viewing digital infrastructure as a public good."
   - title: "Infrastructure for giving"
     icon: "compass"
     anchor: "infrastructure-for-giving"
@@ -33,25 +33,27 @@ The simplest version is the oldest: one person decides to pay for something they
 
 What it looks like in practice:
 
-- A recurring pledge to a journalist whose work you trust — [Substack](https://substack.com/)
-- A monthly contribution to a podcast you listen to every week — [Patreon](https://www.patreon.com/)
-- A subscription to a newsletter you would hate to lose — [Ghost](https://ghost.org/)
-- An album from a musician you keep coming back to — [Bandcamp](https://bandcamp.com/)
-- A small monthly sponsorship of a piece of software you use every day — [GitHub Sponsors](https://github.com/sponsors)
-- A one-off tip to an illustrator whose work you keep screenshotting — [Ko-fi](https://ko-fi.com/)
+- A monthly contribution to an artist you value on [Patreon](https://www.patreon.com/)
+- A subscription to a newsletter you would hate to lose on [Ghost](https://ghost.org/)
+- An album from a musician you keep coming back to on [Bandcamp](https://bandcamp.com/)
+- A sponsorship of a piece of software you use every day through [GitHub](https://github.com/sponsors)
+- A recurring pledge to a journalist whose work you trust on [Substack](https://substack.com/)
+- A tip to an illustrator whose work you keep screenshotting from [Ko-fi](https://ko-fi.com/)
 - A membership paid directly to an independent newsroom, through their own site
 
-At scale, it works. Since 2013, Patreon has channelled over two billion dollars in pledges from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}}
+At scale, it does make a difference. Since 2013, Patreon alone has channelled over two billion dollars in pledges from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}}
 
-It has limits. Most creators earn very little from it. The platforms that host these relationships still set the terms and take a cut — and a platform generous at launch can turn extractive once its users are locked in. Sustaining the income takes real work too: replying to supporters, making things for them, showing up consistently. That labour can be as demanding as the creative work itself.
+Sustaining the income takes real work, though: replying to supporters, making things for them, showing up consistently. That labour can be as demanding as the creative work itself. {{< cite "bonifacio-patreon-labour-2023" >}} It also has limits. Most creators will struggle to earn enough to make a living. {{< cite "mbo-creator-economy-2024" >}}
 
-None of this makes direct support a bad idea. It does something the ad model never does: it makes the supporter the customer, not the product. The person paying decides what is worth sustaining. That shift is the point, even when the amounts are small.
+There are structural risks, too. The platforms that host these relationships still set the terms and take a cut — and a platform generous at launch can turn extractive once its users are locked in. 
 
-The question is whether the shift can last. The durable version is when the people using or making something own it together.
+The challenges are real, but direct support does something the ad model can never do: it makes the you, supporter, the customer - not the product. It lets you decide what is worth sustaining. This shift is the point, even when the amounts are small or the enablers imperfect.
+
+The question is whether the shift can last. The most durable version is when users and builders can own it together - that's [cooperative ownership](#cooperative-ownership).
 
 ## {{< icon "users" >}} Cooperative ownership {#cooperative-ownership}
 
-Cooperative ownership answers that question directly. When the people who make something or use something own it together, the incentive changes. There is no outside shareholder pushing for growth at the community's expense, and no platform owner who can quietly alter the terms of the relationship. The OECD has documented platform cooperatives as a credible structural alternative to conventional platform work, while noting the real governance challenges they face. {{< cite "oecd-platform-cooperatives-2023" >}}
+Cooperative ownership answers that question directly. When the people who make something or use something own it together, the incentive changes. There is no outside shareholder pushing for growth at the community's expense, and no platform owner who can quietly alter the terms of the relationship. The OECD has documented platform cooperatives as a credible structural alternative to conventional platform work, while noting the real governance challenges they face. {{< cite "oecd-platform-cooperatives-2023" >}} The first global inventory of journalism cooperatives — including The Bristol Cable and The Ferret — shows how reader-ownership produces newsrooms that are structurally independent of both advertisers and platform algorithms. {{< cite "gollmitzer-journalism-cooperatives-2024" >}}
 
 The model is already working across creative work, journalism, and more:
 
@@ -71,7 +73,7 @@ Cooperatives assume a visible community — people who know they are using the t
 
 Open source software is the sharpest example. A Harvard Business School study estimated that firms would need to spend $8.8 trillion to replace the open source software they currently use for free — roughly three and a half times their total software spending. {{< cite "hoffmann-value-oss-2024" >}} A decade earlier, Nadia Eghbal's *Roads and Bridges* argued that this software should be treated as public infrastructure, like roads or water systems. The problems she identified have only deepened since. {{< cite "eghbal-roads-bridges-2016" >}}
 
-What underfunding looks like in practice: in 2024, an attacker was found to have spent 2.6 years building trust within the XZ Utils project — a small compression library used by most Linux systems — before injecting a backdoor into it. {{< cite "przymus-xz-utils-2025" >}} The project had essentially one active maintainer. Most of the software the internet runs on looks like this. {{< cite "nagle-census-oss-2024" >}}
+What underfunding looks like in practice: in 2024, an attacker was found to have spent 2.6 years building trust within the XZ Utils project — a small compression library used by most Linux systems — before injecting a backdoor into it. {{< cite "przymus-xz-utils-2025" >}} The project had essentially one active maintainer. Most of the software the internet runs on looks like this. {{< cite "nagle-census-oss-2024" >}}{{< cite "tidelift-maintainer-survey-2024" >}}
 
 Organisations collectively invest about $1.7 billion a year in open source, but 86 per cent of that is employee labour — people whose companies pay them to contribute. Only four per cent of financial contributions reach the maintainers directly. {{< cite "linuxfoundation-oss-funding-2024" >}}
 
@@ -81,8 +83,8 @@ People and institutions are trying to close the gap:
 - **[NLnet Foundation](https://nlnet.net)** — Netherlands funds open internet projects across Europe
 - **[Open Collective](https://opencollective.com)** — fiscal hosting so projects can receive money without forming their own legal entity
 - **Ford and Sloan Foundations** — grants for digital public goods
-- **[Press Forward](https://www.pressforward.news/)** — US funder coalition investing over $500 million in local journalism as civic infrastructure
-- **[Wikimedia Foundation](https://wikimediafoundation.org/)** — runs Wikipedia and its sister projects on small donations from millions of readers, with no advertising
+- **[Press Forward](https://www.pressforward.news/)** — US funder coalition investing over $500 million in local journalism as civic infrastructure {{< cite "inn-nonprofit-news-2025" >}}
+- **[Wikimedia Foundation](https://wikimediafoundation.org/)** — runs Wikipedia and its sister projects on small donations from millions of readers, with no advertising {{< cite "wikimedia-fundraising-2024" >}}
 
 The same public-good logic applies beyond software. Journalism is democratic infrastructure. Community moderation keeps online spaces habitable. The protocols that social networks run on — like [ATProto](https://atproto.com/), the open protocol behind Bluesky — need sustaining too, not just the companies building on top of them.
 
@@ -98,7 +100,7 @@ The tools worth knowing about are the ones that connect and then get out of the 
 
 - **[Thanks.dev](https://thanks.dev)** — routes funding to open source dependencies automatically. If you run software that depends on open source libraries, it helps you find and support the maintainers behind them.
 - **[Liberapay](https://liberapay.com/)** — a non-profit for recurring donations to individuals and projects. Open source, run as a collective, and takes no platform fee beyond what payment processors charge.
-- **[Open Collective](https://opencollective.com)** — fiscal hosting and transparent budgets. Browse projects, see exactly how money is spent, contribute directly. Used by open source projects, journalism startups, community groups, and mutual aid funds.
+- **[Open Collective](https://opencollective.com)** — fiscal hosting and transparent budgets. Browse projects, see exactly how money is spent, contribute directly. Used by open source projects, journalism startups, community groups, and mutual aid funds. {{< cite "opencollective-transparency-2024" >}}
 
 What these tools share is a principle: they connect supporters to the things they value, and then step aside. That is the difference between infrastructure and an intermediary.
 
