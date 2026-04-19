@@ -45,15 +45,15 @@ At scale, it does make a difference. Since 2013, Patreon alone has channelled ov
 
 Sustaining the income takes real work, though: replying to supporters, making things for them, showing up consistently. That labour can be as demanding as the creative work itself. {{< cite "bonifacio-patreon-labour-2023" >}} It also has limits. Most creators will struggle to earn enough to make a living. {{< cite "mbo-creator-economy-2024" >}}
 
-There are structural risks, too. The platforms that host these relationships still set the terms and take a cut — and a platform generous at launch can turn extractive once its users are locked in. 
-
 The challenges are real, but direct support does something the ad model can never do: it makes the you, supporter, the customer - not the product. It lets you decide what is worth sustaining. This shift is the point, even when the amounts are small or the enablers imperfect.
 
-The question is whether the shift can last. The most durable version is when users and builders can own it together - that's [cooperative ownership](#cooperative-ownership).
+Direct support does have a structural risks. The platforms that host the payment relationships still set the terms and take a cut — and a platform generous at launch can turn extractive once its users are locked in. To prevent this, proactive communities have leaned into [cooperative ownership](#cooperative-ownership).
 
 ## {{< icon "users" >}} Cooperative ownership {#cooperative-ownership}
 
-Cooperative ownership answers that question directly. When the people who make something or use something own it together, the incentive changes. There is no outside shareholder pushing for growth at the community's expense, and no platform owner who can quietly alter the terms of the relationship. The OECD has documented platform cooperatives as a credible structural alternative to conventional platform work, while noting the real governance challenges they face. {{< cite "oecd-platform-cooperatives-2023" >}} The first global inventory of journalism cooperatives — including The Bristol Cable and The Ferret — shows how reader-ownership produces newsrooms that are structurally independent of both advertisers and platform algorithms. {{< cite "gollmitzer-journalism-cooperatives-2024" >}}
+Cooperative ownership directly addresses the extractive intermediary problem. When people who make something or use something own it together, incentives are better aligned. There is no outside shareholder pushing for growth at the community's expense, and no platform owner who can quietly alter the terms of the relationship. 
+
+The OECD has documented platform cooperatives as a credible structural alternative to conventional platform work, while noting the real governance challenges they face. {{< cite "oecd-platform-cooperatives-2023" >}} The first global inventory of journalism cooperatives — including The Bristol Cable and The Ferret — shows how reader-ownership produces newsrooms that are structurally independent of both advertisers and platform algorithms. {{< cite "gollmitzer-journalism-cooperatives-2024" >}}
 
 The model is already working across creative work, journalism, and more:
 
@@ -63,9 +63,9 @@ The model is already working across creative work, journalism, and more:
 - **[The Ferret](https://theferret.scot/)** — Scottish investigative journalism funded by its readers
 - **[Mediapart](https://www.mediapart.fr/)** — independent French digital newspaper, journalist- and reader-owned, sustained entirely by subscriptions
 - **[Defector](https://defector.com/)** — worker-owned US media, founded by the *Deadspin* staff who resigned after being told to "stick to sports"
-- **The Guardian** — not a cooperative, but Scott Trust-owned and sustained by voluntary reader contributions; evidence that large-scale reader funding can work
+- **[The Guardian](https://theguardian.com)** — not a cooperative, but Scott Trust-owned and sustained by voluntary reader contributions; evidence that large-scale reader funding can work
 
-None of these are easy. Cooperatives require governance, and governance is slower than venture capital. But the question is not whether cooperatives will replace every platform. It is whether a different ownership model is possible. It is.
+As with direct support, there are challenges. Cooperatives require governance, and governance is slower than venture capital. But the question is not whether cooperatives will replace every platform. It is whether a different ownership model is possible. It is.
 
 ## {{< icon "landmark" >}} Funding the commons {#funding-the-commons}
 
@@ -86,17 +86,15 @@ People and institutions are trying to close the gap:
 - **[Press Forward](https://www.pressforward.news/)** — US funder coalition investing over $500 million in local journalism as civic infrastructure {{< cite "inn-nonprofit-news-2025" >}}
 - **[Wikimedia Foundation](https://wikimediafoundation.org/)** — runs Wikipedia and its sister projects on small donations from millions of readers, with no advertising {{< cite "wikimedia-fundraising-2024" >}}
 
-The same public-good logic applies beyond software. Journalism is democratic infrastructure. Community moderation keeps online spaces habitable. The protocols that social networks run on — like [ATProto](https://atproto.com/), the open protocol behind Bluesky — need sustaining too, not just the companies building on top of them.
-
-The public-good argument is not a reason to leave this to institutions. It is a reason to see your own contribution as part of something larger.
+The same public-good logic applies beyond software. Journalism is democratic infrastructure. Community moderation keeps online spaces habitable. 
 
 ## {{< icon "compass" >}} Infrastructure for giving {#infrastructure-for-giving}
 
-The main obstacle is friction. Too many platforms, no clear picture of who needs support, no sense that any single action makes a difference.
+The public-good argument is not a reason to leave this to institutions. It is a reason to see your own contribution as part of something larger. The main obstacle is friction. Too many platforms, no clear picture of who needs support, no sense that any single action makes a difference.
 
-A useful distinction: some tools connect you to a specific person or project. Others pool your money into a platform that decides how to distribute it. The first is funding. The second is subscribing to a service. Paying for YouTube Premium is not funding your internet — it is paying a platform that pays creators a fraction of a fraction, on terms the platform controls.
+A useful distinction: Paying for Spotify or YouTube Premium is not funding your internet — it is paying a platform that pays creators a fraction of a fraction, on terms the platform controls, to achieve the platform's goals. Infrastructure for giving aligns your interests and the interests of the people who create, build, maintain, study, document, and inspire.
 
-The tools worth knowing about are the ones that connect and then get out of the way:
+They are tools that reduce friction such as:
 
 - **[Thanks.dev](https://thanks.dev)** — routes funding to open source dependencies automatically. If you run software that depends on open source libraries, it helps you find and support the maintainers behind them.
 - **[Liberapay](https://liberapay.com/)** — a non-profit for recurring donations to individuals and projects. Open source, run as a collective, and takes no platform fee beyond what payment processors charge.
@@ -108,4 +106,4 @@ Payment, increasingly, is the easy part. The harder problem is relationship mana
 
 [at.fund](https://at.fund) is one attempt at that layer. Built on the open ATProto protocol behind Bluesky, it keeps a signed, portable record of the things you value — so the distance between what you say matters and what you actually sustain becomes visible. It never touches money; payment still flows through whatever tool the steward has chosen. Built by the same team that maintains this site.
 
-This is not about finding the perfect tool. It is about the practice. Pick one thing you rely on online. Find out if they accept support. Do it once. The tools above make that easier, but the practice does not require any of them.
+This is not about finding the perfect tool. It is about the practice. Pick one thing you rely on online. Find out how they accept support. Fund them. The tools above make that easier, but the practice does not require any special tools.
