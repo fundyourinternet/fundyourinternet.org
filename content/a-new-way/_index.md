@@ -2,18 +2,18 @@
 title: "Is there another way?"
 summary: "Yes. People are already building it."
 outline:
-  - title: "Direct relationships"
-    icon: "heart-handshake"
-    anchor: "direct-relationships"
-    description: "Paying for things you value. The simplest version of funding your internet."
-  - title: "Cooperative ownership"
-    icon: "users"
-    anchor: "cooperative-ownership"
-    description: "When the people who make something or use something own it together."
   - title: "Funding the commons"
     icon: "landmark"
     anchor: "funding-the-commons"
     description: "Treating the infrastructure of a healthy internet as a public good."
+  - title: "Cooperative ownership"
+    icon: "users"
+    anchor: "cooperative-ownership"
+    description: "When the people who make something or use something own it together."
+  - title: "Direct relationships"
+    icon: "heart-handshake"
+    anchor: "direct-relationships"
+    description: "Paying for things you value. The simplest version of funding your internet."
 bridges:
   - branch: action
     heading: "What can I do?"
@@ -23,20 +23,19 @@ bridges:
 
 {{< outline >}}
 
-## {{< icon "heart-handshake" >}} Direct relationships {#direct-relationships}
+## {{< icon "landmark" >}} Funding the commons {#funding-the-commons}
 
-The simplest version is the oldest: one person decides to pay for something they value. This is sustaining something you use, not charity. What it looks like in practice:
+Some of what the internet depends on was never made for an audience at all. It was made for everyone, often by small groups of dedicated professionals, and almost nobody notices until it breaks.
 
-- A recurring contribution to a podcast you listen to every week
-- A pledge to a journalist whose work you trust
-- An album bought directly from a musician
-- A sponsorship of a piece of open source software you depend on
-- A membership to an independent newsroom
-- A tip to an illustrator whose work you keep screenshotting
+Open source software is the sharpest example. A Harvard Business School study estimated that firms would need to spend $8.8 trillion to replace the open source software they currently use for free, roughly three and a half times their total software spending. {{< cite "hoffmann-value-oss-2024" >}} A decade earlier, Nadia Eghbal's *Roads and Bridges* argued that this software should be treated as public infrastructure, like roads or water systems. {{< cite "eghbal-roads-bridges-2016" >}} Yet only 4% of financial contributions to open source reach maintainers directly. {{< cite "linuxfoundation-oss-funding-2024" >}}
 
-Over the last decade, Patreon alone has moved more than two billion dollars from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}} Most contributions are small. Together, they sustain people doing work they would otherwise have had to give up.
+People and institutions are trying to close the gap:
 
-It is not effortless. Sustaining a direct-support relationship can be as demanding as the creative work itself, {{< cite "bonifacio-patreon-labour-2023" >}} and a platform generous at launch can turn extractive once creators are locked in. That is why a quiet layer of better tooling has grown alongside the big platforms. [Open Collective](https://opencollective.com), [Liberapay](https://liberapay.com/), and [Thanks.dev](https://thanks.dev) all connect supporters to the things they value and then step aside. {{< cite "opencollective-transparency-2024" >}} The principle is simple: infrastructure, not intermediary.
+- **[Sovereign Tech Fund](https://sovereigntechfund.de)**: public funding for open source infrastructure
+- **[NLnet Foundation](https://nlnet.net)**: funding open internet projects across Europe
+- **[Wikimedia Foundation](https://wikimediafoundation.org/)**: millions of readers keep Wikipedia funded with no advertising {{< cite "wikimedia-fundraising-2024" >}}
+
+That is the practice at planetary scale. The same instinct works closer to home, where communities organise to own what they make and use.
 
 ## {{< icon "users" >}} Cooperative ownership {#cooperative-ownership}
 
@@ -52,14 +51,21 @@ The OECD has documented platform cooperatives as a credible structural alternati
 
 Bristol Cable's 2,500 members took a decade to build. Mediapart took almost twenty years to reach the scale of a major newspaper. The path is slower because the work is shared, but that is also why it can endure.
 
-## {{< icon "landmark" >}} Funding the commons {#funding-the-commons}
+Even cooperatives take a community to build. The simplest version of this needs only one person.
 
-Some of what the internet depends on was never made for an audience at all. It was made for everyone, often by small groups of dedicated professionals, and almost nobody notices until it breaks.
+## {{< icon "heart-handshake" >}} Direct relationships {#direct-relationships}
 
-Open source software is the sharpest example. A Harvard Business School study estimated that firms would need to spend $8.8 trillion to replace the open source software they currently use for free, roughly three and a half times their total software spending. {{< cite "hoffmann-value-oss-2024" >}} A decade earlier, Nadia Eghbal's *Roads and Bridges* argued that this software should be treated as public infrastructure, like roads or water systems. {{< cite "eghbal-roads-bridges-2016" >}} Yet only 4% of financial contributions to open source reach maintainers directly. {{< cite "linuxfoundation-oss-funding-2024" >}}
+One person decides to pay for something they value. This is sustaining something you use, not charity. What it looks like in practice:
 
-People and institutions are trying to close the gap:
+- A recurring contribution to a podcast you listen to every week
+- A pledge to a journalist whose work you trust
+- An album bought directly from a musician
+- A sponsorship of a piece of open source software you depend on
+- A membership to an independent newsroom
+- A tip to an illustrator whose work you keep screenshotting
 
-- **[Sovereign Tech Fund](https://sovereigntechfund.de)**: public funding for open source infrastructure
-- **[NLnet Foundation](https://nlnet.net)**: funding open internet projects across Europe
-- **[Wikimedia Foundation](https://wikimediafoundation.org/)**: millions of readers keep Wikipedia funded with no advertising {{< cite "wikimedia-fundraising-2024" >}}
+Over the last decade, Patreon alone has moved more than two billion dollars from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}} Most contributions are small. Together, they sustain people doing work they would otherwise have had to give up.
+
+A quiet layer of better tooling has grown alongside the big platforms. [Open Collective](https://opencollective.com) handles fiscal hosting and transparent budgets for projects of any size. {{< cite "opencollective-transparency-2024" >}} [Liberapay](https://liberapay.com/) is a non-profit cooperative for recurring donations. [Thanks.dev](https://thanks.dev) routes funding to the open source dependencies your software already uses. The principle they share is simple: infrastructure, not intermediary.
+
+Now that you know this, what can you do?
