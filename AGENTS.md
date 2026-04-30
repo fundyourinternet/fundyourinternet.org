@@ -39,17 +39,16 @@ This file defines specialised contributor roles for AI-assisted work on fundyour
 
 ## Design Contributor
 
-**Scope:** Templates in `layouts/`, styles in `static/css/style.css`.
+**Scope:** Templates in `layouts/`, styles in `static/css/` (`base.css`, `components.css`, `visual.css`).
 
 **Guidelines:**
 - Read `CLAUDE.md` for CSS conventions and the design system.
-- No JavaScript. If it seems like you need JS, find a CSS-only solution or reconsider the feature.
+- **JavaScript:** Do not add scripts by default. The only client script today is `static/js/theme.js` (legacy filename), which progressively enhances the share card on `/what-can-i-do/`. The full site must work with JS disabled. Any new JS must follow the same bar: optional enhancement only, no breakage without it.
 - No external dependencies — no CDN-hosted libraries, no Google Fonts.
-- Icons should come from a chosen icon library (TBD), not custom SVGs.
-- Keep the total CSS under 400 lines. Every addition should justify its existence.
-- Test in both light and dark mode (`prefers-color-scheme`).
-- Verify WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text) for any new colours.
+- **Icons:** [Lucide](https://lucide.dev) (MIT), inlined as partials under `layouts/partials/icons/`, with `stroke="currentColor"`. Prefer reusing existing partials before adding new SVGs.
+- Keep CSS lean across the three files: prune unused rules rather than accumulating dead styles. Prefer small, purposeful additions over sweeping one-off styling.
+- The shipped UI is a **single ink-dark theme** (no light mode, no theme toggle). Verify WCAG contrast for new colours and states in that theme.
 - The site should feel like a well-designed zine or public resource, never like a SaaS landing page.
 - Mobile-first: base styles work on small screens, `@media (min-width: 48em)` for wider layouts.
 
-**Quality bar:** The site should load in under 1 second on a slow connection. Every visual element should serve comprehension or navigation, never decoration alone.
+**Quality bar:** The site should load quickly on a slow connection. Every visual element should serve comprehension or navigation, never decoration alone.
