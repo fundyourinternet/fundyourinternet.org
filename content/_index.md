@@ -22,11 +22,11 @@ pairs:
     verb: "favour the trolls?"
 threads:
   - heading: "How did we get here?"
-    blurb: "Most of what you see online is chosen by systems designed to keep you watching. It is a business model — and it shapes what gets made, what disappears, and what you never see at all."
+    blurb: "Most of what you see online is chosen by systems designed to keep you watching. It is a business model, and it shapes what gets made, what disappears, and what you never see at all."
     section: old-way
     url: /the-old-way/
   - heading: "Is there another way?"
-    blurb: "In independent communities from journalism to open source, people are building direct relationships between makers and the people who value what they make. Not a single platform. A pattern — and it is growing."
+    blurb: "In independent communities from journalism to open source, people are building direct relationships between makers and the people who value what they make. It's not a single platform, it's a pattern. And it is growing."
     section: new-way
     url: /a-new-way/
   - heading: "What can I do?"

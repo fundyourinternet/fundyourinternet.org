@@ -40,11 +40,11 @@ The simplest version is the oldest: one person decides to pay for something they
 
 Over the last decade, Patreon alone has moved more than two billion dollars from supporters to creators. {{< cite "elsanyoura-patreon-2022" >}} Most contributions are small. Together, they sustain people doing work they would otherwise have had to give up.
 
-Direct support restores the relationship between the creator and the user, allowing the creator to focus on what is best for you, rather than what is best for the platform that makes money from your attention. This shift is critical.
+Direct support restores the relationship between the creator and the user, allowing the creator to focus on what is best for you, rather than what is best for the platform that makes money from your attention. This enables the shift from engagement to intentionality.
 
 But it isn't easy. Sustaining direct support relationships can be as demanding as the creative work itself. {{< cite "bonifacio-patreon-labour-2023" >}} It also has limits. Most creators will struggle to earn enough to make a living. {{< cite "mbo-creator-economy-2024" >}} 
 
-There is a serious structural risk, too. The platforms that host the payment relationships still set the terms and take a cut - and a platform generous at launch can turn extractive once creators are locked in. That is why proactive communities are leaning into [cooperative ownership](#cooperative-ownership).
+There is a serious structural risk, too. The platforms that host the payment relationships still set the terms and take a cut, and a platform generous at launch can turn extractive once creators are locked in. That is why proactive communities are leaning into [cooperative ownership](#cooperative-ownership).
 
 ## {{< icon "users" >}} Cooperative ownership {#cooperative-ownership}
 
@@ -62,7 +62,7 @@ The model is already working across creative work, journalism, and more:
 
 None of these are quick wins. Cooperatives ask their communities to do the slow, unglamorous governance work that venture capital avoids with a reductive focus on investor returns. Bristol Cable's 2,500 members took a decade to build. Mediapart took founding capital and almost twenty years to reach the scale of a major newspaper. Each example is real, each is hard-won, and each is shaped by local conditions that are unique to each effort. The path is slower because the work is shared, but that is also why it can endure.
 
-Cooperatives also depend on a visible community to organise around. But some work is so foundational it impacts many communities, even though most people will know they depend on it. This is infrastructure work, it keeps the internet running, and sustaining it is the challenge of [funding the commons](#funding-the-commons).
+Cooperatives also depend on a visible community to organise around. But some work is so foundational it impacts many communities, even though most people will never know they depend on it. This is infrastructure work, it keeps the internet running, and sustaining it is the challenge of [funding the commons](#funding-the-commons).
 
 ## {{< icon "landmark" >}} Funding the commons {#funding-the-commons}
 
@@ -79,7 +79,7 @@ People and institutions are trying to close the gap:
 - **[Press Forward](https://www.pressforward.news/)** — Investing in local journalism as civic infrastructure {{< cite "inn-nonprofit-news-2025" >}}
 - **[Wikimedia Foundation](https://wikimediafoundation.org/)** — Millions of readers keep Wikipedia funded with no advertising {{< cite "wikimedia-fundraising-2024" >}}
 
-The public-good argument is not just for institutions. But to everyone to get involved, communities need tools to reduce friction. And that's our final category: [instrastructure for giving](#infrastructure-for-giving)
+The public-good argument is not just for institutions. But for everyone to get involved, communities need tools to reduce friction. And that's our final category: [infrastructure for giving](#infrastructure-for-giving).
 
 ## {{< icon "compass" >}} Infrastructure for giving {#infrastructure-for-giving}
 
