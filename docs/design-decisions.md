@@ -4,21 +4,22 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 ---
 
-## Visual redesign: heroes, icons, toggle, layout (April 2026)
+## Visual redesign: heroes, icons, layout, copy-link JS (April 2026)
 
-**Decision:** A visual redesign adding five capabilities: (1) dark/light mode toggle, (2) section icons from Lucide, (3) gradient hero blocks on section pages and homepage, (4) wider layout for card grids, (5) a `figure` shortcode for future inline images.
+**Decision:** A visual redesign adding: (1) section icons from Lucide (inline SVG partials), (2) gradient hero blocks on section pages and homepage, (3) wider layout for card grids and heroes, (4) a `figure` shortcode for future inline images, (5) a single ink-dark theme across the site (no light mode, no user-facing theme toggle).
 
-**Why:** The site was narrow, text-only, and visually flat. The colour wayfinding system worked but lacked visual anchors. Users had no way to override OS dark mode. The goal is to make the site inviting and engaging while preserving its editorial, non-product character.
+**Why:** The site was narrow, text-only, and visually flat. The colour wayfinding system worked but lacked visual anchors. The goal was to make the site inviting and readable while keeping an editorial, non-product character. A consistent dark surface reduces glare and matches the “zine / public resource” direction (see also `.impeccable.md`).
 
 **Key choices:**
-- **CSS split into three files** (`base.css`, `components.css`, `visual.css`) — the single-file approach hit 700+ lines and the redesign would push further. Each file stays under 300 lines with a clear responsibility.
-- **Theme toggle via ~30 lines of JS** — the only JavaScript on the site. Uses `data-theme` attribute on `<html>` with `localStorage` persistence. Progressive enhancement: without JS, OS-level `prefers-color-scheme` detection still works and the toggle button remains hidden.
-- **Lucide icons** (MIT-licensed) — `radio` for Old Way, `hand-heart` for New Way, `book-open` for Evidence. Stored as inline SVG partials, not loaded from a CDN. Use `stroke="currentColor"` to inherit section colours.
-- **Gradient hero blocks** as placeholders for real photography. Each section uses its colour tokens in a `linear-gradient`. Real CC0 photos to be sourced and swapped in later.
+- **CSS split into three files** (`base.css`, `components.css`, `visual.css`) — the single-file approach hit 700+ lines; splitting keeps responsibilities clear and avoids a monolith. Keep each file lean; prune dead rules as the design evolves.
+- **No theme toggle** — an early spec considered `data-theme` on `<html>` with `localStorage`; that was not shipped. Contrast and tokens are tuned for one theme only.
+- **Minimal JavaScript** — `static/js/theme.js` (legacy filename) only enhances the share card on `/what-can-i-do/` with a one-click copy action. Without JS, the card still works as a normal link. No other scripts.
+- **Lucide icons** (MIT-licensed), stored as partials under `layouts/partials/icons/`. The three section pages use SVG derived from Lucide `radio` (Old Way), `hand-heart` (New Way), and `book-open` (Evidence). Main nav uses additional partials (`circle-help` for home, `user` for What can I do). Use `stroke="currentColor"` so colours follow context.
+- **Gradient hero blocks** as placeholders for real photography. Each section uses its colour tokens in a `linear-gradient`. Real CC0 photos can be swapped in later.
 - **Selective layout widening** — body text stays at 42rem for readability. Card grids and heroes break out to 58rem (`--max-width-wide`).
 - **Figure shortcode** with optional section icon overlay, ready for subsection images when content is written.
 
-**Alternatives considered:** CSS-only dark mode toggle (not possible with persistence); custom icon illustrations (CLAUDE.md specifies library icons); full-bleed heroes (too dramatic for the editorial tone); global layout widening (hurts readability).
+**Alternatives considered:** Dark/light toggle with persistence (extra complexity; dropped in favour of one well-tuned theme); custom icon illustrations (library icons keep consistency); full-bleed heroes (too dramatic for the editorial tone); global layout widening (hurts readability).
 
 ---
 
@@ -34,7 +35,7 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 ## Section icons: Lucide library (April 2026)
 
-**Decision:** Each branch gets an icon from the Lucide library (MIT-licensed): `radio` for Old Way, `hand-heart` for New Way, `book-open` for Evidence. Stored as inline SVG partials in `layouts/partials/icons/`. Use `stroke="currentColor"` and `width="1em"` to inherit colour and scale with text.
+**Decision:** Branch visuals use Lucide-derived SVG, stored as partials in `layouts/partials/icons/` (`old-way.html`, `new-way.html`, `evidence.html` map to Lucide `radio`, `hand-heart`, and `book-open`). The main icon nav uses separate partials (`circle-help`, `user`, etc.) as wired in `layouts/partials/header.html`. Use `stroke="currentColor"` and `width="1em"` to inherit colour and scale with text.
 
 **Why:** Lucide icons are minimal line art that match the editorial tone. Using an established library avoids the clip-art problem of bespoke illustrations. Inline SVG avoids external requests. Icons appear in nav, strand cards, branch cards, section headings, and bridge links for consistent visual anchoring.
 
@@ -42,9 +43,9 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 ## Branch colour wayfinding system (April 2026)
 
-**Decision:** Three distinct hues for the three sections — teal (feeds), amber (movement), slate blue (evidence). Each with light/dark mode variants and light/border tones.
+**Decision:** Three distinct hues for the three sections — teal (feeds / Old Way), amber (movement / New Way), slate blue (evidence). Each has main, `-light`, and `-border` tokens for surfaces and accents within the single dark theme (not separate light and dark themes).
 
-**Why:** Colour is the fastest wayfinding signal. A reader seeing teal text or a teal border immediately knows they are in or referencing the "feeds" section. The hues were chosen to feel like the same family (similar saturation) while carrying different emotional energy: teal = analytical, amber = warm/community, slate = scholarly.
+**Why:** Colour is the fastest wayfinding signal. A reader seeing teal text or a teal border immediately knows they are in or referencing the feeds / Old Way thread. The hues were chosen to feel like the same family (similar saturation) while carrying different emotional energy: teal = analytical, amber = warm/community, slate = scholarly.
 
 **Alternatives considered:** Unified single-colour palette (simpler but less navigational); bright saturated colours (too aggressive for a resource site).
 
@@ -80,7 +81,7 @@ A record of significant design choices and the reasoning behind them. Newest dec
 
 **Decision:** Hugo, not Eleventy, Astro, or plain HTML.
 
-**Why:** Zero Node.js dependency means contributors never deal with `node_modules`, `package.json`, or lockfile conflicts. Hugo ships zero JavaScript by default. Its content model (sections with `_index.md`) maps directly to the three-branch architecture. Go templating is arcane but only touched by maintainers — contributors edit markdown only.
+**Why:** Zero Node.js dependency means contributors never deal with `node_modules`, `package.json`, or lockfile conflicts. Hugo does not require a JS toolchain. The built site may include a tiny optional script for progressive enhancement (see visual redesign entry). Its content model (sections with `_index.md`) maps directly to the three-branch architecture. Go templating is arcane but only touched by maintainers — contributors edit markdown and library YAML.
 
 **Alternatives considered:** Eleventy (strong but requires Node); Astro (overkill — component model for a content site); plain HTML (no templating, duplicated nav/header/footer).
 
